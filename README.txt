@@ -2,8 +2,8 @@
 Contributors: neffff
 Donate link: https://example.com
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart
-Requires at least: 5.7
-Tested up to: 5.4
+Requires at least: 5.0
+Tested up to: 5.7
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv3
