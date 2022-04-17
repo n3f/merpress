@@ -1,0 +1,26 @@
+{
+  "name": "merpress",
+  "version": "1.0.0",
+  "description": "Merpress: add MermaidJS to WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n3f/merpress.git"
+  },
+  "keywords": [
+    "wordpress",
+    "mermaid"
+  ],
+  "author": "n3f",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/n3f/merpress/issues"
+  },
+  "homepage": "https://github.com/n3f/merpress#readme",
+  "devDependencies": {
+    "@wordpress/env": "^4.5.0"
+  }
+}
