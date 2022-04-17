@@ -8,8 +8,8 @@
  * Requires at least: 4.6
  */
 
-define( 'MERMAID_JS_VERSION', '8.8.0' );
-define( 'MERMAID_PLUGIN_VERSION', '0.1.1' );
+define( 'MERMAID_JS_VERSION', '9.0.0' );
+define( 'MERMAID_PLUGIN_VERSION', '1.0.1' );
 
 add_action(
 	'init',
@@ -50,11 +50,11 @@ add_action(
 			]
 		);
 
-		add_action(
-			'loop_end',
-			function () {
-				wp_enqueue_script( 'mermaid-init' );
-			}
-		);
+		$enqueue_mermaid = function () {
+			wp_enqueue_script( 'mermaid-init' );
+		};
+
+		add_action( 'loop_end', $enqueue_mermaid );
+		add_action( 'loop_no_results', $enqueue_mermaid );
 	}
 );
