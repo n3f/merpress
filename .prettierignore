@@ -1,2 +1,4 @@
 .idea
 node_modules
+assets/mermaid.js
+assets/mermaid.min.js
