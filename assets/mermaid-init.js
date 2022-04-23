@@ -4,19 +4,15 @@
 			startOnLoad: false,
 			flowchart: {
 				useMaxWidth: true,
-			}
+			},
 		});
 		mermaid.init();
 
 		// deal with infinite scroll loading
-		$(document.body).on('post-load', function () {
+		$(document.body).on("post-load", function () {
 			setTimeout(function () {
 				mermaid.init();
 			}, 1000);
 		});
 	}
-})(
-	window.mermaid,
-	jQuery
-);
-
+})(window.mermaid, jQuery);
