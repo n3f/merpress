@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/n3f/merpress#readme",
   "devDependencies": {
-    "@wordpress/env": "^4.5.0"
+    "@wordpress/env": "^4.5.0",
+    "prettier": "2.6.2"
   }
 }
