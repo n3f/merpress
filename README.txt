@@ -23,7 +23,11 @@ Yes.  Checkout [MermaidJS](https://mermaid-js.github.io/mermaid/#/n00b-syntaxRef
 
 == Screenshots ==
 
-1. No screenshots yet.
+1. Open the block by typing "/MermaidJS" (or use the sidebar and search)
+2. Until there is a valid Mermaid diagram, there will be a syntax error in the graph.
+3. When editing the block, there are 2 views.  Use the upper area for writing, and the lower for displaying the diagram.
+4. When the block is not selected, it will be displayed as it should be seen on the site.
+5. As seen on my test site.
 
 == Changelog ==
 
