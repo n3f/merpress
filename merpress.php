@@ -6,6 +6,8 @@
  * Description: Merpress lets you create diagrams and visualizations using <a href="https://mermaid-js.github.io/mermaid/">MermaidJS</a>.
  * Version: 1.0.2
  * Requires at least: 4.6
+ *
+ * @package MerPress
  */
 
 define( 'MERMAID_JS_VERSION', '9.0.1' );
