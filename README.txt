@@ -3,7 +3,7 @@ Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
 Requires at least: 5.0
 Tested up to: 6.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -30,6 +30,9 @@ Yes.  Checkout [MermaidJS](https://mermaid-js.github.io/mermaid/#/n00b-syntaxRef
 
 == Changelog ==
 
+= 1.0.4 =
+* Update mermaid to 9.1.3.
+
 = 1.0.3 =
 * Update mermaid to 9.1.1.
 
@@ -44,6 +47,9 @@ Yes.  Checkout [MermaidJS](https://mermaid-js.github.io/mermaid/#/n00b-syntaxRef
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Mermaid update (9.1.3)
 
 = 1.0.2 =
 Mermaid update (9.0.1)
