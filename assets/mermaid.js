@@ -10286,6 +10286,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var Diagram = /*#__PURE__*/function () {
   function Diagram(txt) {
+    var _this$db$clear, _this$db;
+
     _classCallCheck(this, Diagram);
 
     _defineProperty(this, "type", 'graph');
@@ -10304,6 +10306,7 @@ var Diagram = /*#__PURE__*/function () {
     // Setup diagram
 
     this.db = diagrams[this.type].db;
+    (_this$db$clear = (_this$db = this.db).clear) === null || _this$db$clear === void 0 ? void 0 : _this$db$clear.call(_this$db);
     this.renderer = diagrams[this.type].renderer;
     this.parser = diagrams[this.type].parser;
     this.parser.parser.yy = this.db;
@@ -18695,6 +18698,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getClass": () => (/* binding */ getClass),
 /* harmony export */   "getClasses": () => (/* binding */ getClasses),
 /* harmony export */   "getRelations": () => (/* binding */ getRelations),
+/* harmony export */   "getTooltip": () => (/* binding */ getTooltip),
 /* harmony export */   "lineType": () => (/* binding */ lineType),
 /* harmony export */   "lookUpDomId": () => (/* binding */ lookUpDomId),
 /* harmony export */   "parseDirective": () => (/* binding */ parseDirective),
@@ -18912,6 +18916,10 @@ var setTooltip = function setTooltip(ids, tooltip) {
     }
   });
 };
+
+var getTooltip = function getTooltip(id) {
+  return classes[id].tooltip;
+};
 /**
  * Called by parser when a link is found. Adds the URL to the vertex data.
  *
@@ -18919,7 +18927,6 @@ var setTooltip = function setTooltip(ids, tooltip) {
  * @param linkStr URL to create a link for
  * @param target Target of the link, _blank by default as originally defined in the svgDraw.js file
  */
-
 
 var setLink = function setLink(ids, linkStr, target) {
   var config = _config__WEBPACK_IMPORTED_MODULE_2__.getConfig();
@@ -19045,6 +19052,7 @@ var setupToolTips = function setupToolTips(element) {
     var rect = this.getBoundingClientRect();
     tooltipElem.transition().duration(200).style('opacity', '.9');
     tooltipElem.text(el.attr('title')).style('left', window.scrollX + rect.left + (rect.right - rect.left) / 2 + 'px').style('top', window.scrollY + rect.top - 14 + document.body.scrollTop + 'px');
+    tooltipElem.html(tooltipElem.html().replace(/&lt;br\/&gt;/g, '<br/>'));
     el.classed('hover', true);
   }).on('mouseout', function () {
     tooltipElem.transition().duration(500).style('opacity', 0);
@@ -19091,6 +19099,7 @@ var setDirection = function setDirection(dir) {
   setClickEvent: setClickEvent,
   setCssClass: setCssClass,
   setLink: setLink,
+  getTooltip: getTooltip,
   setTooltip: setTooltip,
   lookUpDomId: lookUpDomId
 });
@@ -19152,9 +19161,11 @@ var conf = {
  * >} classes
  *   Object containing the vertices.
  * @param {SVGGElement} g The graph that is to be drawn.
+ * @param _id
+ * @param diagObj
  */
 
-var addClasses = function addClasses(classes, g) {
+var addClasses = function addClasses(classes, g, _id, diagObj) {
   // const svg = select(`[id="${svgId}"]`);
   var keys = Object.keys(classes);
   _logger__WEBPACK_IMPORTED_MODULE_4__.log.info('keys:', keys);
@@ -19232,6 +19243,7 @@ var addClasses = function addClasses(classes, g) {
       style: styles.style,
       id: vertex.id,
       domId: vertex.domId,
+      tooltip: diagObj.db.getTooltip(vertex.id) || '',
       haveCallback: vertex.haveCallback,
       link: vertex.link,
       width: vertex.type === 'group' ? 500 : undefined,
@@ -19434,7 +19446,7 @@ var draw = function draw(text, id, _version, diagObj) {
   var classes = diagObj.db.getClasses();
   var relations = diagObj.db.getRelations();
   _logger__WEBPACK_IMPORTED_MODULE_4__.log.info(relations);
-  addClasses(classes, g, id);
+  addClasses(classes, g, id, diagObj);
   addRelations(relations, g); // Add custom shapes
   // flowChartShapes.addToRenderV2(addShape);
   // Set up an SVG group so that we can translate the final graph.
@@ -21930,6 +21942,7 @@ var setupToolTips = function setupToolTips(element) {
     var rect = this.getBoundingClientRect();
     tooltipElem.transition().duration(200).style('opacity', '.9');
     tooltipElem.text(el.attr('title')).style('left', window.scrollX + rect.left + (rect.right - rect.left) / 2 + 'px').style('top', window.scrollY + rect.top - 14 + document.body.scrollTop + 'px');
+    tooltipElem.html(tooltipElem.html().replace(/&lt;br\/&gt;/g, '<br/>'));
     el.classed('hover', true);
   }).on('mouseout', function () {
     tooltipElem.transition().duration(500).style('opacity', 0);
@@ -31963,7 +31976,7 @@ var init = function init() {
     initThrowsErrors.apply(void 0, arguments);
   } catch (e) {
     _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn('Syntax Error rendering');
-    _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn(e);
+    _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn(e.str);
 
     if (this.parseError) {
       this.parseError(e);
@@ -32046,15 +32059,23 @@ var initThrowsErrors = function initThrowsErrors() {
       _logger__WEBPACK_IMPORTED_MODULE_0__.log.debug('Detected early reinit: ', init);
     }
 
-    _mermaidAPI__WEBPACK_IMPORTED_MODULE_1__["default"].render(id, txt, function (svgCode, bindFunctions) {
-      element.innerHTML = svgCode;
+    try {
+      _mermaidAPI__WEBPACK_IMPORTED_MODULE_1__["default"].render(id, txt, function (svgCode, bindFunctions) {
+        element.innerHTML = svgCode;
 
-      if (typeof callback !== 'undefined') {
-        callback(id);
-      }
+        if (typeof callback !== 'undefined') {
+          callback(id);
+        }
 
-      if (bindFunctions) bindFunctions(element);
-    }, element);
+        if (bindFunctions) bindFunctions(element);
+      }, element);
+    } catch (error) {
+      _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn('Catching Error (bootstrap)');
+      throw {
+        error: error,
+        message: error.str
+      };
+    }
   };
 
   for (var i = 0; i < nodes.length; i++) {
@@ -32165,32 +32186,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "encodeEntities": () => (/* binding */ encodeEntities)
 /* harmony export */ });
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
-/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! stylis */ "./node_modules/stylis/src/Serializer.js");
-/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! stylis */ "./node_modules/stylis/src/Parser.js");
-/* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../package.json */ "./package.json");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./config */ "./src/config.js");
-/* harmony import */ var _diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./diagram-api/diagram-orchestration */ "./src/diagram-api/diagram-orchestration.js");
-/* harmony import */ var _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./diagrams/class/classDb */ "./src/diagrams/class/classDb.js");
-/* harmony import */ var _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./diagrams/flowchart/flowDb */ "./src/diagrams/flowchart/flowDb.js");
-/* harmony import */ var _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./diagrams/flowchart/flowRenderer */ "./src/diagrams/flowchart/flowRenderer.js");
-/* harmony import */ var _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./diagrams/flowchart/flowRenderer-v2 */ "./src/diagrams/flowchart/flowRenderer-v2.js");
-/* harmony import */ var _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./diagrams/gantt/ganttDb */ "./src/diagrams/gantt/ganttDb.js");
-/* harmony import */ var _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./diagrams/gantt/ganttRenderer */ "./src/diagrams/gantt/ganttRenderer.js");
-/* harmony import */ var _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./diagrams/sequence/sequenceRenderer */ "./src/diagrams/sequence/sequenceRenderer.js");
-/* harmony import */ var _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./diagrams/state/stateRenderer */ "./src/diagrams/state/stateRenderer.js");
-/* harmony import */ var _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./diagrams/state/stateRenderer-v2 */ "./src/diagrams/state/stateRenderer-v2.js");
-/* harmony import */ var _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./diagrams/user-journey/journeyRenderer */ "./src/diagrams/user-journey/journeyRenderer.js");
-/* harmony import */ var _Diagram__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Diagram */ "./src/Diagram.js");
-/* harmony import */ var _errorRenderer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./errorRenderer */ "./src/errorRenderer.js");
-/* harmony import */ var _interactionDb__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./interactionDb */ "./src/interactionDb.js");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles */ "./src/styles.js");
-/* harmony import */ var _themes__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./themes */ "./src/themes/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils */ "./src/utils.js");
-/* harmony import */ var _assignWithDepth__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assignWithDepth */ "./src/assignWithDepth.js");
+/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! stylis */ "./node_modules/stylis/src/Serializer.js");
+/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! stylis */ "./node_modules/stylis/src/Parser.js");
+/* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../package.json */ "./package.json");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./config */ "./src/config.js");
+/* harmony import */ var _diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./diagram-api/diagram-orchestration */ "./src/diagram-api/diagram-orchestration.js");
+/* harmony import */ var _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./diagrams/class/classDb */ "./src/diagrams/class/classDb.js");
+/* harmony import */ var _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./diagrams/flowchart/flowDb */ "./src/diagrams/flowchart/flowDb.js");
+/* harmony import */ var _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./diagrams/flowchart/flowRenderer */ "./src/diagrams/flowchart/flowRenderer.js");
+/* harmony import */ var _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./diagrams/flowchart/flowRenderer-v2 */ "./src/diagrams/flowchart/flowRenderer-v2.js");
+/* harmony import */ var _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./diagrams/gantt/ganttDb */ "./src/diagrams/gantt/ganttDb.js");
+/* harmony import */ var _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./diagrams/gantt/ganttRenderer */ "./src/diagrams/gantt/ganttRenderer.js");
+/* harmony import */ var _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./diagrams/sequence/sequenceRenderer */ "./src/diagrams/sequence/sequenceRenderer.js");
+/* harmony import */ var _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./diagrams/state/stateRenderer */ "./src/diagrams/state/stateRenderer.js");
+/* harmony import */ var _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./diagrams/state/stateRenderer-v2 */ "./src/diagrams/state/stateRenderer-v2.js");
+/* harmony import */ var _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./diagrams/user-journey/journeyRenderer */ "./src/diagrams/user-journey/journeyRenderer.js");
+/* harmony import */ var _Diagram__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Diagram */ "./src/Diagram.js");
+/* harmony import */ var _errorRenderer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./errorRenderer */ "./src/errorRenderer.js");
+/* harmony import */ var _interactionDb__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./interactionDb */ "./src/interactionDb.js");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles */ "./src/styles.js");
+/* harmony import */ var _themes__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./themes */ "./src/themes/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils */ "./src/utils.js");
+/* harmony import */ var _assignWithDepth__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assignWithDepth */ "./src/assignWithDepth.js");
 /* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dompurify */ "./node_modules/dompurify/dist/purify.js");
 /* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dompurify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mermaid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mermaid */ "./src/mermaid.js");
+/* harmony import */ var _mermaid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mermaid */ "./src/mermaid.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 /**
@@ -32235,6 +32256,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
 
 
+var hasLoadedDiagrams = false;
 /**
  * @param text
  * @param dia
@@ -32242,24 +32264,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
  */
 
 function parse(text, dia) {
+  if (!hasLoadedDiagrams) {
+    (0,_diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    hasLoadedDiagrams = true;
+  }
+
   var parseEncounteredException = false;
 
   try {
-    var diag = dia ? dia : new _Diagram__WEBPACK_IMPORTED_MODULE_2__["default"](text);
+    var diag = dia ? dia : new _Diagram__WEBPACK_IMPORTED_MODULE_3__["default"](text);
     diag.db.clear();
     return diag.parse(text);
   } catch (error) {
     parseEncounteredException = true; // Is this the correct way to access mermiad's parseError()
     // method ? (or global.mermaid.parseError()) ?
 
-    if (_mermaid__WEBPACK_IMPORTED_MODULE_3__["default"].parseError) {
+    if (_mermaid__WEBPACK_IMPORTED_MODULE_4__["default"].parseError) {
       if (error.str != undefined) {
         // handle case where error string and hash were
         // wrapped in object like`const error = { str, hash };`
-        _mermaid__WEBPACK_IMPORTED_MODULE_3__["default"].parseError(error.str, error.hash);
+        _mermaid__WEBPACK_IMPORTED_MODULE_4__["default"].parseError(error.str, error.hash);
       } else {
         // assume it is just error string and pass it on
-        _mermaid__WEBPACK_IMPORTED_MODULE_3__["default"].parseError(error);
+        _mermaid__WEBPACK_IMPORTED_MODULE_4__["default"].parseError(error);
       }
     } else {
       // No mermaid.parseError() handler defined, so re-throw it
@@ -32331,20 +32358,20 @@ var decodeEntities = function decodeEntities(text) {
  */
 
 var render = function render(id, _txt, cb, container) {
-  _config__WEBPACK_IMPORTED_MODULE_4__.reset();
+  _config__WEBPACK_IMPORTED_MODULE_5__.reset();
 
   var txt = _txt.replace(/\r\n?/g, '\n'); // parser problems on CRLF ignore all CR and leave LF;;
 
 
-  var graphInit = _utils__WEBPACK_IMPORTED_MODULE_5__["default"].detectInit(txt);
+  var graphInit = _utils__WEBPACK_IMPORTED_MODULE_6__["default"].detectInit(txt);
 
   if (graphInit) {
-    (0,_utils__WEBPACK_IMPORTED_MODULE_5__.directiveSanitizer)(graphInit);
-    _config__WEBPACK_IMPORTED_MODULE_4__.addDirective(graphInit);
+    (0,_utils__WEBPACK_IMPORTED_MODULE_6__.directiveSanitizer)(graphInit);
+    _config__WEBPACK_IMPORTED_MODULE_5__.addDirective(graphInit);
   }
 
-  var cnf = _config__WEBPACK_IMPORTED_MODULE_4__.getConfig();
-  _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug(cnf); // Check the maximum allowed text size
+  var cnf = _config__WEBPACK_IMPORTED_MODULE_5__.getConfig();
+  _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug(cnf); // Check the maximum allowed text size
 
   if (_txt.length > cnf.maxTextSize) {
     txt = 'graph TB;a[Maximum text size in diagram exceeded];style a fill:#faa';
@@ -32418,9 +32445,9 @@ var render = function render(id, _txt, cb, container) {
     .append('svg').attr('id', id).attr('width', '100%').attr('xmlns', 'http://www.w3.org/2000/svg').append('g');
   }
 
-  txt = encodeEntities(txt); // Imortant that we do not create the diagram until after the directives have been included
+  txt = encodeEntities(txt); // Important that we do not create the diagram until after the directives have been included
 
-  var diag = new _Diagram__WEBPACK_IMPORTED_MODULE_2__["default"](txt); // Get the tmp element containing the the svg
+  var diag = new _Diagram__WEBPACK_IMPORTED_MODULE_3__["default"](txt); // Get the tmp element containing the the svg
 
   var element = root.select('#d' + id).node();
   var graphType = diag.type; // insert inline style into svg
@@ -32447,7 +32474,7 @@ var render = function render(id, _txt, cb, container) {
 
 
   if (graphType === 'flowchart' || graphType === 'flowchart-v2' || graphType === 'graph') {
-    var classes = _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_7__["default"].getClasses(txt, diag);
+    var classes = _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_8__["default"].getClasses(txt, diag);
     var htmlLabels = cnf.htmlLabels || cnf.flowchart.htmlLabels;
 
     for (var className in classes) {
@@ -32469,25 +32496,25 @@ var render = function render(id, _txt, cb, container) {
   }
 
   var stylis = function stylis(selector, styles) {
-    return (0,stylis__WEBPACK_IMPORTED_MODULE_8__.serialize)((0,stylis__WEBPACK_IMPORTED_MODULE_9__.compile)("".concat(selector, "{").concat(styles, "}")), stylis__WEBPACK_IMPORTED_MODULE_8__.stringify);
+    return (0,stylis__WEBPACK_IMPORTED_MODULE_9__.serialize)((0,stylis__WEBPACK_IMPORTED_MODULE_10__.compile)("".concat(selector, "{").concat(styles, "}")), stylis__WEBPACK_IMPORTED_MODULE_9__.stringify);
   };
 
-  var rules = stylis("#".concat(id), (0,_styles__WEBPACK_IMPORTED_MODULE_10__["default"])(graphType, userStyles, cnf.themeVariables));
+  var rules = stylis("#".concat(id), (0,_styles__WEBPACK_IMPORTED_MODULE_11__["default"])(graphType, userStyles, cnf.themeVariables));
   var style1 = document.createElement('style');
   style1.innerHTML = "#".concat(id, " ") + rules;
   svg.insertBefore(style1, firstChild);
 
   try {
-    diag.renderer.draw(txt, id, _package_json__WEBPACK_IMPORTED_MODULE_11__.version, diag);
+    diag.renderer.draw(txt, id, _package_json__WEBPACK_IMPORTED_MODULE_12__.version, diag);
   } catch (e) {
-    _errorRenderer__WEBPACK_IMPORTED_MODULE_12__["default"].draw(id, _package_json__WEBPACK_IMPORTED_MODULE_11__.version);
+    _errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].draw(id, _package_json__WEBPACK_IMPORTED_MODULE_12__.version);
     throw e;
   }
 
   root.select("[id=\"".concat(id, "\"]")).selectAll('foreignobject > *').attr('xmlns', 'http://www.w3.org/1999/xhtml'); // Fix for when the base tag is used
 
   var svgCode = root.select('#d' + id).node().innerHTML;
-  _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug('cnf.arrowMarkerAbsolute', cnf.arrowMarkerAbsolute);
+  _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug('cnf.arrowMarkerAbsolute', cnf.arrowMarkerAbsolute);
 
   if ((!cnf.arrowMarkerAbsolute || cnf.arrowMarkerAbsolute === 'false') && cnf.arrowMarkerAbsolute !== 'sandbox') {
     svgCode = svgCode.replace(/marker-end="url\(.*?#/g, 'marker-end="url(#', 'g');
@@ -32520,26 +32547,26 @@ var render = function render(id, _txt, cb, container) {
     switch (graphType) {
       case 'flowchart':
       case 'flowchart-v2':
-        cb(svgCode, _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_13__["default"].bindFunctions);
+        cb(svgCode, _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_14__["default"].bindFunctions);
         break;
 
       case 'gantt':
-        cb(svgCode, _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_14__["default"].bindFunctions);
+        cb(svgCode, _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_15__["default"].bindFunctions);
         break;
 
       case 'class':
       case 'classDiagram':
-        cb(svgCode, _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_15__["default"].bindFunctions);
+        cb(svgCode, _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_16__["default"].bindFunctions);
         break;
 
       default:
         cb(svgCode);
     }
   } else {
-    _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug('CB = undefined!');
+    _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug('CB = undefined!');
   }
 
-  (0,_interactionDb__WEBPACK_IMPORTED_MODULE_16__.attachFunctions)();
+  (0,_interactionDb__WEBPACK_IMPORTED_MODULE_17__.attachFunctions)();
   var tmpElementSelector = cnf.securityLevel === 'sandbox' ? '#i' + id : '#d' + id;
   var node = (0,d3__WEBPACK_IMPORTED_MODULE_0__.select)(tmpElementSelector).node();
 
@@ -32577,13 +32604,13 @@ var parseDirective = function parseDirective(p, statement, context, type) {
       }
     }
   } catch (error) {
-    _logger__WEBPACK_IMPORTED_MODULE_6__.log.error("Error while rendering sequenceDiagram directive: ".concat(statement, " jison context: ").concat(context));
-    _logger__WEBPACK_IMPORTED_MODULE_6__.log.error(error.message);
+    _logger__WEBPACK_IMPORTED_MODULE_7__.log.error("Error while rendering sequenceDiagram directive: ".concat(statement, " jison context: ").concat(context));
+    _logger__WEBPACK_IMPORTED_MODULE_7__.log.error(error.message);
   }
 };
 
 var handleDirective = function handleDirective(p, directive, type) {
-  _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug("Directive type=".concat(directive.type, " with args:"), directive.args);
+  _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug("Directive type=".concat(directive.type, " with args:"), directive.args);
 
   switch (directive.type) {
     case 'init':
@@ -32599,10 +32626,10 @@ var handleDirective = function handleDirective(p, directive, type) {
             delete directive.args[prop];
           }
         });
-        _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug('sanitize in handleDirective', directive.args);
-        (0,_utils__WEBPACK_IMPORTED_MODULE_5__.directiveSanitizer)(directive.args);
-        _logger__WEBPACK_IMPORTED_MODULE_6__.log.debug('sanitize in handleDirective (done)', directive.args);
-        _config__WEBPACK_IMPORTED_MODULE_4__.addDirective(directive.args);
+        _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug('sanitize in handleDirective', directive.args);
+        (0,_utils__WEBPACK_IMPORTED_MODULE_6__.directiveSanitizer)(directive.args);
+        _logger__WEBPACK_IMPORTED_MODULE_7__.log.debug('sanitize in handleDirective (done)', directive.args);
+        _config__WEBPACK_IMPORTED_MODULE_5__.addDirective(directive.args);
         break;
       }
 
@@ -32615,11 +32642,11 @@ var handleDirective = function handleDirective(p, directive, type) {
       break;
 
     case 'themeCss':
-      _logger__WEBPACK_IMPORTED_MODULE_6__.log.warn('themeCss encountered');
+      _logger__WEBPACK_IMPORTED_MODULE_7__.log.warn('themeCss encountered');
       break;
 
     default:
-      _logger__WEBPACK_IMPORTED_MODULE_6__.log.warn("Unhandled directive: source: '%%{".concat(directive.type, ": ").concat(JSON.stringify(directive.args ? directive.args : {}), "}%%"), directive);
+      _logger__WEBPACK_IMPORTED_MODULE_7__.log.warn("Unhandled directive: source: '%%{".concat(directive.type, ": ").concat(JSON.stringify(directive.args ? directive.args : {}), "}%%"), directive);
       break;
   }
 };
@@ -32628,55 +32655,55 @@ var handleDirective = function handleDirective(p, directive, type) {
 
 function updateRendererConfigs(conf) {
   // Todo remove, all diagrams should get config on demand from the config object, no need for this
-  _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_7__["default"].setConf(conf.flowchart);
-  _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_17__["default"].setConf(conf.flowchart);
+  _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_8__["default"].setConf(conf.flowchart);
+  _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_18__["default"].setConf(conf.flowchart);
 
   if (typeof conf['sequenceDiagram'] !== 'undefined') {
-    _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_18__["default"].setConf((0,_assignWithDepth__WEBPACK_IMPORTED_MODULE_19__["default"])(conf.sequence, conf['sequenceDiagram']));
+    _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_19__["default"].setConf((0,_assignWithDepth__WEBPACK_IMPORTED_MODULE_20__["default"])(conf.sequence, conf['sequenceDiagram']));
   }
 
-  _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_18__["default"].setConf(conf.sequence);
-  _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_20__["default"].setConf(conf.gantt); // classRenderer.setConf(conf.class);
+  _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_19__["default"].setConf(conf.sequence);
+  _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_21__["default"].setConf(conf.gantt); // classRenderer.setConf(conf.class);
 
-  _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_21__["default"].setConf(conf.state);
-  _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_22__["default"].setConf(conf.state); // infoRenderer.setConf(conf.class);
+  _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_22__["default"].setConf(conf.state);
+  _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_23__["default"].setConf(conf.state); // infoRenderer.setConf(conf.class);
 
-  _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_23__["default"].setConf(conf.journey);
-  _errorRenderer__WEBPACK_IMPORTED_MODULE_12__["default"].setConf(conf.class);
+  _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_24__["default"].setConf(conf.journey);
+  _errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].setConf(conf.class);
 }
 /** @param {any} options */
 
 
 function initialize(options) {
   // Handle legacy location of font-family configuration
-  if (options && options.fontFamily) {
-    if (!options.themeVariables) {
+  if (options !== null && options !== void 0 && options.fontFamily) {
+    var _options$themeVariabl;
+
+    if (!((_options$themeVariabl = options.themeVariables) !== null && _options$themeVariabl !== void 0 && _options$themeVariabl.fontFamily)) {
       options.themeVariables = {
         fontFamily: options.fontFamily
       };
-    } else {
-      if (!options.themeVariables.fontFamily) {
-        options.themeVariables = {
-          fontFamily: options.fontFamily
-        };
-      }
     }
   } // Set default options
 
 
-  _config__WEBPACK_IMPORTED_MODULE_4__.saveConfigFromInitialize(options);
+  _config__WEBPACK_IMPORTED_MODULE_5__.saveConfigFromInitialize(options);
 
-  if (options && options.theme && _themes__WEBPACK_IMPORTED_MODULE_24__["default"][options.theme]) {
+  if (options !== null && options !== void 0 && options.theme && _themes__WEBPACK_IMPORTED_MODULE_25__["default"][options.theme]) {
     // Todo merge with user options
-    options.themeVariables = _themes__WEBPACK_IMPORTED_MODULE_24__["default"][options.theme].getThemeVariables(options.themeVariables);
-  } else {
-    if (options) options.themeVariables = _themes__WEBPACK_IMPORTED_MODULE_24__["default"]["default"].getThemeVariables(options.themeVariables);
+    options.themeVariables = _themes__WEBPACK_IMPORTED_MODULE_25__["default"][options.theme].getThemeVariables(options.themeVariables);
+  } else if (options) {
+    options.themeVariables = _themes__WEBPACK_IMPORTED_MODULE_25__["default"]["default"].getThemeVariables(options.themeVariables);
   }
 
-  var config = _typeof(options) === 'object' ? _config__WEBPACK_IMPORTED_MODULE_4__.setSiteConfig(options) : _config__WEBPACK_IMPORTED_MODULE_4__.getSiteConfig();
+  var config = _typeof(options) === 'object' ? _config__WEBPACK_IMPORTED_MODULE_5__.setSiteConfig(options) : _config__WEBPACK_IMPORTED_MODULE_5__.getSiteConfig();
   updateRendererConfigs(config);
-  (0,_logger__WEBPACK_IMPORTED_MODULE_6__.setLogLevel)(config.logLevel);
-  (0,_diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_25__["default"])();
+  (0,_logger__WEBPACK_IMPORTED_MODULE_7__.setLogLevel)(config.logLevel);
+
+  if (!hasLoadedDiagrams) {
+    (0,_diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    hasLoadedDiagrams = true;
+  }
 }
 
 var mermaidAPI = Object.freeze({
@@ -32684,21 +32711,21 @@ var mermaidAPI = Object.freeze({
   parse: parse,
   parseDirective: parseDirective,
   initialize: initialize,
-  getConfig: _config__WEBPACK_IMPORTED_MODULE_4__.getConfig,
-  setConfig: _config__WEBPACK_IMPORTED_MODULE_4__.setConfig,
-  getSiteConfig: _config__WEBPACK_IMPORTED_MODULE_4__.getSiteConfig,
-  updateSiteConfig: _config__WEBPACK_IMPORTED_MODULE_4__.updateSiteConfig,
+  getConfig: _config__WEBPACK_IMPORTED_MODULE_5__.getConfig,
+  setConfig: _config__WEBPACK_IMPORTED_MODULE_5__.setConfig,
+  getSiteConfig: _config__WEBPACK_IMPORTED_MODULE_5__.getSiteConfig,
+  updateSiteConfig: _config__WEBPACK_IMPORTED_MODULE_5__.updateSiteConfig,
   reset: function reset() {
-    _config__WEBPACK_IMPORTED_MODULE_4__.reset();
+    _config__WEBPACK_IMPORTED_MODULE_5__.reset();
   },
   globalReset: function globalReset() {
-    _config__WEBPACK_IMPORTED_MODULE_4__.reset(_config__WEBPACK_IMPORTED_MODULE_4__.defaultConfig);
-    updateRendererConfigs(_config__WEBPACK_IMPORTED_MODULE_4__.getConfig());
+    _config__WEBPACK_IMPORTED_MODULE_5__.reset(_config__WEBPACK_IMPORTED_MODULE_5__.defaultConfig);
+    updateRendererConfigs(_config__WEBPACK_IMPORTED_MODULE_5__.getConfig());
   },
-  defaultConfig: _config__WEBPACK_IMPORTED_MODULE_4__.defaultConfig
+  defaultConfig: _config__WEBPACK_IMPORTED_MODULE_5__.defaultConfig
 });
-(0,_logger__WEBPACK_IMPORTED_MODULE_6__.setLogLevel)(_config__WEBPACK_IMPORTED_MODULE_4__.getConfig().logLevel);
-_config__WEBPACK_IMPORTED_MODULE_4__.reset(_config__WEBPACK_IMPORTED_MODULE_4__.getConfig());
+(0,_logger__WEBPACK_IMPORTED_MODULE_7__.setLogLevel)(_config__WEBPACK_IMPORTED_MODULE_5__.getConfig().logLevel);
+_config__WEBPACK_IMPORTED_MODULE_5__.reset(_config__WEBPACK_IMPORTED_MODULE_5__.getConfig());
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mermaidAPI);
 /**
  * ## mermaidAPI configuration defaults
@@ -89061,7 +89088,7 @@ function combine (array, callback) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"mermaid","version":"9.1.4","description":"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.","main":"dist/mermaid.core.js","module":"dist/mermaid.esm.min.mjs","exports":{".":{"require":"./dist/mermaid.core.js","import":"./dist/mermaid.esm.min.mjs"},"./*":"./*"},"keywords":["diagram","markdown","flowchart","sequence diagram","gantt","class diagram","git graph"],"scripts":{"build:development":"webpack --mode development --progress --color","build:production":"webpack --mode production --progress --color","build":"concurrently \\"yarn build:development\\" \\"yarn build:production\\"","postbuild":"documentation build src/mermaidAPI.js src/config.js src/defaultConfig.js --shallow -f md --markdown-toc false > docs/Setup.md","build:watch":"yarn build:development --watch","release":"yarn build","lint":"eslint ./ --ext .js,.json,.html","lint:fix":"yarn lint --fix","e2e:depr":"yarn lint && jest e2e --config e2e/jest.config.js","cypress":"cypress run","e2e":"start-server-and-test dev http://localhost:9000/ cypress","e2e-upd":"yarn lint && jest e2e -u --config e2e/jest.config.js","dev":"webpack serve --config ./.webpack/webpack.config.e2e.babel.js","ci":"jest src/.*","test":"yarn lint && jest src/.*","test:watch":"jest --watch src","prepublishOnly":"yarn build && yarn test","prepare":"husky install && yarn build","pre-commit":"lint-staged"},"repository":{"type":"git","url":"https://github.com/knsv/mermaid"},"author":"Knut Sveidqvist","license":"MIT","standard":{"ignore":["**/parser/*.js","dist/**/*.js","cypress/**/*.js"],"globals":["page"]},"dependencies":{"@braintree/sanitize-url":"^6.0.0","d3":"^7.0.0","dagre":"^0.8.5","dagre-d3":"^0.6.4","dompurify":"2.3.10","graphlib":"^2.1.8","khroma":"^2.0.0","moment-mini":"^2.24.0","stylis":"^4.0.10"},"devDependencies":{"@applitools/eyes-cypress":"^3.25.7","@babel/core":"^7.14.6","@babel/eslint-parser":"^7.14.7","@babel/preset-env":"^7.14.7","@babel/register":"^7.14.5","@commitlint/cli":"^17.0.0","@commitlint/config-conventional":"^17.0.0","babel-jest":"^28.0.3","babel-loader":"^8.2.2","concurrently":"^7.0.0","coveralls":"^3.0.2","css-to-string-loader":"^0.1.3","cypress":"9.7.0","cypress-image-snapshot":"^4.0.1","documentation":"13.2.0","eslint":"^8.4.1","eslint-config-prettier":"^8.3.0","eslint-plugin-cypress":"^2.12.1","eslint-plugin-html":"^7.1.0","eslint-plugin-jest":"^26.0.0","eslint-plugin-jsdoc":"^39.1.0","eslint-plugin-json":"^3.1.0","eslint-plugin-markdown":"^3.0.0","eslint-plugin-prettier":"^4.0.0","husky":"^8.0.0","identity-obj-proxy":"^3.0.0","jest":"^28.0.3","jest-environment-jsdom":"^28.0.2","jison":"^0.4.18","js-base64":"3.7.2","lint-staged":"^13.0.0","moment":"^2.23.0","path-browserify":"^1.0.1","prettier":"^2.3.2","prettier-plugin-jsdoc":"^0.3.30","start-server-and-test":"^1.12.6","terser-webpack-plugin":"^5.2.4","webpack":"^5.53.0","webpack-cli":"^4.7.2","webpack-dev-server":"^4.3.0","webpack-merge":"^5.8.0","webpack-node-externals":"^3.0.0"},"resolutions":{"d3":"^7.0.0"},"files":["dist"],"sideEffects":["**/*.css","**/*.scss"]}');
+module.exports = JSON.parse('{"name":"mermaid","version":"9.1.5","description":"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.","main":"dist/mermaid.core.js","module":"dist/mermaid.esm.min.mjs","exports":{".":{"require":"./dist/mermaid.core.js","import":"./dist/mermaid.esm.min.mjs"},"./*":"./*"},"keywords":["diagram","markdown","flowchart","sequence diagram","gantt","class diagram","git graph"],"scripts":{"build:development":"webpack --mode development --progress --color","build:production":"webpack --mode production --progress --color","build":"concurrently \\"yarn build:development\\" \\"yarn build:production\\"","postbuild":"documentation build src/mermaidAPI.js src/config.js src/defaultConfig.js --shallow -f md --markdown-toc false > docs/Setup.md","build:watch":"yarn build:development --watch","release":"yarn build","lint":"eslint ./ --ext .js,.json,.html","lint:fix":"yarn lint --fix","e2e:depr":"yarn lint && jest e2e --config e2e/jest.config.js","cypress":"cypress run","e2e":"start-server-and-test dev http://localhost:9000/ cypress","e2e-upd":"yarn lint && jest e2e -u --config e2e/jest.config.js","dev":"webpack serve --config ./.webpack/webpack.config.e2e.babel.js","ci":"jest src/.*","test":"yarn lint && jest src/.*","test:watch":"jest --watch src","prepublishOnly":"yarn build && yarn test","prepare":"husky install && yarn build","pre-commit":"lint-staged"},"repository":{"type":"git","url":"https://github.com/knsv/mermaid"},"author":"Knut Sveidqvist","license":"MIT","standard":{"ignore":["**/parser/*.js","dist/**/*.js","cypress/**/*.js"],"globals":["page"]},"dependencies":{"@braintree/sanitize-url":"^6.0.0","d3":"^7.0.0","dagre":"^0.8.5","dagre-d3":"^0.6.4","dompurify":"2.3.10","graphlib":"^2.1.8","khroma":"^2.0.0","moment-mini":"2.24.0","stylis":"^4.0.10"},"devDependencies":{"@applitools/eyes-cypress":"^3.25.7","@babel/core":"^7.14.6","@babel/eslint-parser":"^7.14.7","@babel/preset-env":"^7.14.7","@babel/register":"^7.14.5","@commitlint/cli":"^17.0.0","@commitlint/config-conventional":"^17.0.0","babel-jest":"^28.0.3","babel-loader":"^8.2.2","concurrently":"^7.0.0","coveralls":"^3.0.2","css-to-string-loader":"^0.1.3","cypress":"9.7.0","cypress-image-snapshot":"^4.0.1","documentation":"13.2.0","eslint":"^8.4.1","eslint-config-prettier":"^8.3.0","eslint-plugin-cypress":"^2.12.1","eslint-plugin-html":"^7.1.0","eslint-plugin-jest":"^26.0.0","eslint-plugin-jsdoc":"^39.1.0","eslint-plugin-json":"^3.1.0","eslint-plugin-markdown":"^3.0.0","eslint-plugin-prettier":"^4.0.0","husky":"^8.0.0","identity-obj-proxy":"^3.0.0","jest":"^28.0.3","jest-environment-jsdom":"^28.0.2","jison":"^0.4.18","js-base64":"3.7.2","lint-staged":"^13.0.0","moment":"^2.23.0","path-browserify":"^1.0.1","prettier":"^2.3.2","prettier-plugin-jsdoc":"^0.3.30","start-server-and-test":"^1.12.6","terser-webpack-plugin":"^5.2.4","webpack":"^5.53.0","webpack-cli":"^4.7.2","webpack-dev-server":"^4.3.0","webpack-merge":"^5.8.0","webpack-node-externals":"^3.0.0"},"resolutions":{"d3":"^7.0.0"},"files":["dist"],"sideEffects":["**/*.css","**/*.scss"]}');
 
 /***/ })
 
