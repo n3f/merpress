@@ -1050,12 +1050,12 @@ if ( true && __webpack_require__.c[__webpack_require__.s] === module) {
   }
 */
 var parser = (function(){
-var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,3],$V1=[1,7],$V2=[1,8],$V3=[1,9],$V4=[1,10],$V5=[1,13],$V6=[1,12],$V7=[1,16,25],$V8=[1,20],$V9=[1,31],$Va=[1,32],$Vb=[1,33],$Vc=[1,35],$Vd=[1,38],$Ve=[1,36],$Vf=[1,37],$Vg=[1,39],$Vh=[1,40],$Vi=[1,41],$Vj=[1,42],$Vk=[1,45],$Vl=[1,46],$Vm=[1,47],$Vn=[1,48],$Vo=[16,25],$Vp=[1,62],$Vq=[1,63],$Vr=[1,64],$Vs=[1,65],$Vt=[1,66],$Vu=[1,67],$Vv=[16,25,32,44,45,53,56,57,58,59,60,61,66,68],$Vw=[16,25,30,32,44,45,49,53,56,57,58,59,60,61,66,68,83,84,85,86],$Vx=[5,8,9,10,11,16,19,23,25],$Vy=[53,83,84,85,86],$Vz=[53,60,61,83,84,85,86],$VA=[53,56,57,58,59,83,84,85,86],$VB=[16,25,32],$VC=[1,99];
+var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,3],$V1=[1,7],$V2=[1,8],$V3=[1,9],$V4=[1,10],$V5=[1,13],$V6=[1,12],$V7=[1,16,25],$V8=[1,20],$V9=[1,31],$Va=[1,32],$Vb=[1,33],$Vc=[1,35],$Vd=[1,38],$Ve=[1,36],$Vf=[1,37],$Vg=[1,39],$Vh=[1,40],$Vi=[1,41],$Vj=[1,42],$Vk=[1,45],$Vl=[1,46],$Vm=[1,47],$Vn=[1,48],$Vo=[16,25],$Vp=[1,62],$Vq=[1,63],$Vr=[1,64],$Vs=[1,65],$Vt=[1,66],$Vu=[1,67],$Vv=[1,68],$Vw=[16,25,32,44,45,53,56,57,58,59,60,61,62,67,69],$Vx=[16,25,30,32,44,45,49,53,56,57,58,59,60,61,62,67,69,84,85,86,87],$Vy=[5,8,9,10,11,16,19,23,25],$Vz=[53,84,85,86,87],$VA=[53,61,62,84,85,86,87],$VB=[53,56,57,58,59,60,84,85,86,87],$VC=[16,25,32],$VD=[1,100];
 var parser = {trace: function trace () { },
 yy: {},
-symbols_: {"error":2,"start":3,"mermaidDoc":4,"statments":5,"direction":6,"directive":7,"direction_tb":8,"direction_bt":9,"direction_rl":10,"direction_lr":11,"graphConfig":12,"openDirective":13,"typeDirective":14,"closeDirective":15,"NEWLINE":16,":":17,"argDirective":18,"open_directive":19,"type_directive":20,"arg_directive":21,"close_directive":22,"CLASS_DIAGRAM":23,"statements":24,"EOF":25,"statement":26,"className":27,"alphaNumToken":28,"classLiteralName":29,"GENERICTYPE":30,"relationStatement":31,"LABEL":32,"classStatement":33,"methodStatement":34,"annotationStatement":35,"clickStatement":36,"cssClassStatement":37,"acc_title":38,"acc_title_value":39,"acc_descr":40,"acc_descr_value":41,"acc_descr_multiline_value":42,"CLASS":43,"STYLE_SEPARATOR":44,"STRUCT_START":45,"members":46,"STRUCT_STOP":47,"ANNOTATION_START":48,"ANNOTATION_END":49,"MEMBER":50,"SEPARATOR":51,"relation":52,"STR":53,"relationType":54,"lineType":55,"AGGREGATION":56,"EXTENSION":57,"COMPOSITION":58,"DEPENDENCY":59,"LINE":60,"DOTTED_LINE":61,"CALLBACK":62,"LINK":63,"LINK_TARGET":64,"CLICK":65,"CALLBACK_NAME":66,"CALLBACK_ARGS":67,"HREF":68,"CSSCLASS":69,"commentToken":70,"textToken":71,"graphCodeTokens":72,"textNoTagsToken":73,"TAGSTART":74,"TAGEND":75,"==":76,"--":77,"PCT":78,"DEFAULT":79,"SPACE":80,"MINUS":81,"keywords":82,"UNICODE_TEXT":83,"NUM":84,"ALPHA":85,"BQUOTE_STR":86,"$accept":0,"$end":1},
-terminals_: {2:"error",5:"statments",8:"direction_tb",9:"direction_bt",10:"direction_rl",11:"direction_lr",16:"NEWLINE",17:":",19:"open_directive",20:"type_directive",21:"arg_directive",22:"close_directive",23:"CLASS_DIAGRAM",25:"EOF",30:"GENERICTYPE",32:"LABEL",38:"acc_title",39:"acc_title_value",40:"acc_descr",41:"acc_descr_value",42:"acc_descr_multiline_value",43:"CLASS",44:"STYLE_SEPARATOR",45:"STRUCT_START",47:"STRUCT_STOP",48:"ANNOTATION_START",49:"ANNOTATION_END",50:"MEMBER",51:"SEPARATOR",53:"STR",56:"AGGREGATION",57:"EXTENSION",58:"COMPOSITION",59:"DEPENDENCY",60:"LINE",61:"DOTTED_LINE",62:"CALLBACK",63:"LINK",64:"LINK_TARGET",65:"CLICK",66:"CALLBACK_NAME",67:"CALLBACK_ARGS",68:"HREF",69:"CSSCLASS",72:"graphCodeTokens",74:"TAGSTART",75:"TAGEND",76:"==",77:"--",78:"PCT",79:"DEFAULT",80:"SPACE",81:"MINUS",82:"keywords",83:"UNICODE_TEXT",84:"NUM",85:"ALPHA",86:"BQUOTE_STR"},
-productions_: [0,[3,1],[3,1],[3,1],[3,2],[6,1],[6,1],[6,1],[6,1],[4,1],[7,4],[7,6],[13,1],[14,1],[18,1],[15,1],[12,4],[24,1],[24,2],[24,3],[27,1],[27,1],[27,2],[27,2],[27,2],[26,1],[26,2],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,2],[26,2],[26,1],[33,2],[33,4],[33,5],[33,7],[35,4],[46,1],[46,2],[34,1],[34,2],[34,1],[34,1],[31,3],[31,4],[31,4],[31,5],[52,3],[52,2],[52,2],[52,1],[54,1],[54,1],[54,1],[54,1],[55,1],[55,1],[36,3],[36,4],[36,3],[36,4],[36,4],[36,5],[36,3],[36,4],[36,4],[36,5],[36,3],[36,4],[36,4],[36,5],[37,3],[70,1],[70,1],[71,1],[71,1],[71,1],[71,1],[71,1],[71,1],[71,1],[73,1],[73,1],[73,1],[73,1],[28,1],[28,1],[28,1],[29,1]],
+symbols_: {"error":2,"start":3,"mermaidDoc":4,"statments":5,"direction":6,"directive":7,"direction_tb":8,"direction_bt":9,"direction_rl":10,"direction_lr":11,"graphConfig":12,"openDirective":13,"typeDirective":14,"closeDirective":15,"NEWLINE":16,":":17,"argDirective":18,"open_directive":19,"type_directive":20,"arg_directive":21,"close_directive":22,"CLASS_DIAGRAM":23,"statements":24,"EOF":25,"statement":26,"className":27,"alphaNumToken":28,"classLiteralName":29,"GENERICTYPE":30,"relationStatement":31,"LABEL":32,"classStatement":33,"methodStatement":34,"annotationStatement":35,"clickStatement":36,"cssClassStatement":37,"acc_title":38,"acc_title_value":39,"acc_descr":40,"acc_descr_value":41,"acc_descr_multiline_value":42,"CLASS":43,"STYLE_SEPARATOR":44,"STRUCT_START":45,"members":46,"STRUCT_STOP":47,"ANNOTATION_START":48,"ANNOTATION_END":49,"MEMBER":50,"SEPARATOR":51,"relation":52,"STR":53,"relationType":54,"lineType":55,"AGGREGATION":56,"EXTENSION":57,"COMPOSITION":58,"DEPENDENCY":59,"LOLLIPOP":60,"LINE":61,"DOTTED_LINE":62,"CALLBACK":63,"LINK":64,"LINK_TARGET":65,"CLICK":66,"CALLBACK_NAME":67,"CALLBACK_ARGS":68,"HREF":69,"CSSCLASS":70,"commentToken":71,"textToken":72,"graphCodeTokens":73,"textNoTagsToken":74,"TAGSTART":75,"TAGEND":76,"==":77,"--":78,"PCT":79,"DEFAULT":80,"SPACE":81,"MINUS":82,"keywords":83,"UNICODE_TEXT":84,"NUM":85,"ALPHA":86,"BQUOTE_STR":87,"$accept":0,"$end":1},
+terminals_: {2:"error",5:"statments",8:"direction_tb",9:"direction_bt",10:"direction_rl",11:"direction_lr",16:"NEWLINE",17:":",19:"open_directive",20:"type_directive",21:"arg_directive",22:"close_directive",23:"CLASS_DIAGRAM",25:"EOF",30:"GENERICTYPE",32:"LABEL",38:"acc_title",39:"acc_title_value",40:"acc_descr",41:"acc_descr_value",42:"acc_descr_multiline_value",43:"CLASS",44:"STYLE_SEPARATOR",45:"STRUCT_START",47:"STRUCT_STOP",48:"ANNOTATION_START",49:"ANNOTATION_END",50:"MEMBER",51:"SEPARATOR",53:"STR",56:"AGGREGATION",57:"EXTENSION",58:"COMPOSITION",59:"DEPENDENCY",60:"LOLLIPOP",61:"LINE",62:"DOTTED_LINE",63:"CALLBACK",64:"LINK",65:"LINK_TARGET",66:"CLICK",67:"CALLBACK_NAME",68:"CALLBACK_ARGS",69:"HREF",70:"CSSCLASS",73:"graphCodeTokens",75:"TAGSTART",76:"TAGEND",77:"==",78:"--",79:"PCT",80:"DEFAULT",81:"SPACE",82:"MINUS",83:"keywords",84:"UNICODE_TEXT",85:"NUM",86:"ALPHA",87:"BQUOTE_STR"},
+productions_: [0,[3,1],[3,1],[3,1],[3,2],[6,1],[6,1],[6,1],[6,1],[4,1],[7,4],[7,6],[13,1],[14,1],[18,1],[15,1],[12,4],[24,1],[24,2],[24,3],[27,1],[27,1],[27,2],[27,2],[27,2],[26,1],[26,2],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,2],[26,2],[26,1],[33,2],[33,4],[33,5],[33,7],[35,4],[46,1],[46,2],[34,1],[34,2],[34,1],[34,1],[31,3],[31,4],[31,4],[31,5],[52,3],[52,2],[52,2],[52,1],[54,1],[54,1],[54,1],[54,1],[54,1],[55,1],[55,1],[36,3],[36,4],[36,3],[36,4],[36,4],[36,5],[36,3],[36,4],[36,4],[36,5],[36,3],[36,4],[36,4],[36,5],[37,3],[71,1],[71,1],[72,1],[72,1],[72,1],[72,1],[72,1],[72,1],[72,1],[74,1],[74,1],[74,1],[74,1],[28,1],[28,1],[28,1],[29,1]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -1176,45 +1176,48 @@ case 59:
  this.$=yy.relationType.DEPENDENCY;
 break;
 case 60:
-this.$=yy.lineType.LINE;
+ this.$=yy.relationType.LOLLIPOP;
 break;
 case 61:
+this.$=yy.lineType.LINE;
+break;
+case 62:
 this.$=yy.lineType.DOTTED_LINE;
 break;
-case 62: case 68:
+case 63: case 69:
 this.$ = $$[$0-2];yy.setClickEvent($$[$0-1], $$[$0]);
 break;
-case 63: case 69:
+case 64: case 70:
 this.$ = $$[$0-3];yy.setClickEvent($$[$0-2], $$[$0-1]);yy.setTooltip($$[$0-2], $$[$0]);
 break;
-case 64: case 72:
+case 65: case 73:
 this.$ = $$[$0-2];yy.setLink($$[$0-1], $$[$0]);
 break;
-case 65:
+case 66:
 this.$ = $$[$0-3];yy.setLink($$[$0-2], $$[$0-1],$$[$0]);
 break;
-case 66: case 74:
+case 67: case 75:
 this.$ = $$[$0-3];yy.setLink($$[$0-2], $$[$0-1]);yy.setTooltip($$[$0-2], $$[$0]);
 break;
-case 67: case 75:
+case 68: case 76:
 this.$ = $$[$0-4];yy.setLink($$[$0-3], $$[$0-2], $$[$0]);yy.setTooltip($$[$0-3], $$[$0-1]);
 break;
-case 70:
+case 71:
 this.$ = $$[$0-3];yy.setClickEvent($$[$0-2], $$[$0-1], $$[$0]);
 break;
-case 71:
+case 72:
 this.$ = $$[$0-4];yy.setClickEvent($$[$0-3], $$[$0-2], $$[$0-1]);yy.setTooltip($$[$0-3], $$[$0]);
 break;
-case 73:
+case 74:
 this.$ = $$[$0-3];yy.setLink($$[$0-2], $$[$0-1], $$[$0]);
 break;
-case 76:
+case 77:
 yy.setCssClass($$[$0-1], $$[$0]);
 break;
 }
 },
-table: [{3:1,4:2,5:$V0,6:4,7:5,8:$V1,9:$V2,10:$V3,11:$V4,12:6,13:11,19:$V5,23:$V6},{1:[3]},{1:[2,1]},{1:[2,2]},{1:[2,3]},{3:14,4:2,5:$V0,6:4,7:5,8:$V1,9:$V2,10:$V3,11:$V4,12:6,13:11,19:$V5,23:$V6},{1:[2,9]},o($V7,[2,5]),o($V7,[2,6]),o($V7,[2,7]),o($V7,[2,8]),{14:15,20:[1,16]},{16:[1,17]},{20:[2,12]},{1:[2,4]},{15:18,17:[1,19],22:$V8},o([17,22],[2,13]),{6:30,7:29,8:$V1,9:$V2,10:$V3,11:$V4,13:11,19:$V5,24:21,26:22,27:34,28:43,29:44,31:23,33:24,34:25,35:26,36:27,37:28,38:$V9,40:$Va,42:$Vb,43:$Vc,48:$Vd,50:$Ve,51:$Vf,62:$Vg,63:$Vh,65:$Vi,69:$Vj,83:$Vk,84:$Vl,85:$Vm,86:$Vn},{16:[1,49]},{18:50,21:[1,51]},{16:[2,15]},{25:[1,52]},{16:[1,53],25:[2,17]},o($Vo,[2,25],{32:[1,54]}),o($Vo,[2,27]),o($Vo,[2,28]),o($Vo,[2,29]),o($Vo,[2,30]),o($Vo,[2,31]),o($Vo,[2,32]),o($Vo,[2,33]),{39:[1,55]},{41:[1,56]},o($Vo,[2,36]),o($Vo,[2,44],{52:57,54:60,55:61,32:[1,59],53:[1,58],56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt,61:$Vu}),{27:68,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},o($Vo,[2,46]),o($Vo,[2,47]),{28:69,83:$Vk,84:$Vl,85:$Vm},{27:70,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},{27:71,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},{27:72,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},{53:[1,73]},o($Vv,[2,20],{28:43,29:44,27:74,30:[1,75],83:$Vk,84:$Vl,85:$Vm,86:$Vn}),o($Vv,[2,21],{30:[1,76]}),o($Vw,[2,90]),o($Vw,[2,91]),o($Vw,[2,92]),o([16,25,30,32,44,45,53,56,57,58,59,60,61,66,68],[2,93]),o($Vx,[2,10]),{15:77,22:$V8},{22:[2,14]},{1:[2,16]},{6:30,7:29,8:$V1,9:$V2,10:$V3,11:$V4,13:11,19:$V5,24:78,25:[2,18],26:22,27:34,28:43,29:44,31:23,33:24,34:25,35:26,36:27,37:28,38:$V9,40:$Va,42:$Vb,43:$Vc,48:$Vd,50:$Ve,51:$Vf,62:$Vg,63:$Vh,65:$Vi,69:$Vj,83:$Vk,84:$Vl,85:$Vm,86:$Vn},o($Vo,[2,26]),o($Vo,[2,34]),o($Vo,[2,35]),{27:79,28:43,29:44,53:[1,80],83:$Vk,84:$Vl,85:$Vm,86:$Vn},{52:81,54:60,55:61,56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt,61:$Vu},o($Vo,[2,45]),{55:82,60:$Vt,61:$Vu},o($Vy,[2,55],{54:83,56:$Vp,57:$Vq,58:$Vr,59:$Vs}),o($Vz,[2,56]),o($Vz,[2,57]),o($Vz,[2,58]),o($Vz,[2,59]),o($VA,[2,60]),o($VA,[2,61]),o($Vo,[2,37],{44:[1,84],45:[1,85]}),{49:[1,86]},{53:[1,87]},{53:[1,88]},{66:[1,89],68:[1,90]},{28:91,83:$Vk,84:$Vl,85:$Vm},o($Vv,[2,22]),o($Vv,[2,23]),o($Vv,[2,24]),{16:[1,92]},{25:[2,19]},o($VB,[2,48]),{27:93,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},{27:94,28:43,29:44,53:[1,95],83:$Vk,84:$Vl,85:$Vm,86:$Vn},o($Vy,[2,54],{54:96,56:$Vp,57:$Vq,58:$Vr,59:$Vs}),o($Vy,[2,53]),{28:97,83:$Vk,84:$Vl,85:$Vm},{46:98,50:$VC},{27:100,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},o($Vo,[2,62],{53:[1,101]}),o($Vo,[2,64],{53:[1,103],64:[1,102]}),o($Vo,[2,68],{53:[1,104],67:[1,105]}),o($Vo,[2,72],{53:[1,107],64:[1,106]}),o($Vo,[2,76]),o($Vx,[2,11]),o($VB,[2,50]),o($VB,[2,49]),{27:108,28:43,29:44,83:$Vk,84:$Vl,85:$Vm,86:$Vn},o($Vy,[2,52]),o($Vo,[2,38],{45:[1,109]}),{47:[1,110]},{46:111,47:[2,42],50:$VC},o($Vo,[2,41]),o($Vo,[2,63]),o($Vo,[2,65]),o($Vo,[2,66],{64:[1,112]}),o($Vo,[2,69]),o($Vo,[2,70],{53:[1,113]}),o($Vo,[2,73]),o($Vo,[2,74],{64:[1,114]}),o($VB,[2,51]),{46:115,50:$VC},o($Vo,[2,39]),{47:[2,43]},o($Vo,[2,67]),o($Vo,[2,71]),o($Vo,[2,75]),{47:[1,116]},o($Vo,[2,40])],
-defaultActions: {2:[2,1],3:[2,2],4:[2,3],6:[2,9],13:[2,12],14:[2,4],20:[2,15],51:[2,14],52:[2,16],78:[2,19],111:[2,43]},
+table: [{3:1,4:2,5:$V0,6:4,7:5,8:$V1,9:$V2,10:$V3,11:$V4,12:6,13:11,19:$V5,23:$V6},{1:[3]},{1:[2,1]},{1:[2,2]},{1:[2,3]},{3:14,4:2,5:$V0,6:4,7:5,8:$V1,9:$V2,10:$V3,11:$V4,12:6,13:11,19:$V5,23:$V6},{1:[2,9]},o($V7,[2,5]),o($V7,[2,6]),o($V7,[2,7]),o($V7,[2,8]),{14:15,20:[1,16]},{16:[1,17]},{20:[2,12]},{1:[2,4]},{15:18,17:[1,19],22:$V8},o([17,22],[2,13]),{6:30,7:29,8:$V1,9:$V2,10:$V3,11:$V4,13:11,19:$V5,24:21,26:22,27:34,28:43,29:44,31:23,33:24,34:25,35:26,36:27,37:28,38:$V9,40:$Va,42:$Vb,43:$Vc,48:$Vd,50:$Ve,51:$Vf,63:$Vg,64:$Vh,66:$Vi,70:$Vj,84:$Vk,85:$Vl,86:$Vm,87:$Vn},{16:[1,49]},{18:50,21:[1,51]},{16:[2,15]},{25:[1,52]},{16:[1,53],25:[2,17]},o($Vo,[2,25],{32:[1,54]}),o($Vo,[2,27]),o($Vo,[2,28]),o($Vo,[2,29]),o($Vo,[2,30]),o($Vo,[2,31]),o($Vo,[2,32]),o($Vo,[2,33]),{39:[1,55]},{41:[1,56]},o($Vo,[2,36]),o($Vo,[2,44],{52:57,54:60,55:61,32:[1,59],53:[1,58],56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt,61:$Vu,62:$Vv}),{27:69,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},o($Vo,[2,46]),o($Vo,[2,47]),{28:70,84:$Vk,85:$Vl,86:$Vm},{27:71,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},{27:72,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},{27:73,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},{53:[1,74]},o($Vw,[2,20],{28:43,29:44,27:75,30:[1,76],84:$Vk,85:$Vl,86:$Vm,87:$Vn}),o($Vw,[2,21],{30:[1,77]}),o($Vx,[2,91]),o($Vx,[2,92]),o($Vx,[2,93]),o([16,25,30,32,44,45,53,56,57,58,59,60,61,62,67,69],[2,94]),o($Vy,[2,10]),{15:78,22:$V8},{22:[2,14]},{1:[2,16]},{6:30,7:29,8:$V1,9:$V2,10:$V3,11:$V4,13:11,19:$V5,24:79,25:[2,18],26:22,27:34,28:43,29:44,31:23,33:24,34:25,35:26,36:27,37:28,38:$V9,40:$Va,42:$Vb,43:$Vc,48:$Vd,50:$Ve,51:$Vf,63:$Vg,64:$Vh,66:$Vi,70:$Vj,84:$Vk,85:$Vl,86:$Vm,87:$Vn},o($Vo,[2,26]),o($Vo,[2,34]),o($Vo,[2,35]),{27:80,28:43,29:44,53:[1,81],84:$Vk,85:$Vl,86:$Vm,87:$Vn},{52:82,54:60,55:61,56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt,61:$Vu,62:$Vv},o($Vo,[2,45]),{55:83,61:$Vu,62:$Vv},o($Vz,[2,55],{54:84,56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt}),o($VA,[2,56]),o($VA,[2,57]),o($VA,[2,58]),o($VA,[2,59]),o($VA,[2,60]),o($VB,[2,61]),o($VB,[2,62]),o($Vo,[2,37],{44:[1,85],45:[1,86]}),{49:[1,87]},{53:[1,88]},{53:[1,89]},{67:[1,90],69:[1,91]},{28:92,84:$Vk,85:$Vl,86:$Vm},o($Vw,[2,22]),o($Vw,[2,23]),o($Vw,[2,24]),{16:[1,93]},{25:[2,19]},o($VC,[2,48]),{27:94,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},{27:95,28:43,29:44,53:[1,96],84:$Vk,85:$Vl,86:$Vm,87:$Vn},o($Vz,[2,54],{54:97,56:$Vp,57:$Vq,58:$Vr,59:$Vs,60:$Vt}),o($Vz,[2,53]),{28:98,84:$Vk,85:$Vl,86:$Vm},{46:99,50:$VD},{27:101,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},o($Vo,[2,63],{53:[1,102]}),o($Vo,[2,65],{53:[1,104],65:[1,103]}),o($Vo,[2,69],{53:[1,105],68:[1,106]}),o($Vo,[2,73],{53:[1,108],65:[1,107]}),o($Vo,[2,77]),o($Vy,[2,11]),o($VC,[2,50]),o($VC,[2,49]),{27:109,28:43,29:44,84:$Vk,85:$Vl,86:$Vm,87:$Vn},o($Vz,[2,52]),o($Vo,[2,38],{45:[1,110]}),{47:[1,111]},{46:112,47:[2,42],50:$VD},o($Vo,[2,41]),o($Vo,[2,64]),o($Vo,[2,66]),o($Vo,[2,67],{65:[1,113]}),o($Vo,[2,70]),o($Vo,[2,71],{53:[1,114]}),o($Vo,[2,74]),o($Vo,[2,75],{65:[1,115]}),o($VC,[2,51]),{46:116,50:$VD},o($Vo,[2,39]),{47:[2,43]},o($Vo,[2,68]),o($Vo,[2,72]),o($Vo,[2,76]),{47:[1,117]},o($Vo,[2,40])],
+defaultActions: {2:[2,1],3:[2,2],4:[2,3],6:[2,9],13:[2,12],14:[2,4],20:[2,15],51:[2,14],52:[2,16],79:[2,19],112:[2,43]},
 parseError: function parseError (str, hash) {
     if (hash.recoverable) {
         this.trace(str);
@@ -1739,122 +1742,126 @@ case 21:return 23;
 break;
 case 22: this.begin("struct"); /*console.log('Starting struct');*/ return 45;
 break;
-case 23:return "EOF_IN_STRUCT";
+case 23: /*console.log('EDGE_STATE=',yy_.yytext);*/ return 'EDGE_STATE';
 break;
-case 24:return "OPEN_IN_STRUCT";
+case 24:return "EOF_IN_STRUCT";
 break;
-case 25: /*console.log('Ending struct');*/this.popState(); return 47;
+case 25:return "OPEN_IN_STRUCT";
 break;
-case 26:/* nothing */
+case 26: /*console.log('Ending struct');*/this.popState(); return 47;
 break;
-case 27: /*console.log('lex-member: ' + yy_.yytext);*/  return "MEMBER";
+case 27:/* nothing */
 break;
-case 28:return 43;
+case 28: /*console.log('lex-member: ' + yy_.yytext);*/  return "MEMBER";
 break;
-case 29:return 69;
+case 29:return 43;
 break;
-case 30:return 62;
+case 30:return 70;
 break;
 case 31:return 63;
 break;
-case 32:return 65;
+case 32:return 64;
 break;
-case 33:return 48;
+case 33:return 66;
 break;
-case 34:return 49;
+case 34:return 48;
 break;
-case 35:this.begin("generic");
+case 35:return 49;
 break;
-case 36:this.popState();
+case 36:this.begin("generic");
 break;
-case 37:return "GENERICTYPE";
+case 37:this.popState();
 break;
-case 38:this.begin("string");
+case 38:return "GENERICTYPE";
 break;
-case 39:this.popState();
+case 39:this.begin("string");
 break;
-case 40:return "STR";
+case 40:this.popState();
 break;
-case 41:this.begin("bqstring");
+case 41:return "STR";
 break;
-case 42:this.popState();
+case 42:this.begin("bqstring");
 break;
-case 43:return "BQUOTE_STR";
+case 43:this.popState();
 break;
-case 44:this.begin("href");
+case 44:return "BQUOTE_STR";
 break;
-case 45:this.popState();
+case 45:this.begin("href");
 break;
-case 46:return 68;
+case 46:this.popState();
 break;
-case 47:this.begin("callback_name");
+case 47:return 69;
 break;
-case 48:this.popState();
+case 48:this.begin("callback_name");
 break;
-case 49:this.popState(); this.begin("callback_args");
+case 49:this.popState();
 break;
-case 50:return 66;
+case 50:this.popState(); this.begin("callback_args");
 break;
-case 51:this.popState();
+case 51:return 67;
 break;
-case 52:return 67;
+case 52:this.popState();
 break;
-case 53:return 64;
+case 53:return 68;
 break;
-case 54:return 64;
+case 54:return 65;
 break;
-case 55:return 64;
+case 55:return 65;
 break;
-case 56:return 64;
+case 56:return 65;
 break;
-case 57:return 57;
+case 57:return 65;
 break;
 case 58:return 57;
 break;
-case 59:return 59;
+case 59:return 57;
 break;
 case 60:return 59;
 break;
-case 61:return 58;
+case 61:return 59;
 break;
-case 62:return 56;
+case 62:return 58;
 break;
-case 63:return 60;
+case 63:return 56;
 break;
-case 64:return 61;
+case 64:return 60;
 break;
-case 65:return 32;
+case 65:return 61;
 break;
-case 66:return 44;
+case 66:return 62;
 break;
-case 67:return 81;
+case 67:return 32;
 break;
-case 68:return 'DOT';
+case 68:return 44;
 break;
-case 69:return 'PLUS';
+case 69:return 82;
 break;
-case 70:return 78;
+case 70:return 'DOT';
 break;
-case 71:return 'EQUALS';
+case 71:return 'PLUS';
 break;
-case 72:return 'EQUALS';
+case 72:return 79;
 break;
-case 73:return 85;
+case 73:return 'EQUALS';
 break;
-case 74:return 'PUNCTUATION';
+case 74:return 'EQUALS';
 break;
-case 75:return 84;
+case 75:return 86;
 break;
-case 76:return 83;
+case 76:return 'PUNCTUATION';
 break;
-case 77:return 80;
+case 77:return 85;
 break;
-case 78:return 25;
+case 78:return 84;
+break;
+case 79:return 81;
+break;
+case 80:return 25;
 break;
 }
 },
-rules: [/^(?:%%\{)/,/^(?:.*direction\s+TB[^\n]*)/,/^(?:.*direction\s+BT[^\n]*)/,/^(?:.*direction\s+RL[^\n]*)/,/^(?:.*direction\s+LR[^\n]*)/,/^(?:((?:(?!\}%%)[^:.])*))/,/^(?::)/,/^(?:\}%%)/,/^(?:((?:(?!\}%%).|\n)*))/,/^(?:%%(?!\{)*[^\n]*(\r?\n?)+)/,/^(?:%%[^\n]*(\r?\n)*)/,/^(?:accTitle\s*:\s*)/,/^(?:(?!\n||)*[^\n]*)/,/^(?:accDescr\s*:\s*)/,/^(?:(?!\n||)*[^\n]*)/,/^(?:accDescr\s*\{\s*)/,/^(?:[\}])/,/^(?:[^\}]*)/,/^(?:\s*(\r?\n)+)/,/^(?:\s+)/,/^(?:classDiagram-v2\b)/,/^(?:classDiagram\b)/,/^(?:[{])/,/^(?:$)/,/^(?:[{])/,/^(?:[}])/,/^(?:[\n])/,/^(?:[^{}\n]*)/,/^(?:class\b)/,/^(?:cssClass\b)/,/^(?:callback\b)/,/^(?:link\b)/,/^(?:click\b)/,/^(?:<<)/,/^(?:>>)/,/^(?:[~])/,/^(?:[~])/,/^(?:[^~]*)/,/^(?:["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:[`])/,/^(?:[`])/,/^(?:[^`]+)/,/^(?:href[\s]+["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:call[\s]+)/,/^(?:\([\s]*\))/,/^(?:\()/,/^(?:[^(]*)/,/^(?:\))/,/^(?:[^)]*)/,/^(?:_self\b)/,/^(?:_blank\b)/,/^(?:_parent\b)/,/^(?:_top\b)/,/^(?:\s*<\|)/,/^(?:\s*\|>)/,/^(?:\s*>)/,/^(?:\s*<)/,/^(?:\s*\*)/,/^(?:\s*o\b)/,/^(?:--)/,/^(?:\.\.)/,/^(?::{1}[^:\n;]+)/,/^(?::{3})/,/^(?:-)/,/^(?:\.)/,/^(?:\+)/,/^(?:%)/,/^(?:=)/,/^(?:=)/,/^(?:\w+)/,/^(?:[!"#$%&'*+,-.`?\\/])/,/^(?:[0-9]+)/,/^(?:[\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6]|[\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377]|[\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5]|[\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA]|[\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE]|[\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA]|[\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0]|[\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977]|[\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2]|[\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A]|[\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39]|[\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8]|[\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C]|[\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C]|[\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99]|[\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0]|[\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D]|[\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3]|[\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10]|[\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1]|[\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81]|[\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3]|[\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6]|[\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A]|[\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081]|[\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D]|[\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0]|[\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310]|[\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C]|[\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711]|[\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7]|[\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C]|[\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16]|[\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF]|[\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC]|[\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D]|[\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D]|[\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3]|[\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F]|[\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128]|[\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184]|[\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3]|[\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6]|[\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE]|[\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C]|[\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D]|[\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC]|[\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B]|[\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788]|[\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805]|[\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB]|[\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28]|[\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5]|[\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4]|[\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E]|[\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D]|[\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36]|[\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D]|[\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC]|[\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF]|[\uFFD2-\uFFD7\uFFDA-\uFFDC])/,/^(?:\s)/,/^(?:$)/],
-conditions: {"acc_descr_multiline":{"rules":[16,17],"inclusive":false},"acc_descr":{"rules":[14],"inclusive":false},"acc_title":{"rules":[12],"inclusive":false},"arg_directive":{"rules":[7,8],"inclusive":false},"type_directive":{"rules":[6,7],"inclusive":false},"open_directive":{"rules":[5],"inclusive":false},"callback_args":{"rules":[51,52],"inclusive":false},"callback_name":{"rules":[48,49,50],"inclusive":false},"href":{"rules":[45,46],"inclusive":false},"struct":{"rules":[23,24,25,26,27],"inclusive":false},"generic":{"rules":[36,37],"inclusive":false},"bqstring":{"rules":[42,43],"inclusive":false},"string":{"rules":[39,40],"inclusive":false},"INITIAL":{"rules":[0,1,2,3,4,9,10,11,13,15,18,19,20,21,22,28,29,30,31,32,33,34,35,38,41,44,47,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78],"inclusive":true}}
+rules: [/^(?:%%\{)/,/^(?:.*direction\s+TB[^\n]*)/,/^(?:.*direction\s+BT[^\n]*)/,/^(?:.*direction\s+RL[^\n]*)/,/^(?:.*direction\s+LR[^\n]*)/,/^(?:((?:(?!\}%%)[^:.])*))/,/^(?::)/,/^(?:\}%%)/,/^(?:((?:(?!\}%%).|\n)*))/,/^(?:%%(?!\{)*[^\n]*(\r?\n?)+)/,/^(?:%%[^\n]*(\r?\n)*)/,/^(?:accTitle\s*:\s*)/,/^(?:(?!\n||)*[^\n]*)/,/^(?:accDescr\s*:\s*)/,/^(?:(?!\n||)*[^\n]*)/,/^(?:accDescr\s*\{\s*)/,/^(?:[\}])/,/^(?:[^\}]*)/,/^(?:\s*(\r?\n)+)/,/^(?:\s+)/,/^(?:classDiagram-v2\b)/,/^(?:classDiagram\b)/,/^(?:[{])/,/^(?:\[\*\])/,/^(?:$)/,/^(?:[{])/,/^(?:[}])/,/^(?:[\n])/,/^(?:[^{}\n]*)/,/^(?:class\b)/,/^(?:cssClass\b)/,/^(?:callback\b)/,/^(?:link\b)/,/^(?:click\b)/,/^(?:<<)/,/^(?:>>)/,/^(?:[~])/,/^(?:[~])/,/^(?:[^~]*)/,/^(?:["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:[`])/,/^(?:[`])/,/^(?:[^`]+)/,/^(?:href[\s]+["])/,/^(?:["])/,/^(?:[^"]*)/,/^(?:call[\s]+)/,/^(?:\([\s]*\))/,/^(?:\()/,/^(?:[^(]*)/,/^(?:\))/,/^(?:[^)]*)/,/^(?:_self\b)/,/^(?:_blank\b)/,/^(?:_parent\b)/,/^(?:_top\b)/,/^(?:\s*<\|)/,/^(?:\s*\|>)/,/^(?:\s*>)/,/^(?:\s*<)/,/^(?:\s*\*)/,/^(?:\s*o\b)/,/^(?:\s*\(\))/,/^(?:--)/,/^(?:\.\.)/,/^(?::{1}[^:\n;]+)/,/^(?::{3})/,/^(?:-)/,/^(?:\.)/,/^(?:\+)/,/^(?:%)/,/^(?:=)/,/^(?:=)/,/^(?:\w+)/,/^(?:[!"#$%&'*+,-.`?\\/])/,/^(?:[0-9]+)/,/^(?:[\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6]|[\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377]|[\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5]|[\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA]|[\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE]|[\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA]|[\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0]|[\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977]|[\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2]|[\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A]|[\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39]|[\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8]|[\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C]|[\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C]|[\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99]|[\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0]|[\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D]|[\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3]|[\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10]|[\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1]|[\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81]|[\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3]|[\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6]|[\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A]|[\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081]|[\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D]|[\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0]|[\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310]|[\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C]|[\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711]|[\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7]|[\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C]|[\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16]|[\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF]|[\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC]|[\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D]|[\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D]|[\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3]|[\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F]|[\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128]|[\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184]|[\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3]|[\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6]|[\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE]|[\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C]|[\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D]|[\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC]|[\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B]|[\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788]|[\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805]|[\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB]|[\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28]|[\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5]|[\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4]|[\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E]|[\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D]|[\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36]|[\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D]|[\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC]|[\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF]|[\uFFD2-\uFFD7\uFFDA-\uFFDC])/,/^(?:\s)/,/^(?:$)/],
+conditions: {"acc_descr_multiline":{"rules":[16,17],"inclusive":false},"acc_descr":{"rules":[14],"inclusive":false},"acc_title":{"rules":[12],"inclusive":false},"arg_directive":{"rules":[7,8],"inclusive":false},"type_directive":{"rules":[6,7],"inclusive":false},"open_directive":{"rules":[5],"inclusive":false},"callback_args":{"rules":[52,53],"inclusive":false},"callback_name":{"rules":[49,50,51],"inclusive":false},"href":{"rules":[46,47],"inclusive":false},"struct":{"rules":[23,24,25,26,27,28],"inclusive":false},"generic":{"rules":[37,38],"inclusive":false},"bqstring":{"rules":[43,44],"inclusive":false},"string":{"rules":[40,41],"inclusive":false},"INITIAL":{"rules":[0,1,2,3,4,9,10,11,13,15,18,19,20,21,22,23,29,30,31,32,33,34,35,36,39,42,45,48,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80],"inclusive":true}}
 });
 return lexer;
 })();
@@ -2619,48 +2626,50 @@ case 20:/* skip whitespace in block */
 break;
 case 21:return 38
 break;
-case 22:return 37
+case 22:return 37;
 break;
-case 23:return 39;
+case 23:return 37
 break;
-case 24:/* nothing */
+case 24:return 39;
 break;
-case 25: this.popState(); return 22; 
+case 25:/* nothing */
 break;
-case 26:return yy_.yytext[0];
+case 26: this.popState(); return 22; 
 break;
-case 27:return 42;
+case 27:return yy_.yytext[0];
 break;
-case 28:return 43;
+case 28:return 42;
 break;
-case 29:return 44;
+case 29:return 43;
 break;
-case 30:return 45;
+case 30:return 44;
 break;
-case 31:return 42;
+case 31:return 45;
 break;
-case 32:return 43;
+case 32:return 42;
 break;
-case 33:return 44;
+case 33:return 43;
 break;
-case 34:return 46;
+case 34:return 44;
 break;
-case 35:return 47;
+case 35:return 46;
 break;
-case 36:return 46;
+case 36:return 47;
 break;
 case 37:return 46;
 break;
-case 38:return 30;
+case 38:return 46;
 break;
-case 39:return yy_.yytext[0];
+case 39:return 30;
 break;
-case 40:return 6;
+case 40:return yy_.yytext[0];
+break;
+case 41:return 6;
 break;
 }
 },
-rules: [/^(?:accTitle\s*:\s*)/i,/^(?:(?!\n||)*[^\n]*)/i,/^(?:accDescr\s*:\s*)/i,/^(?:(?!\n||)*[^\n]*)/i,/^(?:accDescr\s*\{\s*)/i,/^(?:[\}])/i,/^(?:[^\}]*)/i,/^(?:%%\{)/i,/^(?:((?:(?!\}%%)[^:.])*))/i,/^(?::)/i,/^(?:\}%%)/i,/^(?:((?:(?!\}%%).|\n)*))/i,/^(?:%(?!\{)[^\n]*)/i,/^(?:[^\}]%%[^\n]*)/i,/^(?:[\n]+)/i,/^(?:\s+)/i,/^(?:[\s]+)/i,/^(?:"[^"]*")/i,/^(?:erDiagram\b)/i,/^(?:\{)/i,/^(?:\s+)/i,/^(?:\b((?:PK)|(?:FK))\b)/i,/^(?:[A-Za-z][A-Za-z0-9\-_]*)/i,/^(?:"[^"]*")/i,/^(?:[\n]+)/i,/^(?:\})/i,/^(?:.)/i,/^(?:\|o\b)/i,/^(?:\}o\b)/i,/^(?:\}\|)/i,/^(?:\|\|)/i,/^(?:o\|)/i,/^(?:o\{)/i,/^(?:\|\{)/i,/^(?:\.\.)/i,/^(?:--)/i,/^(?:\.-)/i,/^(?:-\.)/i,/^(?:[A-Za-z][A-Za-z0-9\-_]*)/i,/^(?:.)/i,/^(?:$)/i],
-conditions: {"acc_descr_multiline":{"rules":[5,6],"inclusive":false},"acc_descr":{"rules":[3],"inclusive":false},"acc_title":{"rules":[1],"inclusive":false},"open_directive":{"rules":[8],"inclusive":false},"type_directive":{"rules":[9,10],"inclusive":false},"arg_directive":{"rules":[10,11],"inclusive":false},"block":{"rules":[20,21,22,23,24,25,26],"inclusive":false},"INITIAL":{"rules":[0,2,4,7,12,13,14,15,16,17,18,19,27,28,29,30,31,32,33,34,35,36,37,38,39,40],"inclusive":true}}
+rules: [/^(?:accTitle\s*:\s*)/i,/^(?:(?!\n||)*[^\n]*)/i,/^(?:accDescr\s*:\s*)/i,/^(?:(?!\n||)*[^\n]*)/i,/^(?:accDescr\s*\{\s*)/i,/^(?:[\}])/i,/^(?:[^\}]*)/i,/^(?:%%\{)/i,/^(?:((?:(?!\}%%)[^:.])*))/i,/^(?::)/i,/^(?:\}%%)/i,/^(?:((?:(?!\}%%).|\n)*))/i,/^(?:%(?!\{)[^\n]*)/i,/^(?:[^\}]%%[^\n]*)/i,/^(?:[\n]+)/i,/^(?:\s+)/i,/^(?:[\s]+)/i,/^(?:"[^"]*")/i,/^(?:erDiagram\b)/i,/^(?:\{)/i,/^(?:\s+)/i,/^(?:\b((?:PK)|(?:FK))\b)/i,/^(?:(.*?)[~](.*?)*[~])/i,/^(?:[A-Za-z][A-Za-z0-9\-_\[\]]*)/i,/^(?:"[^"]*")/i,/^(?:[\n]+)/i,/^(?:\})/i,/^(?:.)/i,/^(?:\|o\b)/i,/^(?:\}o\b)/i,/^(?:\}\|)/i,/^(?:\|\|)/i,/^(?:o\|)/i,/^(?:o\{)/i,/^(?:\|\{)/i,/^(?:\.\.)/i,/^(?:--)/i,/^(?:\.-)/i,/^(?:-\.)/i,/^(?:[A-Za-z][A-Za-z0-9\-_]*)/i,/^(?:.)/i,/^(?:$)/i],
+conditions: {"acc_descr_multiline":{"rules":[5,6],"inclusive":false},"acc_descr":{"rules":[3],"inclusive":false},"acc_title":{"rules":[1],"inclusive":false},"open_directive":{"rules":[8],"inclusive":false},"type_directive":{"rules":[9,10],"inclusive":false},"arg_directive":{"rules":[10,11],"inclusive":false},"block":{"rules":[20,21,22,23,24,25,26,27],"inclusive":false},"INITIAL":{"rules":[0,2,4,7,12,13,14,15,16,17,18,19,28,29,30,31,32,33,34,35,36,37,38,39,40,41],"inclusive":true}}
 });
 return lexer;
 })();
@@ -4635,12 +4644,12 @@ if ( true && __webpack_require__.c[__webpack_require__.s] === module) {
   }
 */
 var parser = (function(){
-var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,4],$V1=[1,7],$V2=[1,5],$V3=[1,9],$V4=[1,6],$V5=[2,6],$V6=[1,16],$V7=[6,8,14,20,22,24,25,27,29,32,35,37,49,53],$V8=[8,14,20,22,24,25,27,29,32,35,37],$V9=[8,13,14,20,22,24,25,27,29,32,35,37],$Va=[1,26],$Vb=[6,8,14,49,53],$Vc=[8,14,53],$Vd=[1,64],$Ve=[1,65],$Vf=[1,66],$Vg=[8,14,33,36,41,53];
+var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,4],$V1=[1,7],$V2=[1,5],$V3=[1,9],$V4=[1,6],$V5=[2,6],$V6=[1,16],$V7=[6,8,14,20,22,24,25,27,29,32,35,39,49,53],$V8=[8,14,20,22,24,25,27,29,32,35,39],$V9=[8,13,14,20,22,24,25,27,29,32,35,39],$Va=[1,26],$Vb=[6,8,14,49,53],$Vc=[8,14,53],$Vd=[1,64],$Ve=[1,65],$Vf=[1,66],$Vg=[8,14,33,38,41,53];
 var parser = {trace: function trace () { },
 yy: {},
-symbols_: {"error":2,"start":3,"eol":4,"directive":5,"GG":6,"document":7,"EOF":8,":":9,"DIR":10,"options":11,"body":12,"OPT":13,"NL":14,"line":15,"statement":16,"commitStatement":17,"mergeStatement":18,"cherryPickStatement":19,"acc_title":20,"acc_title_value":21,"acc_descr":22,"acc_descr_value":23,"acc_descr_multiline_value":24,"section":25,"branchStatement":26,"CHECKOUT":27,"ID":28,"BRANCH":29,"ORDER":30,"NUM":31,"CHERRY_PICK":32,"COMMIT_ID":33,"STR":34,"MERGE":35,"COMMIT_TAG":36,"COMMIT":37,"commit_arg":38,"COMMIT_TYPE":39,"commitType":40,"COMMIT_MSG":41,"NORMAL":42,"REVERSE":43,"HIGHLIGHT":44,"openDirective":45,"typeDirective":46,"closeDirective":47,"argDirective":48,"open_directive":49,"type_directive":50,"arg_directive":51,"close_directive":52,";":53,"$accept":0,"$end":1},
-terminals_: {2:"error",6:"GG",8:"EOF",9:":",10:"DIR",13:"OPT",14:"NL",20:"acc_title",21:"acc_title_value",22:"acc_descr",23:"acc_descr_value",24:"acc_descr_multiline_value",25:"section",27:"CHECKOUT",28:"ID",29:"BRANCH",30:"ORDER",31:"NUM",32:"CHERRY_PICK",33:"COMMIT_ID",34:"STR",35:"MERGE",36:"COMMIT_TAG",37:"COMMIT",39:"COMMIT_TYPE",41:"COMMIT_MSG",42:"NORMAL",43:"REVERSE",44:"HIGHLIGHT",49:"open_directive",50:"type_directive",51:"arg_directive",52:"close_directive",53:";"},
-productions_: [0,[3,2],[3,2],[3,3],[3,4],[3,5],[7,0],[7,2],[11,2],[11,1],[12,0],[12,2],[15,2],[15,1],[16,1],[16,1],[16,1],[16,2],[16,2],[16,1],[16,1],[16,1],[16,2],[26,2],[26,4],[19,3],[18,2],[18,4],[17,2],[17,3],[17,3],[17,5],[17,5],[17,3],[17,5],[17,5],[17,5],[17,5],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,3],[17,5],[17,5],[17,5],[17,5],[17,5],[17,5],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[38,0],[38,1],[40,1],[40,1],[40,1],[5,3],[5,5],[45,1],[46,1],[48,1],[47,1],[4,1],[4,1],[4,1]],
+symbols_: {"error":2,"start":3,"eol":4,"directive":5,"GG":6,"document":7,"EOF":8,":":9,"DIR":10,"options":11,"body":12,"OPT":13,"NL":14,"line":15,"statement":16,"commitStatement":17,"mergeStatement":18,"cherryPickStatement":19,"acc_title":20,"acc_title_value":21,"acc_descr":22,"acc_descr_value":23,"acc_descr_multiline_value":24,"section":25,"branchStatement":26,"CHECKOUT":27,"ID":28,"BRANCH":29,"ORDER":30,"NUM":31,"CHERRY_PICK":32,"COMMIT_ID":33,"STR":34,"MERGE":35,"COMMIT_TYPE":36,"commitType":37,"COMMIT_TAG":38,"COMMIT":39,"commit_arg":40,"COMMIT_MSG":41,"NORMAL":42,"REVERSE":43,"HIGHLIGHT":44,"openDirective":45,"typeDirective":46,"closeDirective":47,"argDirective":48,"open_directive":49,"type_directive":50,"arg_directive":51,"close_directive":52,";":53,"$accept":0,"$end":1},
+terminals_: {2:"error",6:"GG",8:"EOF",9:":",10:"DIR",13:"OPT",14:"NL",20:"acc_title",21:"acc_title_value",22:"acc_descr",23:"acc_descr_value",24:"acc_descr_multiline_value",25:"section",27:"CHECKOUT",28:"ID",29:"BRANCH",30:"ORDER",31:"NUM",32:"CHERRY_PICK",33:"COMMIT_ID",34:"STR",35:"MERGE",36:"COMMIT_TYPE",38:"COMMIT_TAG",39:"COMMIT",41:"COMMIT_MSG",42:"NORMAL",43:"REVERSE",44:"HIGHLIGHT",49:"open_directive",50:"type_directive",51:"arg_directive",52:"close_directive",53:";"},
+productions_: [0,[3,2],[3,2],[3,3],[3,4],[3,5],[7,0],[7,2],[11,2],[11,1],[12,0],[12,2],[15,2],[15,1],[16,1],[16,1],[16,1],[16,2],[16,2],[16,1],[16,1],[16,1],[16,2],[26,2],[26,4],[19,3],[18,2],[18,4],[18,4],[18,4],[18,6],[18,6],[18,6],[18,6],[18,6],[18,6],[18,8],[18,8],[18,8],[18,8],[18,8],[18,8],[17,2],[17,3],[17,3],[17,5],[17,5],[17,3],[17,5],[17,5],[17,5],[17,5],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,3],[17,5],[17,5],[17,5],[17,5],[17,5],[17,5],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,7],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[17,9],[40,0],[40,1],[37,1],[37,1],[37,1],[5,3],[5,5],[45,1],[46,1],[48,1],[47,1],[4,1],[4,1],[4,1]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -4692,237 +4701,279 @@ case 25:
 yy.cherryPick($$[$0])
 break;
 case 26:
-yy.merge($$[$0])
+yy.merge($$[$0],'','','')
 break;
 case 27:
-yy.merge($$[$0-2], $$[$0])
+yy.merge($$[$0-2], $$[$0],'','')
 break;
 case 28:
-yy.commit($$[$0])
+yy.merge($$[$0-2],'', $$[$0],'')
 break;
 case 29:
-yy.commit('','',yy.commitType.NORMAL,$$[$0])
+yy.merge($$[$0-2], '','',$$[$0])
 break;
 case 30:
-yy.commit('','',$$[$0],'')
+yy.merge($$[$0-4], $$[$0],'', $$[$0-2])
 break;
 case 31:
-yy.commit('','',$$[$0],$$[$0-2])
+yy.merge($$[$0-4], '',$$[$0], $$[$0-2])
 break;
 case 32:
-yy.commit('','',$$[$0-2],$$[$0])
+yy.merge($$[$0-4], '',$$[$0-2], $$[$0])
 break;
 case 33:
-yy.commit('',$$[$0],yy.commitType.NORMAL,'')
+yy.merge($$[$0-4], $$[$0-2], $$[$0], '')
 break;
 case 34:
-yy.commit('',$$[$0-2],yy.commitType.NORMAL,$$[$0])
+yy.merge($$[$0-4], $$[$0-2], '', $$[$0])
 break;
 case 35:
-yy.commit('',$$[$0],yy.commitType.NORMAL,$$[$0-2])
+yy.merge($$[$0-4], $$[$0],$$[$0-2], '')
 break;
 case 36:
-yy.commit('',$$[$0-2],$$[$0],'')
+yy.merge($$[$0-6], $$[$0-4], $$[$0-2], $$[$0])
 break;
 case 37:
-yy.commit('',$$[$0],$$[$0-2],'')
+yy.merge($$[$0-6], $$[$0], $$[$0-4], $$[$0-2])
 break;
 case 38:
-yy.commit('',$$[$0-4],$$[$0-2],$$[$0])
+yy.merge($$[$0-6], $$[$0-4], $$[$0], $$[$0-2])
 break;
 case 39:
-yy.commit('',$$[$0-4],$$[$0],$$[$0-2])
+yy.merge($$[$0-6], $$[$0-2], $$[$0-4], $$[$0])
 break;
 case 40:
-yy.commit('',$$[$0-2],$$[$0-4],$$[$0])
+yy.merge($$[$0-6], $$[$0], $$[$0-2], $$[$0-4])
 break;
 case 41:
-yy.commit('',$$[$0],$$[$0-4],$$[$0-2])
+yy.merge($$[$0-6], $$[$0-2], $$[$0], $$[$0-4])
 break;
 case 42:
-yy.commit('',$$[$0],$$[$0-2],$$[$0-4])
+yy.commit($$[$0])
 break;
 case 43:
-yy.commit('',$$[$0-2],$$[$0],$$[$0-4])
+yy.commit('','',yy.commitType.NORMAL,$$[$0])
 break;
 case 44:
-yy.commit($$[$0],'',yy.commitType.NORMAL,'')
+yy.commit('','',$$[$0],'')
 break;
 case 45:
-yy.commit($$[$0],'',yy.commitType.NORMAL,$$[$0-2])
+yy.commit('','',$$[$0],$$[$0-2])
 break;
 case 46:
-yy.commit($$[$0-2],'',yy.commitType.NORMAL,$$[$0])
+yy.commit('','',$$[$0-2],$$[$0])
 break;
 case 47:
-yy.commit($$[$0-2],'',$$[$0],'')
+yy.commit('',$$[$0],yy.commitType.NORMAL,'')
 break;
 case 48:
-yy.commit($$[$0],'',$$[$0-2],'')
+yy.commit('',$$[$0-2],yy.commitType.NORMAL,$$[$0])
 break;
 case 49:
-yy.commit($$[$0],$$[$0-2],yy.commitType.NORMAL,'')
+yy.commit('',$$[$0],yy.commitType.NORMAL,$$[$0-2])
 break;
 case 50:
-yy.commit($$[$0-2],$$[$0],yy.commitType.NORMAL,'')
+yy.commit('',$$[$0-2],$$[$0],'')
 break;
 case 51:
-yy.commit($$[$0-4],'',$$[$0-2],$$[$0])
+yy.commit('',$$[$0],$$[$0-2],'')
 break;
 case 52:
-yy.commit($$[$0-4],'',$$[$0],$$[$0-2])
+yy.commit('',$$[$0-4],$$[$0-2],$$[$0])
 break;
 case 53:
-yy.commit($$[$0-2],'',$$[$0-4],$$[$0])
+yy.commit('',$$[$0-4],$$[$0],$$[$0-2])
 break;
 case 54:
-yy.commit($$[$0],'',$$[$0-4],$$[$0-2])
+yy.commit('',$$[$0-2],$$[$0-4],$$[$0])
 break;
 case 55:
-yy.commit($$[$0],'',$$[$0-2],$$[$0-4])
+yy.commit('',$$[$0],$$[$0-4],$$[$0-2])
 break;
 case 56:
-yy.commit($$[$0-2],'',$$[$0],$$[$0-4])
+yy.commit('',$$[$0],$$[$0-2],$$[$0-4])
 break;
 case 57:
-yy.commit($$[$0-4],$$[$0],$$[$0-2],'')
+yy.commit('',$$[$0-2],$$[$0],$$[$0-4])
 break;
 case 58:
-yy.commit($$[$0-4],$$[$0-2],$$[$0],'')
+yy.commit($$[$0],'',yy.commitType.NORMAL,'')
 break;
 case 59:
-yy.commit($$[$0-2],$$[$0],$$[$0-4],'')
+yy.commit($$[$0],'',yy.commitType.NORMAL,$$[$0-2])
 break;
 case 60:
-yy.commit($$[$0],$$[$0-2],$$[$0-4],'')
+yy.commit($$[$0-2],'',yy.commitType.NORMAL,$$[$0])
 break;
 case 61:
-yy.commit($$[$0],$$[$0-4],$$[$0-2],'')
+yy.commit($$[$0-2],'',$$[$0],'')
 break;
 case 62:
-yy.commit($$[$0-2],$$[$0-4],$$[$0],'')
+yy.commit($$[$0],'',$$[$0-2],'')
 break;
 case 63:
-yy.commit($$[$0-4],$$[$0],yy.commitType.NORMAL,$$[$0-2])
+yy.commit($$[$0],$$[$0-2],yy.commitType.NORMAL,'')
 break;
 case 64:
-yy.commit($$[$0-4],$$[$0-2],yy.commitType.NORMAL,$$[$0])
+yy.commit($$[$0-2],$$[$0],yy.commitType.NORMAL,'')
 break;
 case 65:
-yy.commit($$[$0-2],$$[$0],yy.commitType.NORMAL,$$[$0-4])
+yy.commit($$[$0-4],'',$$[$0-2],$$[$0])
 break;
 case 66:
-yy.commit($$[$0],$$[$0-2],yy.commitType.NORMAL,$$[$0-4])
+yy.commit($$[$0-4],'',$$[$0],$$[$0-2])
 break;
 case 67:
-yy.commit($$[$0],$$[$0-4],yy.commitType.NORMAL,$$[$0-2])
+yy.commit($$[$0-2],'',$$[$0-4],$$[$0])
 break;
 case 68:
-yy.commit($$[$0-2],$$[$0-4],yy.commitType.NORMAL,$$[$0])
+yy.commit($$[$0],'',$$[$0-4],$$[$0-2])
 break;
 case 69:
-yy.commit($$[$0-6],$$[$0-4],$$[$0-2],$$[$0])
+yy.commit($$[$0],'',$$[$0-2],$$[$0-4])
 break;
 case 70:
-yy.commit($$[$0-6],$$[$0-4],$$[$0],$$[$0-2])
+yy.commit($$[$0-2],'',$$[$0],$$[$0-4])
 break;
 case 71:
-yy.commit($$[$0-6],$$[$0-2],$$[$0-4],$$[$0])
+yy.commit($$[$0-4],$$[$0],$$[$0-2],'')
 break;
 case 72:
-yy.commit($$[$0-6],$$[$0],$$[$0-4],$$[$0-2])
+yy.commit($$[$0-4],$$[$0-2],$$[$0],'')
 break;
 case 73:
-yy.commit($$[$0-6],$$[$0-2],$$[$0],$$[$0-4])
+yy.commit($$[$0-2],$$[$0],$$[$0-4],'')
 break;
 case 74:
-yy.commit($$[$0-6],$$[$0],$$[$0-2],$$[$0-4])
+yy.commit($$[$0],$$[$0-2],$$[$0-4],'')
 break;
 case 75:
-yy.commit($$[$0-4],$$[$0-6],$$[$0-2],$$[$0])
+yy.commit($$[$0],$$[$0-4],$$[$0-2],'')
 break;
 case 76:
-yy.commit($$[$0-4],$$[$0-6],$$[$0],$$[$0-2])
+yy.commit($$[$0-2],$$[$0-4],$$[$0],'')
 break;
 case 77:
-yy.commit($$[$0-2],$$[$0-6],$$[$0-4],$$[$0])
+yy.commit($$[$0-4],$$[$0],yy.commitType.NORMAL,$$[$0-2])
 break;
 case 78:
-yy.commit($$[$0],$$[$0-6],$$[$0-4],$$[$0-2])
+yy.commit($$[$0-4],$$[$0-2],yy.commitType.NORMAL,$$[$0])
 break;
 case 79:
-yy.commit($$[$0-2],$$[$0-6],$$[$0],$$[$0-4])
+yy.commit($$[$0-2],$$[$0],yy.commitType.NORMAL,$$[$0-4])
 break;
 case 80:
-yy.commit($$[$0],$$[$0-6],$$[$0-2],$$[$0-4])
+yy.commit($$[$0],$$[$0-2],yy.commitType.NORMAL,$$[$0-4])
 break;
 case 81:
-yy.commit($$[$0],$$[$0-4],$$[$0-2],$$[$0-6])
+yy.commit($$[$0],$$[$0-4],yy.commitType.NORMAL,$$[$0-2])
 break;
 case 82:
-yy.commit($$[$0-2],$$[$0-4],$$[$0],$$[$0-6])
+yy.commit($$[$0-2],$$[$0-4],yy.commitType.NORMAL,$$[$0])
 break;
 case 83:
-yy.commit($$[$0],$$[$0-2],$$[$0-4],$$[$0-6])
+yy.commit($$[$0-6],$$[$0-4],$$[$0-2],$$[$0])
 break;
 case 84:
-yy.commit($$[$0-2],$$[$0],$$[$0-4],$$[$0-6])
+yy.commit($$[$0-6],$$[$0-4],$$[$0],$$[$0-2])
 break;
 case 85:
-yy.commit($$[$0-4],$$[$0-2],$$[$0],$$[$0-6])
+yy.commit($$[$0-6],$$[$0-2],$$[$0-4],$$[$0])
 break;
 case 86:
-yy.commit($$[$0-4],$$[$0],$$[$0-2],$$[$0-6])
+yy.commit($$[$0-6],$$[$0],$$[$0-4],$$[$0-2])
 break;
 case 87:
-yy.commit($$[$0-2],$$[$0-4],$$[$0-6],$$[$0])
+yy.commit($$[$0-6],$$[$0-2],$$[$0],$$[$0-4])
 break;
 case 88:
-yy.commit($$[$0],$$[$0-4],$$[$0-6],$$[$0-2])
+yy.commit($$[$0-6],$$[$0],$$[$0-2],$$[$0-4])
 break;
 case 89:
-yy.commit($$[$0-2],$$[$0],$$[$0-6],$$[$0-4])
+yy.commit($$[$0-4],$$[$0-6],$$[$0-2],$$[$0])
 break;
 case 90:
-yy.commit($$[$0],$$[$0-2],$$[$0-6],$$[$0-4])
+yy.commit($$[$0-4],$$[$0-6],$$[$0],$$[$0-2])
 break;
 case 91:
-yy.commit($$[$0-4],$$[$0-2],$$[$0-6],$$[$0])
+yy.commit($$[$0-2],$$[$0-6],$$[$0-4],$$[$0])
 break;
 case 92:
-yy.commit($$[$0-4],$$[$0],$$[$0-6],$$[$0-2])
+yy.commit($$[$0],$$[$0-6],$$[$0-4],$$[$0-2])
 break;
 case 93:
-this.$ = ""
+yy.commit($$[$0-2],$$[$0-6],$$[$0],$$[$0-4])
 break;
 case 94:
-this.$=$$[$0]
+yy.commit($$[$0],$$[$0-6],$$[$0-2],$$[$0-4])
 break;
 case 95:
- this.$=yy.commitType.NORMAL;
+yy.commit($$[$0],$$[$0-4],$$[$0-2],$$[$0-6])
 break;
 case 96:
- this.$=yy.commitType.REVERSE;
+yy.commit($$[$0-2],$$[$0-4],$$[$0],$$[$0-6])
 break;
 case 97:
- this.$=yy.commitType.HIGHLIGHT;
+yy.commit($$[$0],$$[$0-2],$$[$0-4],$$[$0-6])
+break;
+case 98:
+yy.commit($$[$0-2],$$[$0],$$[$0-4],$$[$0-6])
+break;
+case 99:
+yy.commit($$[$0-4],$$[$0-2],$$[$0],$$[$0-6])
 break;
 case 100:
- yy.parseDirective('%%{', 'open_directive'); 
+yy.commit($$[$0-4],$$[$0],$$[$0-2],$$[$0-6])
 break;
 case 101:
- yy.parseDirective($$[$0], 'type_directive'); 
+yy.commit($$[$0-2],$$[$0-4],$$[$0-6],$$[$0])
 break;
 case 102:
- $$[$0] = $$[$0].trim().replace(/'/g, '"'); yy.parseDirective($$[$0], 'arg_directive'); 
+yy.commit($$[$0],$$[$0-4],$$[$0-6],$$[$0-2])
 break;
 case 103:
+yy.commit($$[$0-2],$$[$0],$$[$0-6],$$[$0-4])
+break;
+case 104:
+yy.commit($$[$0],$$[$0-2],$$[$0-6],$$[$0-4])
+break;
+case 105:
+yy.commit($$[$0-4],$$[$0-2],$$[$0-6],$$[$0])
+break;
+case 106:
+yy.commit($$[$0-4],$$[$0],$$[$0-6],$$[$0-2])
+break;
+case 107:
+this.$ = ""
+break;
+case 108:
+this.$=$$[$0]
+break;
+case 109:
+ this.$=yy.commitType.NORMAL;
+break;
+case 110:
+ this.$=yy.commitType.REVERSE;
+break;
+case 111:
+ this.$=yy.commitType.HIGHLIGHT;
+break;
+case 114:
+ yy.parseDirective('%%{', 'open_directive'); 
+break;
+case 115:
+ yy.parseDirective($$[$0], 'type_directive'); 
+break;
+case 116:
+ $$[$0] = $$[$0].trim().replace(/'/g, '"'); yy.parseDirective($$[$0], 'arg_directive'); 
+break;
+case 117:
  yy.parseDirective('}%%', 'close_directive', 'gitGraph'); 
 break;
 }
 },
-table: [{3:1,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{1:[3]},{3:10,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{3:11,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{7:12,8:$V5,9:[1,13],10:[1,14],11:15,14:$V6},o($V7,[2,104]),o($V7,[2,105]),o($V7,[2,106]),{46:17,50:[1,18]},{50:[2,100]},{1:[2,1]},{1:[2,2]},{8:[1,19]},{7:20,8:$V5,11:15,14:$V6},{9:[1,21]},o($V8,[2,10],{12:22,13:[1,23]}),o($V9,[2,9]),{9:[1,25],47:24,52:$Va},o([9,52],[2,101]),{1:[2,3]},{8:[1,27]},{7:28,8:$V5,11:15,14:$V6},{8:[2,7],14:[1,31],15:29,16:30,17:32,18:33,19:34,20:[1,35],22:[1,36],24:[1,37],25:[1,38],26:39,27:[1,40],29:[1,44],32:[1,43],35:[1,42],37:[1,41]},o($V9,[2,8]),o($Vb,[2,98]),{48:45,51:[1,46]},o($Vb,[2,103]),{1:[2,4]},{8:[1,47]},o($V8,[2,11]),{4:48,8:$V1,14:$V2,53:$V4},o($V8,[2,13]),o($Vc,[2,14]),o($Vc,[2,15]),o($Vc,[2,16]),{21:[1,49]},{23:[1,50]},o($Vc,[2,19]),o($Vc,[2,20]),o($Vc,[2,21]),{28:[1,51]},o($Vc,[2,93],{38:52,33:[1,55],34:[1,57],36:[1,53],39:[1,54],41:[1,56]}),{28:[1,58]},{33:[1,59]},{28:[1,60]},{47:61,52:$Va},{52:[2,102]},{1:[2,5]},o($V8,[2,12]),o($Vc,[2,17]),o($Vc,[2,18]),o($Vc,[2,22]),o($Vc,[2,28]),{34:[1,62]},{40:63,42:$Vd,43:$Ve,44:$Vf},{34:[1,67]},{34:[1,68]},o($Vc,[2,94]),o($Vc,[2,26],{36:[1,69]}),{34:[1,70]},o($Vc,[2,23],{30:[1,71]}),o($Vb,[2,99]),o($Vc,[2,29],{33:[1,73],39:[1,72],41:[1,74]}),o($Vc,[2,30],{33:[1,76],36:[1,75],41:[1,77]}),o($Vg,[2,95]),o($Vg,[2,96]),o($Vg,[2,97]),o($Vc,[2,33],{36:[1,78],39:[1,79],41:[1,80]}),o($Vc,[2,44],{33:[1,83],36:[1,81],39:[1,82]}),{34:[1,84]},o($Vc,[2,25]),{31:[1,85]},{40:86,42:$Vd,43:$Ve,44:$Vf},{34:[1,87]},{34:[1,88]},{34:[1,89]},{34:[1,90]},{34:[1,91]},{34:[1,92]},{40:93,42:$Vd,43:$Ve,44:$Vf},{34:[1,94]},{34:[1,95]},{40:96,42:$Vd,43:$Ve,44:$Vf},{34:[1,97]},o($Vc,[2,27]),o($Vc,[2,24]),o($Vc,[2,31],{33:[1,98],41:[1,99]}),o($Vc,[2,35],{39:[1,100],41:[1,101]}),o($Vc,[2,45],{33:[1,103],39:[1,102]}),o($Vc,[2,32],{33:[1,104],41:[1,105]}),o($Vc,[2,37],{36:[1,106],41:[1,107]}),o($Vc,[2,48],{33:[1,109],36:[1,108]}),o($Vc,[2,34],{39:[1,110],41:[1,111]}),o($Vc,[2,36],{36:[1,112],41:[1,113]}),o($Vc,[2,49],{36:[1,115],39:[1,114]}),o($Vc,[2,46],{33:[1,117],39:[1,116]}),o($Vc,[2,47],{33:[1,119],36:[1,118]}),o($Vc,[2,50],{36:[1,121],39:[1,120]}),{34:[1,122]},{34:[1,123]},{40:124,42:$Vd,43:$Ve,44:$Vf},{34:[1,125]},{40:126,42:$Vd,43:$Ve,44:$Vf},{34:[1,127]},{34:[1,128]},{34:[1,129]},{34:[1,130]},{34:[1,131]},{34:[1,132]},{34:[1,133]},{40:134,42:$Vd,43:$Ve,44:$Vf},{34:[1,135]},{34:[1,136]},{34:[1,137]},{40:138,42:$Vd,43:$Ve,44:$Vf},{34:[1,139]},{40:140,42:$Vd,43:$Ve,44:$Vf},{34:[1,141]},{34:[1,142]},{34:[1,143]},{40:144,42:$Vd,43:$Ve,44:$Vf},{34:[1,145]},o($Vc,[2,42],{41:[1,146]}),o($Vc,[2,55],{33:[1,147]}),o($Vc,[2,43],{41:[1,148]}),o($Vc,[2,66],{39:[1,149]}),o($Vc,[2,56],{33:[1,150]}),o($Vc,[2,65],{39:[1,151]}),o($Vc,[2,41],{41:[1,152]}),o($Vc,[2,54],{33:[1,153]}),o($Vc,[2,40],{41:[1,154]}),o($Vc,[2,60],{36:[1,155]}),o($Vc,[2,53],{33:[1,156]}),o($Vc,[2,59],{36:[1,157]}),o($Vc,[2,39],{41:[1,158]}),o($Vc,[2,67],{39:[1,159]}),o($Vc,[2,38],{41:[1,160]}),o($Vc,[2,61],{36:[1,161]}),o($Vc,[2,62],{36:[1,162]}),o($Vc,[2,68],{39:[1,163]}),o($Vc,[2,52],{33:[1,164]}),o($Vc,[2,63],{39:[1,165]}),o($Vc,[2,51],{33:[1,166]}),o($Vc,[2,57],{36:[1,167]}),o($Vc,[2,58],{36:[1,168]}),o($Vc,[2,64],{39:[1,169]}),{34:[1,170]},{34:[1,171]},{34:[1,172]},{40:173,42:$Vd,43:$Ve,44:$Vf},{34:[1,174]},{40:175,42:$Vd,43:$Ve,44:$Vf},{34:[1,176]},{34:[1,177]},{34:[1,178]},{34:[1,179]},{34:[1,180]},{34:[1,181]},{34:[1,182]},{40:183,42:$Vd,43:$Ve,44:$Vf},{34:[1,184]},{34:[1,185]},{34:[1,186]},{40:187,42:$Vd,43:$Ve,44:$Vf},{34:[1,188]},{40:189,42:$Vd,43:$Ve,44:$Vf},{34:[1,190]},{34:[1,191]},{34:[1,192]},{40:193,42:$Vd,43:$Ve,44:$Vf},o($Vc,[2,83]),o($Vc,[2,84]),o($Vc,[2,81]),o($Vc,[2,82]),o($Vc,[2,86]),o($Vc,[2,85]),o($Vc,[2,90]),o($Vc,[2,89]),o($Vc,[2,88]),o($Vc,[2,87]),o($Vc,[2,92]),o($Vc,[2,91]),o($Vc,[2,80]),o($Vc,[2,79]),o($Vc,[2,78]),o($Vc,[2,77]),o($Vc,[2,75]),o($Vc,[2,76]),o($Vc,[2,74]),o($Vc,[2,73]),o($Vc,[2,72]),o($Vc,[2,71]),o($Vc,[2,69]),o($Vc,[2,70])],
-defaultActions: {9:[2,100],10:[2,1],11:[2,2],19:[2,3],27:[2,4],46:[2,102],47:[2,5]},
+table: [{3:1,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{1:[3]},{3:10,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{3:11,4:2,5:3,6:$V0,8:$V1,14:$V2,45:8,49:$V3,53:$V4},{7:12,8:$V5,9:[1,13],10:[1,14],11:15,14:$V6},o($V7,[2,118]),o($V7,[2,119]),o($V7,[2,120]),{46:17,50:[1,18]},{50:[2,114]},{1:[2,1]},{1:[2,2]},{8:[1,19]},{7:20,8:$V5,11:15,14:$V6},{9:[1,21]},o($V8,[2,10],{12:22,13:[1,23]}),o($V9,[2,9]),{9:[1,25],47:24,52:$Va},o([9,52],[2,115]),{1:[2,3]},{8:[1,27]},{7:28,8:$V5,11:15,14:$V6},{8:[2,7],14:[1,31],15:29,16:30,17:32,18:33,19:34,20:[1,35],22:[1,36],24:[1,37],25:[1,38],26:39,27:[1,40],29:[1,44],32:[1,43],35:[1,42],39:[1,41]},o($V9,[2,8]),o($Vb,[2,112]),{48:45,51:[1,46]},o($Vb,[2,117]),{1:[2,4]},{8:[1,47]},o($V8,[2,11]),{4:48,8:$V1,14:$V2,53:$V4},o($V8,[2,13]),o($Vc,[2,14]),o($Vc,[2,15]),o($Vc,[2,16]),{21:[1,49]},{23:[1,50]},o($Vc,[2,19]),o($Vc,[2,20]),o($Vc,[2,21]),{28:[1,51]},o($Vc,[2,107],{40:52,33:[1,55],34:[1,57],36:[1,54],38:[1,53],41:[1,56]}),{28:[1,58]},{33:[1,59]},{28:[1,60]},{47:61,52:$Va},{52:[2,116]},{1:[2,5]},o($V8,[2,12]),o($Vc,[2,17]),o($Vc,[2,18]),o($Vc,[2,22]),o($Vc,[2,42]),{34:[1,62]},{37:63,42:$Vd,43:$Ve,44:$Vf},{34:[1,67]},{34:[1,68]},o($Vc,[2,108]),o($Vc,[2,26],{33:[1,69],36:[1,70],38:[1,71]}),{34:[1,72]},o($Vc,[2,23],{30:[1,73]}),o($Vb,[2,113]),o($Vc,[2,43],{33:[1,75],36:[1,74],41:[1,76]}),o($Vc,[2,44],{33:[1,78],38:[1,77],41:[1,79]}),o($Vg,[2,109]),o($Vg,[2,110]),o($Vg,[2,111]),o($Vc,[2,47],{36:[1,81],38:[1,80],41:[1,82]}),o($Vc,[2,58],{33:[1,85],36:[1,84],38:[1,83]}),{34:[1,86]},{37:87,42:$Vd,43:$Ve,44:$Vf},{34:[1,88]},o($Vc,[2,25]),{31:[1,89]},{37:90,42:$Vd,43:$Ve,44:$Vf},{34:[1,91]},{34:[1,92]},{34:[1,93]},{34:[1,94]},{34:[1,95]},{34:[1,96]},{37:97,42:$Vd,43:$Ve,44:$Vf},{34:[1,98]},{34:[1,99]},{37:100,42:$Vd,43:$Ve,44:$Vf},{34:[1,101]},o($Vc,[2,27],{36:[1,102],38:[1,103]}),o($Vc,[2,28],{33:[1,105],38:[1,104]}),o($Vc,[2,29],{33:[1,106],36:[1,107]}),o($Vc,[2,24]),o($Vc,[2,45],{33:[1,108],41:[1,109]}),o($Vc,[2,49],{36:[1,110],41:[1,111]}),o($Vc,[2,59],{33:[1,113],36:[1,112]}),o($Vc,[2,46],{33:[1,114],41:[1,115]}),o($Vc,[2,51],{38:[1,116],41:[1,117]}),o($Vc,[2,62],{33:[1,119],38:[1,118]}),o($Vc,[2,48],{36:[1,120],41:[1,121]}),o($Vc,[2,50],{38:[1,122],41:[1,123]}),o($Vc,[2,63],{36:[1,124],38:[1,125]}),o($Vc,[2,60],{33:[1,127],36:[1,126]}),o($Vc,[2,61],{33:[1,129],38:[1,128]}),o($Vc,[2,64],{36:[1,130],38:[1,131]}),{37:132,42:$Vd,43:$Ve,44:$Vf},{34:[1,133]},{34:[1,134]},{34:[1,135]},{34:[1,136]},{37:137,42:$Vd,43:$Ve,44:$Vf},{34:[1,138]},{34:[1,139]},{37:140,42:$Vd,43:$Ve,44:$Vf},{34:[1,141]},{37:142,42:$Vd,43:$Ve,44:$Vf},{34:[1,143]},{34:[1,144]},{34:[1,145]},{34:[1,146]},{34:[1,147]},{34:[1,148]},{34:[1,149]},{37:150,42:$Vd,43:$Ve,44:$Vf},{34:[1,151]},{34:[1,152]},{34:[1,153]},{37:154,42:$Vd,43:$Ve,44:$Vf},{34:[1,155]},{37:156,42:$Vd,43:$Ve,44:$Vf},{34:[1,157]},{34:[1,158]},{34:[1,159]},{37:160,42:$Vd,43:$Ve,44:$Vf},{34:[1,161]},o($Vc,[2,33],{38:[1,162]}),o($Vc,[2,34],{36:[1,163]}),o($Vc,[2,32],{33:[1,164]}),o($Vc,[2,35],{38:[1,165]}),o($Vc,[2,30],{36:[1,166]}),o($Vc,[2,31],{33:[1,167]}),o($Vc,[2,56],{41:[1,168]}),o($Vc,[2,69],{33:[1,169]}),o($Vc,[2,57],{41:[1,170]}),o($Vc,[2,80],{36:[1,171]}),o($Vc,[2,70],{33:[1,172]}),o($Vc,[2,79],{36:[1,173]}),o($Vc,[2,55],{41:[1,174]}),o($Vc,[2,68],{33:[1,175]}),o($Vc,[2,54],{41:[1,176]}),o($Vc,[2,74],{38:[1,177]}),o($Vc,[2,67],{33:[1,178]}),o($Vc,[2,73],{38:[1,179]}),o($Vc,[2,53],{41:[1,180]}),o($Vc,[2,81],{36:[1,181]}),o($Vc,[2,52],{41:[1,182]}),o($Vc,[2,75],{38:[1,183]}),o($Vc,[2,76],{38:[1,184]}),o($Vc,[2,82],{36:[1,185]}),o($Vc,[2,66],{33:[1,186]}),o($Vc,[2,77],{36:[1,187]}),o($Vc,[2,65],{33:[1,188]}),o($Vc,[2,71],{38:[1,189]}),o($Vc,[2,72],{38:[1,190]}),o($Vc,[2,78],{36:[1,191]}),{34:[1,192]},{37:193,42:$Vd,43:$Ve,44:$Vf},{34:[1,194]},{34:[1,195]},{37:196,42:$Vd,43:$Ve,44:$Vf},{34:[1,197]},{34:[1,198]},{34:[1,199]},{34:[1,200]},{37:201,42:$Vd,43:$Ve,44:$Vf},{34:[1,202]},{37:203,42:$Vd,43:$Ve,44:$Vf},{34:[1,204]},{34:[1,205]},{34:[1,206]},{34:[1,207]},{34:[1,208]},{34:[1,209]},{34:[1,210]},{37:211,42:$Vd,43:$Ve,44:$Vf},{34:[1,212]},{34:[1,213]},{34:[1,214]},{37:215,42:$Vd,43:$Ve,44:$Vf},{34:[1,216]},{37:217,42:$Vd,43:$Ve,44:$Vf},{34:[1,218]},{34:[1,219]},{34:[1,220]},{37:221,42:$Vd,43:$Ve,44:$Vf},o($Vc,[2,36]),o($Vc,[2,38]),o($Vc,[2,37]),o($Vc,[2,39]),o($Vc,[2,41]),o($Vc,[2,40]),o($Vc,[2,97]),o($Vc,[2,98]),o($Vc,[2,95]),o($Vc,[2,96]),o($Vc,[2,100]),o($Vc,[2,99]),o($Vc,[2,104]),o($Vc,[2,103]),o($Vc,[2,102]),o($Vc,[2,101]),o($Vc,[2,106]),o($Vc,[2,105]),o($Vc,[2,94]),o($Vc,[2,93]),o($Vc,[2,92]),o($Vc,[2,91]),o($Vc,[2,89]),o($Vc,[2,90]),o($Vc,[2,88]),o($Vc,[2,87]),o($Vc,[2,86]),o($Vc,[2,85]),o($Vc,[2,83]),o($Vc,[2,84])],
+defaultActions: {9:[2,114],10:[2,1],11:[2,2],19:[2,3],27:[2,4],46:[2,116],47:[2,5]},
 parseError: function parseError (str, hash) {
     if (hash.recoverable) {
         this.trace(str);
@@ -5434,11 +5485,11 @@ case 15:/* skip comments */
 break;
 case 16:return 6;
 break;
-case 17:return 37;
+case 17:return 39;
 break;
 case 18:return 33;
 break;
-case 19:return 39;
+case 19:return 36;
 break;
 case 20:return 41;
 break;
@@ -5448,7 +5499,7 @@ case 22:return 43;
 break;
 case 23:return 44;
 break;
-case 24:return 36;
+case 24:return 38;
 break;
 case 25:return 29;
 break;
@@ -11708,6 +11759,10 @@ var insertEdge = function insertEdge(elem, e, edge, clusterDb, diagramType, grap
       svgPath.attr('marker-start', 'url(' + url + '#' + diagramType + '-dependencyStart' + ')');
       break;
 
+    case 'lollipop':
+      svgPath.attr('marker-start', 'url(' + url + '#' + diagramType + '-lollipopStart' + ')');
+      break;
+
     default:
   }
 
@@ -11742,6 +11797,10 @@ var insertEdge = function insertEdge(elem, e, edge, clusterDb, diagramType, grap
 
     case 'dependency':
       svgPath.attr('marker-end', 'url(' + url + '#' + diagramType + '-dependencyEnd' + ')');
+      break;
+
+    case 'lollipop':
+      svgPath.attr('marker-end', 'url(' + url + '#' + diagramType + '-lollipopEnd' + ')');
       break;
 
     default:
@@ -12335,6 +12394,10 @@ var dependency = function dependency(elem, type) {
   elem.append('defs').append('marker').attr('id', type + '-dependencyEnd').attr('class', 'marker dependency ' + type).attr('refX', 19).attr('refY', 7).attr('markerWidth', 20).attr('markerHeight', 28).attr('orient', 'auto').append('path').attr('d', 'M 18,7 L9,13 L14,7 L9,1 Z');
 };
 
+var lollipop = function lollipop(elem, type, id) {
+  elem.append('defs').append('marker').attr('id', type + '-lollipopStart').attr('class', 'marker lollipop ' + type).attr('refX', 0).attr('refY', 7).attr('markerWidth', 190).attr('markerHeight', 240).attr('orient', 'auto').append('circle').attr('stroke', 'black').attr('fill', 'white').attr('cx', 6).attr('cy', 7).attr('r', 6);
+};
+
 var point = function point(elem, type) {
   elem.append('marker').attr('id', type + '-pointEnd').attr('class', 'marker ' + type).attr('viewBox', '0 0 10 10').attr('refX', 9).attr('refY', 5).attr('markerUnits', 'userSpaceOnUse').attr('markerWidth', 12).attr('markerHeight', 12).attr('orient', 'auto').append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z').attr('class', 'arrowMarkerPath').style('stroke-width', 1).style('stroke-dasharray', '1,0');
   elem.append('marker').attr('id', type + '-pointStart').attr('class', 'marker ' + type).attr('viewBox', '0 0 10 10').attr('refX', 0).attr('refY', 5).attr('markerUnits', 'userSpaceOnUse').attr('markerWidth', 12).attr('markerHeight', 12).attr('orient', 'auto').append('path').attr('d', 'M 0 5 L 10 10 L 10 0 z').attr('class', 'arrowMarkerPath').style('stroke-width', 1).style('stroke-dasharray', '1,0');
@@ -12362,6 +12425,7 @@ var markers = {
   composition: composition,
   aggregation: aggregation,
   dependency: dependency,
+  lollipop: lollipop,
   point: point,
   circle: circle,
   cross: cross,
@@ -14056,9 +14120,9 @@ var config = {
   logLevel: 5,
 
   /**
-   * | Parameter     | Description                       | Type   | Required | Values                          |
-   * | ------------- | --------------------------------- | ------ | -------- | ------------------------------- |
-   * | securitylevel | Level of trust for parsed diagram | string | Required | 'strict', 'loose', 'antiscript' |
+   * | Parameter     | Description                       | Type   | Required | Values                                     |
+   * | ------------- | --------------------------------- | ------ | -------- | ------------------------------------------ |
+   * | securityLevel | Level of trust for parsed diagram | string | Required | 'sandbox', 'strict', 'loose', 'antiscript' |
    *
    * **Notes**:
    *
@@ -14066,6 +14130,9 @@ var config = {
    * - **loose**: tags in text are allowed, click functionality is enabled
    * - **antiscript**: html tags in text are allowed, (only script element is removed), click
    *   functionality is enabled
+   * - **sandbox**: With this security level all rendering takes place in a sandboxed iframe. This
+   *   prevent any JavaScript from running in the context. This may hinder interactive functionality
+   *   of the diagram like scripts, popups in sequence diagram or links to other tabs/targets etc.
    */
   securityLevel: 'strict',
 
@@ -15897,6 +15964,10 @@ var detectType = function detectType(text, cnf) {
     return 'c4';
   }
 
+  if (text === 'error') {
+    return 'error';
+  }
+
   if (text.match(/^\s*sequenceDiagram/)) {
     return 'sequence';
   }
@@ -16036,48 +16107,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _diagrams_c4_parser_c4Diagram__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_diagrams_c4_parser_c4Diagram__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../diagrams/class/classDb */ "./src/diagrams/class/classDb.js");
 /* harmony import */ var _diagrams_class_classRenderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../diagrams/class/classRenderer */ "./src/diagrams/class/classRenderer.js");
-/* harmony import */ var _diagrams_class_classRenderer_v2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../diagrams/class/classRenderer-v2 */ "./src/diagrams/class/classRenderer-v2.js");
+/* harmony import */ var _diagrams_class_classRenderer_v2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../diagrams/class/classRenderer-v2 */ "./src/diagrams/class/classRenderer-v2.js");
 /* harmony import */ var _diagrams_class_parser_classDiagram__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../diagrams/class/parser/classDiagram */ "./src/diagrams/class/parser/classDiagram.jison");
 /* harmony import */ var _diagrams_class_parser_classDiagram__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_diagrams_class_parser_classDiagram__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _diagrams_er_erDb__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../diagrams/er/erDb */ "./src/diagrams/er/erDb.js");
-/* harmony import */ var _diagrams_er_erRenderer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../diagrams/er/erRenderer */ "./src/diagrams/er/erRenderer.js");
-/* harmony import */ var _diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../diagrams/er/parser/erDiagram */ "./src/diagrams/er/parser/erDiagram.jison");
-/* harmony import */ var _diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../diagrams/flowchart/flowDb */ "./src/diagrams/flowchart/flowDb.js");
-/* harmony import */ var _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../diagrams/flowchart/flowRenderer */ "./src/diagrams/flowchart/flowRenderer.js");
-/* harmony import */ var _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../diagrams/flowchart/flowRenderer-v2 */ "./src/diagrams/flowchart/flowRenderer-v2.js");
-/* harmony import */ var _diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../diagrams/flowchart/parser/flow */ "./src/diagrams/flowchart/parser/flow.jison");
-/* harmony import */ var _diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../diagrams/gantt/ganttDb */ "./src/diagrams/gantt/ganttDb.js");
-/* harmony import */ var _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../diagrams/gantt/ganttRenderer */ "./src/diagrams/gantt/ganttRenderer.js");
-/* harmony import */ var _diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../diagrams/gantt/parser/gantt */ "./src/diagrams/gantt/parser/gantt.jison");
-/* harmony import */ var _diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _diagrams_info_infoDb__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../diagrams/info/infoDb */ "./src/diagrams/info/infoDb.js");
-/* harmony import */ var _diagrams_info_infoRenderer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../diagrams/info/infoRenderer */ "./src/diagrams/info/infoRenderer.js");
-/* harmony import */ var _diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../diagrams/info/parser/info */ "./src/diagrams/info/parser/info.jison");
-/* harmony import */ var _diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../diagrams/pie/parser/pie */ "./src/diagrams/pie/parser/pie.jison");
-/* harmony import */ var _diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _diagrams_pie_pieDb__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../diagrams/pie/pieDb */ "./src/diagrams/pie/pieDb.js");
-/* harmony import */ var _diagrams_pie_pieRenderer__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../diagrams/pie/pieRenderer */ "./src/diagrams/pie/pieRenderer.js");
-/* harmony import */ var _diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../diagrams/requirement/parser/requirementDiagram */ "./src/diagrams/requirement/parser/requirementDiagram.jison");
-/* harmony import */ var _diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _diagrams_requirement_requirementDb__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../diagrams/requirement/requirementDb */ "./src/diagrams/requirement/requirementDb.js");
-/* harmony import */ var _diagrams_requirement_requirementRenderer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../diagrams/requirement/requirementRenderer */ "./src/diagrams/requirement/requirementRenderer.js");
-/* harmony import */ var _diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../diagrams/sequence/parser/sequenceDiagram */ "./src/diagrams/sequence/parser/sequenceDiagram.jison");
-/* harmony import */ var _diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../diagrams/sequence/sequenceDb */ "./src/diagrams/sequence/sequenceDb.js");
-/* harmony import */ var _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../diagrams/sequence/sequenceRenderer */ "./src/diagrams/sequence/sequenceRenderer.js");
-/* harmony import */ var _diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../diagrams/state/parser/stateDiagram */ "./src/diagrams/state/parser/stateDiagram.jison");
-/* harmony import */ var _diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../diagrams/state/stateDb */ "./src/diagrams/state/stateDb.js");
-/* harmony import */ var _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../diagrams/state/stateRenderer */ "./src/diagrams/state/stateRenderer.js");
-/* harmony import */ var _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../diagrams/state/stateRenderer-v2 */ "./src/diagrams/state/stateRenderer-v2.js");
-/* harmony import */ var _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../diagrams/user-journey/journeyDb */ "./src/diagrams/user-journey/journeyDb.js");
-/* harmony import */ var _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../diagrams/user-journey/journeyRenderer */ "./src/diagrams/user-journey/journeyRenderer.js");
-/* harmony import */ var _diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../diagrams/user-journey/parser/journey */ "./src/diagrams/user-journey/parser/journey.jison");
-/* harmony import */ var _diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(_diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_35__);
-/* harmony import */ var _detectType__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./detectType */ "./src/diagram-api/detectType.js");
+/* harmony import */ var _diagrams_er_erDb__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../diagrams/er/erDb */ "./src/diagrams/er/erDb.js");
+/* harmony import */ var _diagrams_er_erRenderer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../diagrams/er/erRenderer */ "./src/diagrams/er/erRenderer.js");
+/* harmony import */ var _diagrams_error_errorRenderer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../diagrams/error/errorRenderer */ "./src/diagrams/error/errorRenderer.js");
+/* harmony import */ var _diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../diagrams/er/parser/erDiagram */ "./src/diagrams/er/parser/erDiagram.jison");
+/* harmony import */ var _diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../diagrams/flowchart/flowDb */ "./src/diagrams/flowchart/flowDb.js");
+/* harmony import */ var _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../diagrams/flowchart/flowRenderer */ "./src/diagrams/flowchart/flowRenderer.js");
+/* harmony import */ var _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../diagrams/flowchart/flowRenderer-v2 */ "./src/diagrams/flowchart/flowRenderer-v2.js");
+/* harmony import */ var _diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../diagrams/flowchart/parser/flow */ "./src/diagrams/flowchart/parser/flow.jison");
+/* harmony import */ var _diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../diagrams/gantt/ganttDb */ "./src/diagrams/gantt/ganttDb.js");
+/* harmony import */ var _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../diagrams/gantt/ganttRenderer */ "./src/diagrams/gantt/ganttRenderer.js");
+/* harmony import */ var _diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../diagrams/gantt/parser/gantt */ "./src/diagrams/gantt/parser/gantt.jison");
+/* harmony import */ var _diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _diagrams_info_infoDb__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../diagrams/info/infoDb */ "./src/diagrams/info/infoDb.js");
+/* harmony import */ var _diagrams_info_infoRenderer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../diagrams/info/infoRenderer */ "./src/diagrams/info/infoRenderer.js");
+/* harmony import */ var _diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../diagrams/info/parser/info */ "./src/diagrams/info/parser/info.jison");
+/* harmony import */ var _diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../diagrams/pie/parser/pie */ "./src/diagrams/pie/parser/pie.jison");
+/* harmony import */ var _diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _diagrams_pie_pieDb__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../diagrams/pie/pieDb */ "./src/diagrams/pie/pieDb.js");
+/* harmony import */ var _diagrams_pie_pieRenderer__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../diagrams/pie/pieRenderer */ "./src/diagrams/pie/pieRenderer.js");
+/* harmony import */ var _diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../diagrams/requirement/parser/requirementDiagram */ "./src/diagrams/requirement/parser/requirementDiagram.jison");
+/* harmony import */ var _diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _diagrams_requirement_requirementDb__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../diagrams/requirement/requirementDb */ "./src/diagrams/requirement/requirementDb.js");
+/* harmony import */ var _diagrams_requirement_requirementRenderer__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../diagrams/requirement/requirementRenderer */ "./src/diagrams/requirement/requirementRenderer.js");
+/* harmony import */ var _diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../diagrams/sequence/parser/sequenceDiagram */ "./src/diagrams/sequence/parser/sequenceDiagram.jison");
+/* harmony import */ var _diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../diagrams/sequence/sequenceDb */ "./src/diagrams/sequence/sequenceDb.js");
+/* harmony import */ var _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../diagrams/sequence/sequenceRenderer */ "./src/diagrams/sequence/sequenceRenderer.js");
+/* harmony import */ var _diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../diagrams/state/parser/stateDiagram */ "./src/diagrams/state/parser/stateDiagram.jison");
+/* harmony import */ var _diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../diagrams/state/stateDb */ "./src/diagrams/state/stateDb.js");
+/* harmony import */ var _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../diagrams/state/stateRenderer */ "./src/diagrams/state/stateRenderer.js");
+/* harmony import */ var _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../diagrams/state/stateRenderer-v2 */ "./src/diagrams/state/stateRenderer-v2.js");
+/* harmony import */ var _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../diagrams/user-journey/journeyDb */ "./src/diagrams/user-journey/journeyDb.js");
+/* harmony import */ var _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../diagrams/user-journey/journeyRenderer */ "./src/diagrams/user-journey/journeyRenderer.js");
+/* harmony import */ var _diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../diagrams/user-journey/parser/journey */ "./src/diagrams/user-journey/parser/journey.jison");
+/* harmony import */ var _diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var _detectType__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./detectType */ "./src/diagram-api/detectType.js");
+
 
 
 
@@ -16133,9 +16206,21 @@ var diagrams = {
       _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_3__["default"].clear();
     }
   },
+  // Special diagram with error messages but setup as a regular diagram
+  error: {
+    db: {},
+    renderer: _diagrams_error_errorRenderer__WEBPACK_IMPORTED_MODULE_6__["default"],
+    parser: {
+      parser: {
+        yy: {}
+      },
+      parse: function parse() {}
+    },
+    init: function init() {}
+  },
   classDiagram: {
     db: _diagrams_class_classDb__WEBPACK_IMPORTED_MODULE_3__["default"],
-    renderer: _diagrams_class_classRenderer_v2__WEBPACK_IMPORTED_MODULE_6__["default"],
+    renderer: _diagrams_class_classRenderer_v2__WEBPACK_IMPORTED_MODULE_7__["default"],
     parser: (_diagrams_class_parser_classDiagram__WEBPACK_IMPORTED_MODULE_5___default()),
     init: function init(cnf) {
       cnf.class.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
@@ -16143,38 +16228,38 @@ var diagrams = {
     }
   },
   er: {
-    db: _diagrams_er_erDb__WEBPACK_IMPORTED_MODULE_7__["default"],
-    renderer: _diagrams_er_erRenderer__WEBPACK_IMPORTED_MODULE_8__["default"],
-    parser: (_diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_9___default())
+    db: _diagrams_er_erDb__WEBPACK_IMPORTED_MODULE_8__["default"],
+    renderer: _diagrams_er_erRenderer__WEBPACK_IMPORTED_MODULE_9__["default"],
+    parser: (_diagrams_er_parser_erDiagram__WEBPACK_IMPORTED_MODULE_10___default())
   },
   flowchart: {
-    db: _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"],
-    renderer: _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_11__["default"],
-    parser: (_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_12___default()),
+    db: _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"],
+    renderer: _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_12__["default"],
+    parser: (_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_13___default()),
     init: function init(cnf) {
-      _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_11__["default"].setConf(cnf.flowchart);
+      _diagrams_flowchart_flowRenderer__WEBPACK_IMPORTED_MODULE_12__["default"].setConf(cnf.flowchart);
       cnf.flowchart.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
-      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"].clear();
-      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"].setGen('gen-1');
+      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"].clear();
+      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"].setGen('gen-1');
     }
   },
   'flowchart-v2': {
-    db: _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"],
-    renderer: _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_13__["default"],
-    parser: (_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_12___default()),
+    db: _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"],
+    renderer: _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_14__["default"],
+    parser: (_diagrams_flowchart_parser_flow__WEBPACK_IMPORTED_MODULE_13___default()),
     init: function init(cnf) {
-      _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_13__["default"].setConf(cnf.flowchart);
+      _diagrams_flowchart_flowRenderer_v2__WEBPACK_IMPORTED_MODULE_14__["default"].setConf(cnf.flowchart);
       cnf.flowchart.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
-      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"].clear();
-      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_10__["default"].setGen('gen-2');
+      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"].clear();
+      _diagrams_flowchart_flowDb__WEBPACK_IMPORTED_MODULE_11__["default"].setGen('gen-2');
     }
   },
   gantt: {
-    db: _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_14__["default"],
-    renderer: _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_15__["default"],
-    parser: (_diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_16___default()),
+    db: _diagrams_gantt_ganttDb__WEBPACK_IMPORTED_MODULE_15__["default"],
+    renderer: _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_16__["default"],
+    parser: (_diagrams_gantt_parser_gantt__WEBPACK_IMPORTED_MODULE_17___default()),
     init: function init(cnf) {
-      _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_15__["default"].setConf(cnf.gantt);
+      _diagrams_gantt_ganttRenderer__WEBPACK_IMPORTED_MODULE_16__["default"].setConf(cnf.gantt);
     }
   },
   // git: {
@@ -16183,62 +16268,62 @@ var diagrams = {
   //   parser: gitGraphParser,
   // },
   info: {
-    db: _diagrams_info_infoDb__WEBPACK_IMPORTED_MODULE_17__["default"],
-    renderer: _diagrams_info_infoRenderer__WEBPACK_IMPORTED_MODULE_18__["default"],
-    parser: (_diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_19___default())
+    db: _diagrams_info_infoDb__WEBPACK_IMPORTED_MODULE_18__["default"],
+    renderer: _diagrams_info_infoRenderer__WEBPACK_IMPORTED_MODULE_19__["default"],
+    parser: (_diagrams_info_parser_info__WEBPACK_IMPORTED_MODULE_20___default())
   },
   pie: {
-    db: _diagrams_pie_pieDb__WEBPACK_IMPORTED_MODULE_20__["default"],
-    renderer: _diagrams_pie_pieRenderer__WEBPACK_IMPORTED_MODULE_21__["default"],
-    parser: (_diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_22___default())
+    db: _diagrams_pie_pieDb__WEBPACK_IMPORTED_MODULE_21__["default"],
+    renderer: _diagrams_pie_pieRenderer__WEBPACK_IMPORTED_MODULE_22__["default"],
+    parser: (_diagrams_pie_parser_pie__WEBPACK_IMPORTED_MODULE_23___default())
   },
   requirement: {
-    db: _diagrams_requirement_requirementDb__WEBPACK_IMPORTED_MODULE_23__["default"],
-    renderer: _diagrams_requirement_requirementRenderer__WEBPACK_IMPORTED_MODULE_24__["default"],
-    parser: (_diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_25___default())
+    db: _diagrams_requirement_requirementDb__WEBPACK_IMPORTED_MODULE_24__["default"],
+    renderer: _diagrams_requirement_requirementRenderer__WEBPACK_IMPORTED_MODULE_25__["default"],
+    parser: (_diagrams_requirement_parser_requirementDiagram__WEBPACK_IMPORTED_MODULE_26___default())
   },
   sequence: {
-    db: _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_26__["default"],
-    renderer: _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_27__["default"],
-    parser: (_diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_28___default()),
+    db: _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_27__["default"],
+    renderer: _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_28__["default"],
+    parser: (_diagrams_sequence_parser_sequenceDiagram__WEBPACK_IMPORTED_MODULE_29___default()),
     init: function init(cnf) {
       cnf.sequence.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
 
       if (cnf.sequenceDiagram) {
         // backwards compatibility
-        _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_27__["default"].setConf(Object.assign(cnf.sequence, cnf.sequenceDiagram));
+        _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_28__["default"].setConf(Object.assign(cnf.sequence, cnf.sequenceDiagram));
         console.error('`mermaid config.sequenceDiagram` has been renamed to `config.sequence`. Please update your mermaid config.');
       }
 
-      _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_26__["default"].setWrap(cnf.wrap);
-      _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_27__["default"].setConf(cnf.sequence);
+      _diagrams_sequence_sequenceDb__WEBPACK_IMPORTED_MODULE_27__["default"].setWrap(cnf.wrap);
+      _diagrams_sequence_sequenceRenderer__WEBPACK_IMPORTED_MODULE_28__["default"].setConf(cnf.sequence);
     }
   },
   state: {
-    db: _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_29__["default"],
-    renderer: _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_30__["default"],
-    parser: (_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_31___default()),
+    db: _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_30__["default"],
+    renderer: _diagrams_state_stateRenderer__WEBPACK_IMPORTED_MODULE_31__["default"],
+    parser: (_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_32___default()),
     init: function init(cnf) {
       cnf.class.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
-      _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_29__["default"].clear();
+      _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_30__["default"].clear();
     }
   },
   stateDiagram: {
-    db: _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_29__["default"],
-    renderer: _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_32__["default"],
-    parser: (_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_31___default()),
+    db: _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_30__["default"],
+    renderer: _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_33__["default"],
+    parser: (_diagrams_state_parser_stateDiagram__WEBPACK_IMPORTED_MODULE_32___default()),
     init: function init(cnf) {
       cnf.class.arrowMarkerAbsolute = cnf.arrowMarkerAbsolute;
-      _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_29__["default"].clear();
+      _diagrams_state_stateDb__WEBPACK_IMPORTED_MODULE_30__["default"].clear();
     }
   },
   journey: {
-    db: _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_33__["default"],
-    renderer: _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_34__["default"],
-    parser: (_diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_35___default()),
+    db: _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_34__["default"],
+    renderer: _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_35__["default"],
+    parser: (_diagrams_user_journey_parser_journey__WEBPACK_IMPORTED_MODULE_36___default()),
     init: function init(cnf) {
-      _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_34__["default"].setConf(cnf.journey);
-      _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_33__["default"].clear();
+      _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_35__["default"].setConf(cnf.journey);
+      _diagrams_user_journey_journeyDb__WEBPACK_IMPORTED_MODULE_34__["default"].clear();
     }
   }
 }; // console.log(sequenceDb);
@@ -16250,7 +16335,7 @@ var registerDiagram = function registerDiagram(id, parser, db, renderer, init, d
     renderer: renderer,
     init: init
   };
-  (0,_detectType__WEBPACK_IMPORTED_MODULE_36__.addDetector)(id, detector);
+  (0,_detectType__WEBPACK_IMPORTED_MODULE_37__.addDetector)(id, detector);
 };
 var getDiagrams = function getDiagrams() {
   // console.log('diagrams', diagrams);
@@ -19029,7 +19114,8 @@ var relationType = {
   AGGREGATION: 0,
   EXTENSION: 1,
   COMPOSITION: 2,
-  DEPENDENCY: 3
+  DEPENDENCY: 3,
+  LOLLIPOP: 4
 };
 
 var setupToolTips = function setupToolTips(element) {
@@ -19461,7 +19547,7 @@ var draw = function draw(text, id, _version, diagObj) {
   var svg = root.select("[id=\"".concat(id, "\"]")); // Run the renderer. This is what draws the final graph.
 
   var element = root.select('#' + id + ' g');
-  (0,_dagre_wrapper_index_js__WEBPACK_IMPORTED_MODULE_6__.render)(element, g, ['aggregation', 'extension', 'composition', 'dependency'], 'classDiagram', id);
+  (0,_dagre_wrapper_index_js__WEBPACK_IMPORTED_MODULE_6__.render)(element, g, ['aggregation', 'extension', 'composition', 'dependency', 'lollipop'], 'classDiagram', id);
   (0,_utils__WEBPACK_IMPORTED_MODULE_5__.setupGraphViewbox)(g, svg, conf.diagramPadding, conf.useMaxWidth); // Add label rects for non html labels
 
   if (!conf.htmlLabels) {
@@ -19537,6 +19623,10 @@ function getArrowMarker(type) {
 
     case 3:
       marker = 'dependency';
+      break;
+
+    case 4:
+      marker = 'lollipop';
       break;
 
     default:
@@ -19728,7 +19818,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var getStyles = function getStyles(options) {
-  return "g.classGroup text {\n  fill: ".concat(options.nodeBorder, ";\n  fill: ").concat(options.classText, ";\n  stroke: none;\n  font-family: ").concat(options.fontFamily, ";\n  font-size: 10px;\n\n  .title {\n    font-weight: bolder;\n  }\n\n}\n\n.nodeLabel, .edgeLabel {\n  color: ").concat(options.classText, ";\n}\n.edgeLabel .label rect {\n  fill: ").concat(options.mainBkg, ";\n}\n.label text {\n  fill: ").concat(options.classText, ";\n}\n.edgeLabel .label span {\n  background: ").concat(options.mainBkg, ";\n}\n\n.classTitle {\n  font-weight: bolder;\n}\n.node rect,\n  .node circle,\n  .node ellipse,\n  .node polygon,\n  .node path {\n    fill: ").concat(options.mainBkg, ";\n    stroke: ").concat(options.nodeBorder, ";\n    stroke-width: 1px;\n  }\n\n\n.divider {\n  stroke: ").concat(options.nodeBorder, ";\n  stroke: 1;\n}\n\ng.clickable {\n  cursor: pointer;\n}\n\ng.classGroup rect {\n  fill: ").concat(options.mainBkg, ";\n  stroke: ").concat(options.nodeBorder, ";\n}\n\ng.classGroup line {\n  stroke: ").concat(options.nodeBorder, ";\n  stroke-width: 1;\n}\n\n.classLabel .box {\n  stroke: none;\n  stroke-width: 0;\n  fill: ").concat(options.mainBkg, ";\n  opacity: 0.5;\n}\n\n.classLabel .label {\n  fill: ").concat(options.nodeBorder, ";\n  font-size: 10px;\n}\n\n.relation {\n  stroke: ").concat(options.lineColor, ";\n  stroke-width: 1;\n  fill: none;\n}\n\n.dashed-line{\n  stroke-dasharray: 3;\n}\n\n#compositionStart, .composition {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#compositionEnd, .composition {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#dependencyStart, .dependency {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#dependencyStart, .dependency {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#extensionStart, .extension {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#extensionEnd, .extension {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#aggregationStart, .aggregation {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#aggregationEnd, .aggregation {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n.edgeTerminals {\n  font-size: 11px;\n}\n\n");
+  return "g.classGroup text {\n  fill: ".concat(options.nodeBorder, ";\n  fill: ").concat(options.classText, ";\n  stroke: none;\n  font-family: ").concat(options.fontFamily, ";\n  font-size: 10px;\n\n  .title {\n    font-weight: bolder;\n  }\n\n}\n\n.nodeLabel, .edgeLabel {\n  color: ").concat(options.classText, ";\n}\n.edgeLabel .label rect {\n  fill: ").concat(options.mainBkg, ";\n}\n.label text {\n  fill: ").concat(options.classText, ";\n}\n.edgeLabel .label span {\n  background: ").concat(options.mainBkg, ";\n}\n\n.classTitle {\n  font-weight: bolder;\n}\n.node rect,\n  .node circle,\n  .node ellipse,\n  .node polygon,\n  .node path {\n    fill: ").concat(options.mainBkg, ";\n    stroke: ").concat(options.nodeBorder, ";\n    stroke-width: 1px;\n  }\n\n\n.divider {\n  stroke: ").concat(options.nodeBorder, ";\n  stroke: 1;\n}\n\ng.clickable {\n  cursor: pointer;\n}\n\ng.classGroup rect {\n  fill: ").concat(options.mainBkg, ";\n  stroke: ").concat(options.nodeBorder, ";\n}\n\ng.classGroup line {\n  stroke: ").concat(options.nodeBorder, ";\n  stroke-width: 1;\n}\n\n.classLabel .box {\n  stroke: none;\n  stroke-width: 0;\n  fill: ").concat(options.mainBkg, ";\n  opacity: 0.5;\n}\n\n.classLabel .label {\n  fill: ").concat(options.nodeBorder, ";\n  font-size: 10px;\n}\n\n.relation {\n  stroke: ").concat(options.lineColor, ";\n  stroke-width: 1;\n  fill: none;\n}\n\n.dashed-line{\n  stroke-dasharray: 3;\n}\n\n#compositionStart, .composition {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#compositionEnd, .composition {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#dependencyStart, .dependency {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#dependencyStart, .dependency {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#extensionStart, .extension {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#extensionEnd, .extension {\n  fill: ").concat(options.lineColor, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#aggregationStart, .aggregation {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#aggregationEnd, .aggregation {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#lollipopStart, .lollipop {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n#lollipopEnd, .lollipop {\n  fill: ").concat(options.mainBkg, " !important;\n  stroke: ").concat(options.lineColor, " !important;\n  stroke-width: 1;\n}\n\n.edgeTerminals {\n  font-size: 11px;\n}\n\n");
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getStyles);
@@ -19752,6 +19842,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./src/utils.js");
 /* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../logger */ "./src/logger.js");
+/* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/common */ "./src/diagrams/common/common.js");
+
 
 
 
@@ -19770,6 +19862,9 @@ var drawEdge = function drawEdge(elem, path, relation, conf, diagObj) {
 
       case diagObj.db.DEPENDENCY:
         return 'dependency';
+
+      case diagObj.db.LOLLIPOP:
+        return 'lollipop';
     }
   };
 
@@ -19962,7 +20057,7 @@ var buildFieldDisplay = function buildFieldDisplay(parsedText) {
   try {
     var visibility = parsedText[1] ? parsedText[1].trim() : '';
     var fieldType = parsedText[2] ? parsedText[2].trim() : '';
-    var genericType = parsedText[3] ? parseGenericTypes(parsedText[3].trim()) : '';
+    var genericType = parsedText[3] ? (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(parsedText[3].trim()) : '';
     var fieldName = parsedText[4] ? parsedText[4].trim() : '';
     var classifier = parsedText[5] ? parsedText[5].trim() : '';
     displayText = visibility + fieldType + genericType + ' ' + fieldName;
@@ -19984,9 +20079,9 @@ var buildMethodDisplay = function buildMethodDisplay(parsedText) {
   try {
     var visibility = parsedText[1] ? parsedText[1].trim() : '';
     var methodName = parsedText[2] ? parsedText[2].trim() : '';
-    var parameters = parsedText[3] ? parseGenericTypes(parsedText[3].trim()) : '';
+    var parameters = parsedText[3] ? (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(parsedText[3].trim()) : '';
     var classifier = parsedText[4] ? parsedText[4].trim() : '';
-    var returnType = parsedText[5] ? ' : ' + parseGenericTypes(parsedText[5]).trim() : '';
+    var returnType = parsedText[5] ? ' : ' + (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(parsedText[5]).trim() : '';
     displayText = visibility + methodName + '(' + parameters + ')' + returnType;
     cssStyle = parseClassifier(classifier);
   } catch (err) {
@@ -20026,18 +20121,18 @@ var buildLegacyDisplay = function buildLegacyDisplay(text) {
     var parameters = text.substring(methodStart + 1, methodEnd);
     var classifier = text.substring(methodEnd + 1, 1);
     cssStyle = parseClassifier(classifier);
-    displayText = visibility + methodName + '(' + parseGenericTypes(parameters.trim()) + ')';
+    displayText = visibility + methodName + '(' + (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(parameters.trim()) + ')';
 
     if (methodEnd < memberText.length) {
       returnType = text.substring(methodEnd + 2).trim();
 
       if (returnType !== '') {
-        returnType = ' : ' + parseGenericTypes(returnType);
+        returnType = ' : ' + (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(returnType);
       }
     }
   } else {
     // finally - if all else fails, just send the text back as written (other than parsing for generic types)
-    displayText = parseGenericTypes(text);
+    displayText = (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(text);
   }
 
   return {
@@ -20065,29 +20160,6 @@ var addTspan = function addTspan(textEl, txt, isFirst, conf) {
 
   if (!isFirst) {
     tSpan.attr('dy', conf.textHeight);
-  }
-};
-/**
- * Makes generics in typescript syntax
- *
- * @example <caption>Array of array of strings in typescript syntax</caption>
- *   // returns "Array<Array<string>>"
- *   parseGenericTypes('Array~Array~string~~');
- *
- * @param {string} text The text to convert
- * @returns {string} The converted string
- */
-
-
-var parseGenericTypes = function parseGenericTypes(text) {
-  var cleanedText = text;
-
-  if (text.indexOf('~') != -1) {
-    cleanedText = cleanedText.replace('~', '<');
-    cleanedText = cleanedText.replace('~', '>');
-    return parseGenericTypes(cleanedText);
-  } else {
-    return cleanedText;
   }
 };
 /**
@@ -20133,6 +20205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getRows": () => (/* binding */ getRows),
 /* harmony export */   "hasBreaks": () => (/* binding */ hasBreaks),
 /* harmony export */   "lineBreakRegex": () => (/* binding */ lineBreakRegex),
+/* harmony export */   "parseGenericTypes": () => (/* binding */ parseGenericTypes),
 /* harmony export */   "removeEscapes": () => (/* binding */ removeEscapes),
 /* harmony export */   "removeScript": () => (/* binding */ removeScript),
 /* harmony export */   "sanitizeText": () => (/* binding */ sanitizeText),
@@ -20201,11 +20274,11 @@ var removeScript = function removeScript(txt) {
   }
 
   var decodedText = removeEscapes(rs);
-  decodedText = decodedText.replaceAll(/script>/gi, '#');
-  decodedText = decodedText.replaceAll(/javascript:/gi, '#');
-  decodedText = decodedText.replaceAll(/javascript&colon/gi, '#');
-  decodedText = decodedText.replaceAll(/onerror=/gi, 'onerror:');
-  decodedText = decodedText.replaceAll(/<iframe/gi, '');
+  decodedText = decodedText.replace(/script>/gi, '#');
+  decodedText = decodedText.replace(/javascript:/gi, '#');
+  decodedText = decodedText.replace(/javascript&colon/gi, '#');
+  decodedText = decodedText.replace(/onerror=/gi, 'onerror:');
+  decodedText = decodedText.replace(/<iframe/gi, '');
   return decodedText;
 };
 
@@ -20326,6 +20399,28 @@ var getUrl = function getUrl(useAbsolute) {
 
 var evaluate = function evaluate(val) {
   return val === 'false' || val === false ? false : true;
+};
+/**
+ * Makes generics in typescript syntax
+ *
+ * @example <caption>Array of array of strings in typescript syntax</caption>
+ *   // returns "Array<Array<string>>"
+ *   parseGenericTypes('Array~Array~string~~');
+ *
+ * @param {string} text The text to convert
+ * @returns {string} The converted string
+ */
+
+var parseGenericTypes = function parseGenericTypes(text) {
+  var cleanedText = text;
+
+  if (text.indexOf('~') != -1) {
+    cleanedText = cleanedText.replace('~', '<');
+    cleanedText = cleanedText.replace('~', '>');
+    return parseGenericTypes(cleanedText);
+  } else {
+    return cleanedText;
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   getRows: getRows,
@@ -20534,14 +20629,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
 /* harmony import */ var dagre__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dagre */ "./node_modules/dagre/index.js");
 /* harmony import */ var dagre__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dagre__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./src/config.js");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../logger */ "./src/logger.js");
-/* harmony import */ var _erMarkers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./erMarkers */ "./src/diagrams/er/erMarkers.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils */ "./src/utils.js");
-/* harmony import */ var _accessibility__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../accessibility */ "./src/accessibility.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../config */ "./src/config.js");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../logger */ "./src/logger.js");
+/* harmony import */ var _erMarkers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./erMarkers */ "./src/diagrams/er/erMarkers.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils */ "./src/utils.js");
+/* harmony import */ var _accessibility__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../accessibility */ "./src/accessibility.js");
+/* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/common */ "./src/diagrams/common/common.js");
 
  // import erDb from './erDb';
 // import erParser from './parser/erDiagram';
+
 
 
 
@@ -20603,11 +20700,12 @@ var drawAttributes = function drawAttributes(groupNode, entityTextNode, attribut
   });
   attributes.forEach(function (item) {
     var attrPrefix = "".concat(entityTextNode.node().id, "-attr-").concat(attrNum);
-    var nodeHeight = 0; // Add a text node for the attribute type
+    var nodeHeight = 0;
+    var attributeType = (0,_common_common__WEBPACK_IMPORTED_MODULE_3__.parseGenericTypes)(item.attributeType); // Add a text node for the attribute type
 
-    var typeNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-type")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeType); // Add a text node for the attribute name
+    var typeNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-type")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(attributeType); // Add a text node for the attribute name
 
-    var nameNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-name")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeName);
+    var nameNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-name")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeName);
     var attributeNode = {};
     attributeNode.tn = typeNode;
     attributeNode.nn = nameNode;
@@ -20618,7 +20716,7 @@ var drawAttributes = function drawAttributes(groupNode, entityTextNode, attribut
     nodeHeight = Math.max(typeBBox.height, nameBBox.height);
 
     if (hasKeyType) {
-      var keyTypeNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-key")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeKeyType || '');
+      var keyTypeNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-key")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeKeyType || '');
       attributeNode.kn = keyTypeNode;
       var keyTypeBBox = keyTypeNode.node().getBBox();
       maxKeyWidth = Math.max(maxKeyWidth, keyTypeBBox.width);
@@ -20626,7 +20724,7 @@ var drawAttributes = function drawAttributes(groupNode, entityTextNode, attribut
     }
 
     if (hasComment) {
-      var commentNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-comment")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeComment || '');
+      var commentNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', "".concat(attrPrefix, "-comment")).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'left').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + attrFontSize + 'px').text(item.attributeComment || '');
       attributeNode.cn = commentNode;
       var commentNodeBBox = commentNode.node().getBBox();
       maxCommentWidth = Math.max(maxCommentWidth, commentNodeBBox.width);
@@ -20730,7 +20828,7 @@ var drawEntities = function drawEntities(svgNode, entities, graph) {
     // which then determines the size of the rectangle
 
     var textId = 'entity-' + id;
-    var textNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', textId).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'middle').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(id);
+    var textNode = groupNode.append('text').attr('class', 'er entityLabel').attr('id', textId).attr('x', 0).attr('y', 0).attr('dominant-baseline', 'middle').attr('text-anchor', 'middle').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(id);
 
     var _drawAttributes = drawAttributes(groupNode, textNode, entities[id].attributes),
         entityWidth = _drawAttributes.width,
@@ -20825,37 +20923,37 @@ var drawRelationshipFromLayout = function drawRelationshipFromLayout(svg, rel, g
 
   switch (rel.relSpec.cardA) {
     case diagObj.db.Cardinality.ZERO_OR_ONE:
-      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ZERO_OR_ONE_END + ')');
+      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ZERO_OR_ONE_END + ')');
       break;
 
     case diagObj.db.Cardinality.ZERO_OR_MORE:
-      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ZERO_OR_MORE_END + ')');
+      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ZERO_OR_MORE_END + ')');
       break;
 
     case diagObj.db.Cardinality.ONE_OR_MORE:
-      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ONE_OR_MORE_END + ')');
+      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ONE_OR_MORE_END + ')');
       break;
 
     case diagObj.db.Cardinality.ONLY_ONE:
-      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ONLY_ONE_END + ')');
+      svgPath.attr('marker-end', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ONLY_ONE_END + ')');
       break;
   }
 
   switch (rel.relSpec.cardB) {
     case diagObj.db.Cardinality.ZERO_OR_ONE:
-      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ZERO_OR_ONE_START + ')');
+      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ZERO_OR_ONE_START + ')');
       break;
 
     case diagObj.db.Cardinality.ZERO_OR_MORE:
-      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ZERO_OR_MORE_START + ')');
+      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ZERO_OR_MORE_START + ')');
       break;
 
     case diagObj.db.Cardinality.ONE_OR_MORE:
-      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ONE_OR_MORE_START + ')');
+      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ONE_OR_MORE_START + ')');
       break;
 
     case diagObj.db.Cardinality.ONLY_ONE:
-      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].ERMarkers.ONLY_ONE_START + ')');
+      svgPath.attr('marker-start', 'url(' + url + '#' + _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].ERMarkers.ONLY_ONE_START + ')');
       break;
   } // Now label the relationship
   // Find the half-way point
@@ -20865,7 +20963,7 @@ var drawRelationshipFromLayout = function drawRelationshipFromLayout(svg, rel, g
   var labelPoint = svgPath.node().getPointAtLength(len * 0.5); // Append a text node containing the label
 
   var labelId = 'rel' + relCnt;
-  var labelNode = svg.append('text').attr('class', 'er relationshipLabel').attr('id', labelId).attr('x', labelPoint.x).attr('y', labelPoint.y).attr('text-anchor', 'middle').attr('dominant-baseline', 'middle').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(rel.roleA); // Figure out how big the opaque 'container' rectangle needs to be
+  var labelNode = svg.append('text').attr('class', 'er relationshipLabel').attr('id', labelId).attr('x', labelPoint.x).attr('y', labelPoint.y).attr('text-anchor', 'middle').attr('dominant-baseline', 'middle').attr('style', 'font-family: ' + (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().fontFamily + '; font-size: ' + conf.fontSize + 'px').text(rel.roleA); // Figure out how big the opaque 'container' rectangle needs to be
 
   var labelBBox = labelNode.node().getBBox(); // Insert the opaque rectangle before the text label
 
@@ -20884,10 +20982,10 @@ var drawRelationshipFromLayout = function drawRelationshipFromLayout(svg, rel, g
 
 
 var draw = function draw(text, id, _version, diagObj) {
-  conf = (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().er;
-  _logger__WEBPACK_IMPORTED_MODULE_5__.log.info('Drawing ER diagram'); //  diag.db.clear();
+  conf = (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().er;
+  _logger__WEBPACK_IMPORTED_MODULE_6__.log.info('Drawing ER diagram'); //  diag.db.clear();
 
-  var securityLevel = (0,_config__WEBPACK_IMPORTED_MODULE_3__.getConfig)().securityLevel; // Handle root and Document for when rendering in sanbox mode
+  var securityLevel = (0,_config__WEBPACK_IMPORTED_MODULE_4__.getConfig)().securityLevel; // Handle root and Document for when rendering in sanbox mode
 
   var sandboxElement;
 
@@ -20906,7 +21004,7 @@ var draw = function draw(text, id, _version, diagObj) {
 
   var svg = root.select("[id='".concat(id, "']")); // Add cardinality marker definitions to the svg
 
-  _erMarkers__WEBPACK_IMPORTED_MODULE_4__["default"].insertMarkers(svg, conf); // Now we have to construct the diagram in a specific way:
+  _erMarkers__WEBPACK_IMPORTED_MODULE_5__["default"].insertMarkers(svg, conf); // Now we have to construct the diagram in a specific way:
   // ---
   // 1. Create all the entities in the svg node at 0,0, but with the correct dimensions (allowing for text content)
   // 2. Make sure they are all added to the graph
@@ -20959,9 +21057,9 @@ var draw = function draw(text, id, _version, diagObj) {
   var svgBounds = svg.node().getBBox();
   var width = svgBounds.width + padding * 2;
   var height = svgBounds.height + padding * 2;
-  (0,_utils__WEBPACK_IMPORTED_MODULE_6__.configureSvgSize)(svg, height, width, conf.useMaxWidth);
+  (0,_utils__WEBPACK_IMPORTED_MODULE_7__.configureSvgSize)(svg, height, width, conf.useMaxWidth);
   svg.attr('viewBox', "".concat(svgBounds.x - padding, " ").concat(svgBounds.y - padding, " ").concat(width, " ").concat(height));
-  (0,_accessibility__WEBPACK_IMPORTED_MODULE_7__["default"])(diagObj.db, svg, id);
+  (0,_accessibility__WEBPACK_IMPORTED_MODULE_8__["default"])(diagObj.db, svg, id);
 }; // draw
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -20984,6 +21082,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var getStyles = function getStyles(options) {
   return "\n  .entityBox {\n    fill: ".concat(options.mainBkg, ";\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .attributeBoxOdd {\n    fill: #ffffff;\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .attributeBoxEven {\n    fill: #f2f2f2;\n    stroke: ").concat(options.nodeBorder, ";\n  }\n\n  .relationshipLabelBox {\n    fill: ").concat(options.tertiaryColor, ";\n    opacity: 0.7;\n    background-color: ").concat(options.tertiaryColor, ";\n      rect {\n        opacity: 0.5;\n      }\n  }\n\n    .relationshipLine {\n      stroke: ").concat(options.lineColor, ";\n    }\n");
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getStyles);
+
+/***/ }),
+
+/***/ "./src/diagrams/error/errorRenderer.js":
+/*!*********************************************!*\
+  !*** ./src/diagrams/error/errorRenderer.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "draw": () => (/* binding */ draw),
+/* harmony export */   "setConf": () => (/* binding */ setConf)
+/* harmony export */ });
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../logger */ "./src/logger.js");
+/** Created by knut on 14-12-11. */
+
+
+var conf = {};
+/**
+ * Merges the value of `conf` with the passed `cnf`
+ *
+ * @param {object} cnf Config to merge
+ */
+
+var setConf = function setConf(cnf) {
+  var keys = Object.keys(cnf);
+  keys.forEach(function (key) {
+    conf[key] = cnf[key];
+  });
+};
+/**
+ * Draws a an info picture in the tag with id: id based on the graph definition in text.
+ *
+ * @param _txt
+ * @param {string} id The text for the error
+ * @param {string} ver The version
+ */
+
+var draw = function draw(_txt, id, ver) {
+  try {
+    _logger__WEBPACK_IMPORTED_MODULE_1__.log.debug('Renering svg for syntax error\n');
+    var svg = (0,d3__WEBPACK_IMPORTED_MODULE_0__.select)('#' + id);
+    var g = svg.append('g');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm411.313,123.313c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32-9.375,9.375-20.688-20.688c-12.484-12.5-32.766-12.5-45.25,0l-16,16c-1.261,1.261-2.304,2.648-3.31,4.051-21.739-8.561-45.324-13.426-70.065-13.426-105.867,0-192,86.133-192,192s86.133,192 192,192 192-86.133 192-192c0-24.741-4.864-48.327-13.426-70.065 1.402-1.007 2.79-2.049 4.051-3.31l16-16c12.5-12.492 12.5-32.758 0-45.25l-20.688-20.688 9.375-9.375 32.001-31.999zm-219.313,100.687c-52.938,0-96,43.063-96,96 0,8.836-7.164,16-16,16s-16-7.164-16-16c0-70.578 57.422-128 128-128 8.836,0 16,7.164 16,16s-7.164,16-16,16z');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm459.02,148.98c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l16,16c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16.001-16z');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm340.395,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16-16c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l15.999,16z');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm400,64c8.844,0 16-7.164 16-16v-32c0-8.836-7.156-16-16-16-8.844,0-16,7.164-16,16v32c0,8.836 7.156,16 16,16z');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm496,96.586h-32c-8.844,0-16,7.164-16,16 0,8.836 7.156,16 16,16h32c8.844,0 16-7.164 16-16 0-8.836-7.156-16-16-16z');
+    g.append('path').attr('class', 'error-icon').attr('d', 'm436.98,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688l32-32c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32c-6.251,6.25-6.251,16.375-0.001,22.625z');
+    g.append('text') // text label for the x axis
+    .attr('class', 'error-text').attr('x', 1440).attr('y', 250).attr('font-size', '150px').style('text-anchor', 'middle').text('Syntax error in graph');
+    g.append('text') // text label for the x axis
+    .attr('class', 'error-text').attr('x', 1250).attr('y', 400).attr('font-size', '100px').style('text-anchor', 'middle').text('mermaid version ' + ver);
+    svg.attr('height', 100);
+    svg.attr('width', 500);
+    svg.attr('viewBox', '768 0 912 512');
+  } catch (e) {
+    _logger__WEBPACK_IMPORTED_MODULE_1__.log.error('Error while rendering info diagram');
+    _logger__WEBPACK_IMPORTED_MODULE_1__.log.error(e.message);
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  setConf: setConf,
+  draw: draw
+});
+
+/***/ }),
+
+/***/ "./src/diagrams/error/styles.js":
+/*!**************************************!*\
+  !*** ./src/diagrams/error/styles.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var getStyles = function getStyles() {
+  return "";
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getStyles);
@@ -22817,8 +23003,8 @@ var draw = function draw(text, id, _version, diagObj) {
     rankdir: dir,
     nodesep: nodeSpacing,
     ranksep: rankSpacing,
-    marginx: 8,
-    marginy: 8
+    marginx: 0,
+    marginy: 0
   }).setDefaultEdgeLabel(function () {
     return {};
   });
@@ -23774,6 +23960,10 @@ var getStartDate = function getStartDate(prevTime, dateFormat, str) {
 var durationToDate = function durationToDate(durationStatement, relativeTime) {
   if (durationStatement !== null) {
     switch (durationStatement[2]) {
+      case 'ms':
+        relativeTime.add(durationStatement[1], 'milliseconds');
+        break;
+
       case 's':
         relativeTime.add(durationStatement[1], 'seconds');
         break;
@@ -23814,7 +24004,7 @@ var getEndDate = function getEndDate(prevTime, dateFormat, str, inclusive) {
     return mDate.toDate();
   }
 
-  return durationToDate(/^([\d]+)([wdhms])/.exec(str.trim()), moment_mini__WEBPACK_IMPORTED_MODULE_0___default()(prevTime));
+  return durationToDate(/^([\d]+)([wdhms]|ms)$/.exec(str.trim()), moment_mini__WEBPACK_IMPORTED_MODULE_0___default()(prevTime));
 };
 
 var taskCnt = 0;
@@ -25028,8 +25218,9 @@ var branch = function branch(name, order) {
     throw error;
   }
 };
-var merge = function merge(otherBranch, tag) {
+var merge = function merge(otherBranch, custom_id, override_type, custom_tag) {
   otherBranch = _common_common__WEBPACK_IMPORTED_MODULE_4__["default"].sanitizeText(otherBranch, _config__WEBPACK_IMPORTED_MODULE_0__.getConfig());
+  custom_id = _common_common__WEBPACK_IMPORTED_MODULE_4__["default"].sanitizeText(custom_id, _config__WEBPACK_IMPORTED_MODULE_0__.getConfig());
   var currentCommit = commits[branches[curBranch]];
   var otherCommit = commits[branches[otherBranch]];
 
@@ -25112,6 +25303,22 @@ var merge = function merge(otherBranch, tag) {
       expected: ['branch abc']
     };
     throw _error4;
+  } else if (custom_id && typeof commits[custom_id] !== 'undefined') {
+    var _error5 = new Error('Incorrect usage of "merge". Commit with id:' + custom_id + ' already exists, use different custom Id');
+
+    _error5.hash = {
+      text: 'merge ' + otherBranch + custom_id + override_type + custom_tag,
+      token: 'merge ' + otherBranch + custom_id + override_type + custom_tag,
+      line: '1',
+      loc: {
+        first_line: 1,
+        last_line: 1,
+        first_column: 1,
+        last_column: 1
+      },
+      expected: ['merge ' + otherBranch + ' ' + custom_id + '_UNIQUE ' + override_type + ' ' + custom_tag]
+    };
+    throw _error5;
   } // if (isReachableFrom(currentCommit, otherCommit)) {
   //   log.debug('Already merged');
   //   return;
@@ -25124,13 +25331,15 @@ var merge = function merge(otherBranch, tag) {
 
 
   var commit = {
-    id: seq + '-' + getId(),
+    id: custom_id ? custom_id : seq + '-' + getId(),
     message: 'merged branch ' + otherBranch + ' into ' + curBranch,
     seq: seq++,
     parents: [head == null ? null : head.id, branches[otherBranch]],
     branch: curBranch,
     type: commitType.MERGE,
-    tag: tag ? tag : ''
+    customType: override_type,
+    customId: custom_id ? true : false,
+    tag: custom_tag ? custom_tag : ''
   };
   head = commit;
   commits[commit.id] = commit;
@@ -25164,9 +25373,9 @@ var cherryPick = function cherryPick(sourceId, targetId) {
   var sourceCommitBranch = sourceCommit.branch;
 
   if (sourceCommit.type === commitType.MERGE) {
-    var _error5 = new Error('Incorrect usage of "cherryPick". Source commit should not be a merge commit');
+    var _error6 = new Error('Incorrect usage of "cherryPick". Source commit should not be a merge commit');
 
-    _error5.hash = {
+    _error6.hash = {
       text: 'cherryPick ' + sourceId + ' ' + targetId,
       token: 'cherryPick ' + sourceId + ' ' + targetId,
       line: '1',
@@ -25178,33 +25387,13 @@ var cherryPick = function cherryPick(sourceId, targetId) {
       },
       expected: ['cherry-pick abc']
     };
-    throw _error5;
+    throw _error6;
   }
 
   if (!targetId || typeof commits[targetId] === 'undefined') {
     // cherry-pick source commit to current branch
     if (sourceCommitBranch === curBranch) {
-      var _error6 = new Error('Incorrect usage of "cherryPick". Source commit is already on current branch');
-
-      _error6.hash = {
-        text: 'cherryPick ' + sourceId + ' ' + targetId,
-        token: 'cherryPick ' + sourceId + ' ' + targetId,
-        line: '1',
-        loc: {
-          first_line: 1,
-          last_line: 1,
-          first_column: 1,
-          last_column: 1
-        },
-        expected: ['cherry-pick abc']
-      };
-      throw _error6;
-    }
-
-    var currentCommit = commits[branches[curBranch]];
-
-    if (typeof currentCommit === 'undefined' || !currentCommit) {
-      var _error7 = new Error('Incorrect usage of "cherry-pick". Current branch (' + curBranch + ')has no commits');
+      var _error7 = new Error('Incorrect usage of "cherryPick". Source commit is already on current branch');
 
       _error7.hash = {
         text: 'cherryPick ' + sourceId + ' ' + targetId,
@@ -25219,6 +25408,26 @@ var cherryPick = function cherryPick(sourceId, targetId) {
         expected: ['cherry-pick abc']
       };
       throw _error7;
+    }
+
+    var currentCommit = commits[branches[curBranch]];
+
+    if (typeof currentCommit === 'undefined' || !currentCommit) {
+      var _error8 = new Error('Incorrect usage of "cherry-pick". Current branch (' + curBranch + ')has no commits');
+
+      _error8.hash = {
+        text: 'cherryPick ' + sourceId + ' ' + targetId,
+        token: 'cherryPick ' + sourceId + ' ' + targetId,
+        line: '1',
+        loc: {
+          first_line: 1,
+          last_line: 1,
+          first_column: 1,
+          last_column: 1
+        },
+        expected: ['cherry-pick abc']
+      };
+      throw _error8;
     }
 
     var _commit = {
@@ -25570,8 +25779,9 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
 
     if (modifyGraph) {
       var typeClass;
+      var commitSymbolType = typeof commit.customType !== 'undefined' && commit.customType !== '' ? commit.customType : commit.type;
 
-      switch (commit.type) {
+      switch (commitSymbolType) {
         case commitType.NORMAL:
           typeClass = 'commit-normal';
           break;
@@ -25596,7 +25806,7 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
           typeClass = 'commit-normal';
       }
 
-      if (commit.type === commitType.HIGHLIGHT) {
+      if (commitSymbolType === commitType.HIGHLIGHT) {
         var circle = gBullets.append('rect');
         circle.attr('x', x - 10);
         circle.attr('y', y - 10);
@@ -25604,7 +25814,7 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
         circle.attr('width', 20);
         circle.attr('class', "commit ".concat(commit.id, " commit-highlight").concat(branchPos[commit.branch].index % THEME_COLOR_LIMIT, " ").concat(typeClass, "-outer"));
         gBullets.append('rect').attr('x', x - 6).attr('y', y - 6).attr('height', 12).attr('width', 12).attr('class', "commit ".concat(commit.id, " commit").concat(branchPos[commit.branch].index % THEME_COLOR_LIMIT, " ").concat(typeClass, "-inner"));
-      } else if (commit.type === commitType.CHERRY_PICK) {
+      } else if (commitSymbolType === commitType.CHERRY_PICK) {
         gBullets.append('circle').attr('cx', x).attr('cy', y).attr('r', 10).attr('class', "commit ".concat(commit.id, " ").concat(typeClass));
         gBullets.append('circle').attr('cx', x - 3).attr('cy', y + 2).attr('r', 2.75).attr('fill', '#fff').attr('class', "commit ".concat(commit.id, " ").concat(typeClass));
         gBullets.append('circle').attr('cx', x + 3).attr('cy', y + 2).attr('r', 2.75).attr('fill', '#fff').attr('class', "commit ".concat(commit.id, " ").concat(typeClass));
@@ -25621,7 +25831,7 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
 
         _circle.attr('class', "commit ".concat(commit.id, " commit").concat(branchPos[commit.branch].index % THEME_COLOR_LIMIT));
 
-        if (commit.type === commitType.MERGE) {
+        if (commitSymbolType === commitType.MERGE) {
           var circle2 = gBullets.append('circle');
           circle2.attr('cx', x);
           circle2.attr('cy', y);
@@ -25629,7 +25839,7 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
           circle2.attr('class', "commit ".concat(typeClass, " ").concat(commit.id, " commit").concat(branchPos[commit.branch].index % THEME_COLOR_LIMIT));
         }
 
-        if (commit.type === commitType.REVERSE) {
+        if (commitSymbolType === commitType.REVERSE) {
           var cross = gBullets.append('path');
           cross.attr('d', "M ".concat(x - 5, ",").concat(y - 5, "L").concat(x + 5, ",").concat(y + 5, "M").concat(x - 5, ",").concat(y + 5, "L").concat(x + 5, ",").concat(y - 5)).attr('class', "commit ".concat(typeClass, " ").concat(commit.id, " commit").concat(branchPos[commit.branch].index % THEME_COLOR_LIMIT));
         }
@@ -25647,7 +25857,7 @@ var drawCommits = function drawCommits(svg, commits, modifyGraph) {
       var px = 4;
       var py = 2; // Draw the commit label
 
-      if (commit.type !== commitType.CHERRY_PICK && commit.type !== commitType.MERGE && gitGraphConfig.showCommitLabel) {
+      if (commit.type !== commitType.CHERRY_PICK && (commit.customId && commit.type === commitType.MERGE || commit.type !== commitType.MERGE) && gitGraphConfig.showCommitLabel) {
         var wrapper = gLabels.append('g');
         var labelBkg = wrapper.insert('rect').attr('class', 'commit-label-bkg');
         var text = wrapper.append('text').attr('x', pos).attr('y', y + 25).attr('class', 'commit-label').text(commit.id);
@@ -25738,7 +25948,7 @@ var findLane = function findLane(y1, y2, _depth) {
   }
 
   var diff = Math.abs(y1 - y2);
-  return findLane(y1, y2 - diff / 5, depth);
+  return findLane(y1, y2 - diff / 5, depth + 1);
 };
 /**
  * This function draw the lines between the commits. They were arrows initially.
@@ -28572,7 +28782,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var getStyles = function getStyles(options) {
-  return ".actor {\n    stroke: ".concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n  }\n\n  text.actor > tspan {\n    fill: ").concat(options.actorTextColor, ";\n    stroke: none;\n  }\n\n  .actor-line {\n    stroke: ").concat(options.actorLineColor, ";\n  }\n\n  .messageLine0 {\n    stroke-width: 1.5;\n    stroke-dasharray: none;\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .messageLine1 {\n    stroke-width: 1.5;\n    stroke-dasharray: 2, 2;\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  #arrowhead path {\n    fill: ").concat(options.signalColor, ";\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .sequenceNumber {\n    fill: ").concat(options.sequenceNumberColor, ";\n  }\n\n  #sequencenumber {\n    fill: ").concat(options.signalColor, ";\n  }\n\n  #crosshead path {\n    fill: ").concat(options.signalColor, ";\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .messageText {\n    fill: ").concat(options.signalTextColor, ";\n    stroke: ").concat(options.signalTextColor, ";\n  }\n\n  .labelBox {\n    stroke: ").concat(options.labelBoxBorderColor, ";\n    fill: ").concat(options.labelBoxBkgColor, ";\n  }\n\n  .labelText, .labelText > tspan {\n    fill: ").concat(options.labelTextColor, ";\n    stroke: none;\n  }\n\n  .loopText, .loopText > tspan {\n    fill: ").concat(options.loopTextColor, ";\n    stroke: none;\n  }\n\n  .loopLine {\n    stroke-width: 2px;\n    stroke-dasharray: 2, 2;\n    stroke: ").concat(options.labelBoxBorderColor, ";\n    fill: ").concat(options.labelBoxBorderColor, ";\n  }\n\n  .note {\n    //stroke: #decc93;\n    stroke: ").concat(options.noteBorderColor, ";\n    fill: ").concat(options.noteBkgColor, ";\n  }\n\n  .noteText, .noteText > tspan {\n    fill: ").concat(options.noteTextColor, ";\n    stroke: none;\n  }\n\n  .activation0 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .activation1 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .activation2 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .actorPopupMenu {\n    position: absolute;\n  }\n\n  .actorPopupMenuPanel {\n    position: absolute;\n    fill: ").concat(options.actorBkg, ";\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));\n}\n  .actor-man line {\n    stroke: ").concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n  }\n  .actor-man circle, line {\n    stroke: ").concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n    stroke-width: 2px;\n  }\n");
+  return ".actor {\n    stroke: ".concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n  }\n\n  text.actor > tspan {\n    fill: ").concat(options.actorTextColor, ";\n    stroke: none;\n  }\n\n  .actor-line {\n    stroke: ").concat(options.actorLineColor, ";\n  }\n\n  .messageLine0 {\n    stroke-width: 1.5;\n    stroke-dasharray: none;\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .messageLine1 {\n    stroke-width: 1.5;\n    stroke-dasharray: 2, 2;\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  #arrowhead path {\n    fill: ").concat(options.signalColor, ";\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .sequenceNumber {\n    fill: ").concat(options.sequenceNumberColor, ";\n  }\n\n  #sequencenumber {\n    fill: ").concat(options.signalColor, ";\n  }\n\n  #crosshead path {\n    fill: ").concat(options.signalColor, ";\n    stroke: ").concat(options.signalColor, ";\n  }\n\n  .messageText {\n    fill: ").concat(options.signalTextColor, ";\n    stroke: none;\n  }\n\n  .labelBox {\n    stroke: ").concat(options.labelBoxBorderColor, ";\n    fill: ").concat(options.labelBoxBkgColor, ";\n  }\n\n  .labelText, .labelText > tspan {\n    fill: ").concat(options.labelTextColor, ";\n    stroke: none;\n  }\n\n  .loopText, .loopText > tspan {\n    fill: ").concat(options.loopTextColor, ";\n    stroke: none;\n  }\n\n  .loopLine {\n    stroke-width: 2px;\n    stroke-dasharray: 2, 2;\n    stroke: ").concat(options.labelBoxBorderColor, ";\n    fill: ").concat(options.labelBoxBorderColor, ";\n  }\n\n  .note {\n    //stroke: #decc93;\n    stroke: ").concat(options.noteBorderColor, ";\n    fill: ").concat(options.noteBkgColor, ";\n  }\n\n  .noteText, .noteText > tspan {\n    fill: ").concat(options.noteTextColor, ";\n    stroke: none;\n  }\n\n  .activation0 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .activation1 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .activation2 {\n    fill: ").concat(options.activationBkgColor, ";\n    stroke: ").concat(options.activationBorderColor, ";\n  }\n\n  .actorPopupMenu {\n    position: absolute;\n  }\n\n  .actorPopupMenuPanel {\n    position: absolute;\n    fill: ").concat(options.actorBkg, ";\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));\n}\n  .actor-man line {\n    stroke: ").concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n  }\n  .actor-man circle, line {\n    stroke: ").concat(options.actorBorder, ";\n    fill: ").concat(options.actorBkg, ";\n    stroke-width: 2px;\n  }\n");
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getStyles);
@@ -30592,7 +30802,7 @@ var draw = function draw(text, id, _version, diag) {
 
   svg.attr('class', 'statediagram');
   var svgBounds = svg.node().getBBox();
-  (0,_utils__WEBPACK_IMPORTED_MODULE_6__.configureSvgSize)(svg, height, width * 1.75, conf.useMaxWidth); // Ensure the viewBox includes the whole svgBounds area with extra space for padding
+  (0,_utils__WEBPACK_IMPORTED_MODULE_6__.configureSvgSize)(svg, height, width, conf.useMaxWidth); // Ensure the viewBox includes the whole svgBounds area with extra space for padding
 
   var vBox = "".concat(svgBounds.x - padding, " ").concat(svgBounds.y - padding, " ").concat(width, " ").concat(height);
   _logger__WEBPACK_IMPORTED_MODULE_2__.log.debug("viewBox ".concat(vBox));
@@ -31735,74 +31945,6 @@ var initGraphics = function initGraphics(graphics) {
 
 /***/ }),
 
-/***/ "./src/errorRenderer.js":
-/*!******************************!*\
-  !*** ./src/errorRenderer.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "draw": () => (/* binding */ draw),
-/* harmony export */   "setConf": () => (/* binding */ setConf)
-/* harmony export */ });
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
-/** Created by knut on 14-12-11. */
-
-
-var conf = {};
-/**
- * Merges the value of `conf` with the passed `cnf`
- *
- * @param {object} cnf Config to merge
- */
-
-var setConf = function setConf(cnf) {
-  var keys = Object.keys(cnf);
-  keys.forEach(function (key) {
-    conf[key] = cnf[key];
-  });
-};
-/**
- * Draws a an info picture in the tag with id: id based on the graph definition in text.
- *
- * @param {string} id The text for the error
- * @param {string} ver The version
- */
-
-var draw = function draw(id, ver) {
-  try {
-    _logger__WEBPACK_IMPORTED_MODULE_1__.log.debug('Renering svg for syntax error\n');
-    var svg = (0,d3__WEBPACK_IMPORTED_MODULE_0__.select)('#' + id);
-    var g = svg.append('g');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm411.313,123.313c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32-9.375,9.375-20.688-20.688c-12.484-12.5-32.766-12.5-45.25,0l-16,16c-1.261,1.261-2.304,2.648-3.31,4.051-21.739-8.561-45.324-13.426-70.065-13.426-105.867,0-192,86.133-192,192s86.133,192 192,192 192-86.133 192-192c0-24.741-4.864-48.327-13.426-70.065 1.402-1.007 2.79-2.049 4.051-3.31l16-16c12.5-12.492 12.5-32.758 0-45.25l-20.688-20.688 9.375-9.375 32.001-31.999zm-219.313,100.687c-52.938,0-96,43.063-96,96 0,8.836-7.164,16-16,16s-16-7.164-16-16c0-70.578 57.422-128 128-128 8.836,0 16,7.164 16,16s-7.164,16-16,16z');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm459.02,148.98c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l16,16c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16.001-16z');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm340.395,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16-16c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l15.999,16z');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm400,64c8.844,0 16-7.164 16-16v-32c0-8.836-7.156-16-16-16-8.844,0-16,7.164-16,16v32c0,8.836 7.156,16 16,16z');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm496,96.586h-32c-8.844,0-16,7.164-16,16 0,8.836 7.156,16 16,16h32c8.844,0 16-7.164 16-16 0-8.836-7.156-16-16-16z');
-    g.append('path').attr('class', 'error-icon').attr('d', 'm436.98,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688l32-32c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32c-6.251,6.25-6.251,16.375-0.001,22.625z');
-    g.append('text') // text label for the x axis
-    .attr('class', 'error-text').attr('x', 1240).attr('y', 250).attr('font-size', '150px').style('text-anchor', 'middle').text('Syntax error in graph');
-    g.append('text') // text label for the x axis
-    .attr('class', 'error-text').attr('x', 1050).attr('y', 400).attr('font-size', '100px').style('text-anchor', 'middle').text('mermaid version ' + ver);
-    svg.attr('height', 100);
-    svg.attr('width', 400);
-    svg.attr('viewBox', '768 0 512 512');
-  } catch (e) {
-    _logger__WEBPACK_IMPORTED_MODULE_1__.log.error('Error while rendering info diagram');
-    _logger__WEBPACK_IMPORTED_MODULE_1__.log.error(e.message);
-  }
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  setConf: setConf,
-  draw: draw
-});
-
-/***/ }),
-
 /***/ "./src/interactionDb.js":
 /*!******************************!*\
   !*** ./src/interactionDb.js ***!
@@ -31977,10 +32119,6 @@ var init = function init() {
   } catch (e) {
     _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn('Syntax Error rendering');
     _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn(e.str);
-
-    if (this.parseError) {
-      this.parseError(e);
-    }
   }
 };
 
@@ -32036,9 +32174,11 @@ var initThrowsErrors = function initThrowsErrors() {
 
   var idGenerator = new _utils__WEBPACK_IMPORTED_MODULE_2__["default"].initIdGenerator(conf.deterministicIds, conf.deterministicIDSeed);
   var txt;
+  var errors = [];
 
   var _loop = function _loop(i) {
-    // element is the current div with mermaid class
+    _logger__WEBPACK_IMPORTED_MODULE_0__.log.info('Rendering diagram: ' + nodes[i].id, i); // element is the current div with mermaid class
+
     var element = nodes[i];
     /*! Check if previously processed */
 
@@ -32070,11 +32210,23 @@ var initThrowsErrors = function initThrowsErrors() {
         if (bindFunctions) bindFunctions(element);
       }, element);
     } catch (error) {
-      _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn('Catching Error (bootstrap)');
-      throw {
+      _logger__WEBPACK_IMPORTED_MODULE_0__.log.warn('Catching Error (bootstrap)', error);
+
+      if (typeof mermaid.parseError === 'function') {
+        mermaid.parseError({
+          error: error,
+          str: error.str,
+          hash: error.hash,
+          message: error.str
+        });
+      }
+
+      errors.push({
         error: error,
+        str: error.str,
+        hash: error.hash,
         message: error.str
-      };
+      });
     }
   };
 
@@ -32082,6 +32234,10 @@ var initThrowsErrors = function initThrowsErrors() {
     var _ret = _loop(i);
 
     if (_ret === "continue") continue;
+  }
+
+  if (errors.length > 0) {
+    throw errors[0];
   }
 };
 
@@ -32202,7 +32358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./diagrams/state/stateRenderer-v2 */ "./src/diagrams/state/stateRenderer-v2.js");
 /* harmony import */ var _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./diagrams/user-journey/journeyRenderer */ "./src/diagrams/user-journey/journeyRenderer.js");
 /* harmony import */ var _Diagram__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Diagram */ "./src/Diagram.js");
-/* harmony import */ var _errorRenderer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./errorRenderer */ "./src/errorRenderer.js");
+/* harmony import */ var _diagrams_error_errorRenderer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./diagrams/error/errorRenderer */ "./src/diagrams/error/errorRenderer.js");
 /* harmony import */ var _interactionDb__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./interactionDb */ "./src/interactionDb.js");
 /* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles */ "./src/styles.js");
@@ -32352,12 +32508,17 @@ var decodeEntities = function decodeEntities(text) {
  * @param {any} _txt The graph definition
  * @param {any} cb Callback which is called after rendering is finished with the svg code as inparam.
  * @param {any} container Selector to element in which a div with the graph temporarily will be
- *   inserted. In one is provided a hidden div will be inserted in the body of the page instead. The
+ *   inserted. If one is provided a hidden div will be inserted in the body of the page instead. The
  *   element will be removed when rendering is completed.
  * @returns {any}
  */
 
 var render = function render(id, _txt, cb, container) {
+  if (!hasLoadedDiagrams) {
+    (0,_diagram_api_diagram_orchestration__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    hasLoadedDiagrams = true;
+  }
+
   _config__WEBPACK_IMPORTED_MODULE_5__.reset();
 
   var txt = _txt.replace(/\r\n?/g, '\n'); // parser problems on CRLF ignore all CR and leave LF;;
@@ -32447,7 +32608,16 @@ var render = function render(id, _txt, cb, container) {
 
   txt = encodeEntities(txt); // Important that we do not create the diagram until after the directives have been included
 
-  var diag = new _Diagram__WEBPACK_IMPORTED_MODULE_3__["default"](txt); // Get the tmp element containing the the svg
+  var diag;
+  var parseEncounteredException;
+
+  try {
+    diag = new _Diagram__WEBPACK_IMPORTED_MODULE_3__["default"](txt);
+  } catch (error) {
+    diag = new _Diagram__WEBPACK_IMPORTED_MODULE_3__["default"]('error');
+    parseEncounteredException = error;
+  } // Get the tmp element containing the the svg
+
 
   var element = root.select('#d' + id).node();
   var graphType = diag.type; // insert inline style into svg
@@ -32507,7 +32677,7 @@ var render = function render(id, _txt, cb, container) {
   try {
     diag.renderer.draw(txt, id, _package_json__WEBPACK_IMPORTED_MODULE_12__.version, diag);
   } catch (e) {
-    _errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].draw(id, _package_json__WEBPACK_IMPORTED_MODULE_12__.version);
+    _diagrams_error_errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].draw(id, _package_json__WEBPACK_IMPORTED_MODULE_12__.version);
     throw e;
   }
 
@@ -32572,6 +32742,10 @@ var render = function render(id, _txt, cb, container) {
 
   if (node !== null && typeof node.remove === 'function') {
     (0,d3__WEBPACK_IMPORTED_MODULE_0__.select)(tmpElementSelector).node().remove();
+  }
+
+  if (parseEncounteredException) {
+    throw parseEncounteredException;
   }
 
   return svgCode;
@@ -32669,7 +32843,7 @@ function updateRendererConfigs(conf) {
   _diagrams_state_stateRenderer_v2__WEBPACK_IMPORTED_MODULE_23__["default"].setConf(conf.state); // infoRenderer.setConf(conf.class);
 
   _diagrams_user_journey_journeyRenderer__WEBPACK_IMPORTED_MODULE_24__["default"].setConf(conf.journey);
-  _errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].setConf(conf.class);
+  _diagrams_error_errorRenderer__WEBPACK_IMPORTED_MODULE_13__["default"].setConf(conf.class);
 }
 /** @param {any} options */
 
@@ -32807,17 +32981,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _diagrams_class_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./diagrams/class/styles */ "./src/diagrams/class/styles.js");
 /* harmony import */ var _diagrams_er_styles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./diagrams/er/styles */ "./src/diagrams/er/styles.js");
+/* harmony import */ var _diagrams_error_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagrams/error/styles */ "./src/diagrams/error/styles.js");
 /* harmony import */ var _diagrams_flowchart_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./diagrams/flowchart/styles */ "./src/diagrams/flowchart/styles.js");
 /* harmony import */ var _diagrams_gantt_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./diagrams/gantt/styles */ "./src/diagrams/gantt/styles.js");
 /* harmony import */ var _diagrams_git_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./diagrams/git/styles */ "./src/diagrams/git/styles.js");
 /* harmony import */ var _diagrams_info_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./diagrams/info/styles */ "./src/diagrams/info/styles.js");
 /* harmony import */ var _diagrams_pie_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./diagrams/pie/styles */ "./src/diagrams/pie/styles.js");
-/* harmony import */ var _diagrams_requirement_styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./diagrams/requirement/styles */ "./src/diagrams/requirement/styles.js");
+/* harmony import */ var _diagrams_requirement_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./diagrams/requirement/styles */ "./src/diagrams/requirement/styles.js");
 /* harmony import */ var _diagrams_sequence_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./diagrams/sequence/styles */ "./src/diagrams/sequence/styles.js");
 /* harmony import */ var _diagrams_state_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./diagrams/state/styles */ "./src/diagrams/state/styles.js");
-/* harmony import */ var _diagrams_user_journey_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagrams/user-journey/styles */ "./src/diagrams/user-journey/styles.js");
-/* harmony import */ var _diagrams_c4_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./diagrams/c4/styles */ "./src/diagrams/c4/styles.js");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
+/* harmony import */ var _diagrams_user_journey_styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./diagrams/user-journey/styles */ "./src/diagrams/user-journey/styles.js");
+/* harmony import */ var _diagrams_c4_styles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./diagrams/c4/styles */ "./src/diagrams/c4/styles.js");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./logger */ "./src/logger.js");
+
 
 
 
@@ -32845,12 +33021,13 @@ var themes = {
   info: _diagrams_info_styles__WEBPACK_IMPORTED_MODULE_6__["default"],
   pie: _diagrams_pie_styles__WEBPACK_IMPORTED_MODULE_7__["default"],
   er: _diagrams_er_styles__WEBPACK_IMPORTED_MODULE_8__["default"],
-  journey: _diagrams_user_journey_styles__WEBPACK_IMPORTED_MODULE_9__["default"],
-  requirement: _diagrams_requirement_styles__WEBPACK_IMPORTED_MODULE_10__["default"],
-  c4: _diagrams_c4_styles__WEBPACK_IMPORTED_MODULE_11__["default"]
+  error: _diagrams_error_styles__WEBPACK_IMPORTED_MODULE_9__["default"],
+  journey: _diagrams_user_journey_styles__WEBPACK_IMPORTED_MODULE_10__["default"],
+  requirement: _diagrams_requirement_styles__WEBPACK_IMPORTED_MODULE_11__["default"],
+  c4: _diagrams_c4_styles__WEBPACK_IMPORTED_MODULE_12__["default"]
 };
 var calcThemeVariables = function calcThemeVariables(theme, userOverRides) {
-  _logger__WEBPACK_IMPORTED_MODULE_12__.log.info('userOverides', userOverRides);
+  _logger__WEBPACK_IMPORTED_MODULE_13__.log.info('userOverides', userOverRides);
   return theme.calcColors(userOverRides);
 };
 
@@ -35475,8 +35652,7 @@ var d3Attrs = function d3Attrs(d3Elem, attrs) {
 
 
 var calculateSvgSizeAttrs = function calculateSvgSizeAttrs(height, width, useMaxWidth) {
-  var attrs = new Map();
-  attrs.set('height', height);
+  var attrs = new Map(); // attrs.set('height', height);
 
   if (useMaxWidth) {
     attrs.set('width', '100%');
@@ -35497,38 +35673,39 @@ var calculateSvgSizeAttrs = function calculateSvgSizeAttrs(height, width, useMax
  */
 
 var configureSvgSize = function configureSvgSize(svgElem, height, width, useMaxWidth) {
-  var attrs = calculateSvgSizeAttrs(height, width, useMaxWidth);
+  var attrs = calculateSvgSizeAttrs(height, 1 * width, useMaxWidth);
   d3Attrs(svgElem, attrs);
 };
 var setupGraphViewbox = function setupGraphViewbox(graph, svgElem, padding, useMaxWidth) {
   var svgBounds = svgElem.node().getBBox();
   var sWidth = svgBounds.width;
   var sHeight = svgBounds.height;
+  _logger__WEBPACK_IMPORTED_MODULE_4__.log.info("SVG bounds: ".concat(sWidth, "x").concat(sHeight), svgBounds);
   var width = graph._label.width;
   var height = graph._label.height;
-  var tx = 0;
-  var ty = 0;
+  _logger__WEBPACK_IMPORTED_MODULE_4__.log.info("Graph bounds: ".concat(width, "x").concat(height), graph); // let tx = 0;
+  // let ty = 0;
+  // if (sWidth > width) {
+  //   tx = (sWidth - width) / 2 + padding;
 
-  if (sWidth > width) {
-    tx = (sWidth - width) / 2 + padding;
-    width = sWidth + padding * 2;
-  } else {
-    if (Math.abs(sWidth - width) >= 2 * padding + 1) {
-      width = width - padding;
-    }
-  }
+  width = sWidth + padding * 2; // } else {
+  //   if (Math.abs(sWidth - width) >= 2 * padding + 1) {
+  //     width = width - padding;
+  //   }
+  // }
+  // if (sHeight > height) {
+  //   ty = (sHeight - height) / 2 + padding;
 
-  if (sHeight > height) {
-    ty = (sHeight - height) / 2 + padding;
-    height = sHeight + padding * 2;
-  }
+  height = sHeight + padding * 2; // }
+  // width =
 
+  _logger__WEBPACK_IMPORTED_MODULE_4__.log.info("Calculated bounds: ".concat(width, "x").concat(height));
   configureSvgSize(svgElem, height, width, useMaxWidth); // Ensure the viewBox includes the whole svgBounds area with extra space for padding
+  // const vBox = `0 0 ${width} ${height}`;
 
-  var vBox = "0 0 ".concat(width, " ").concat(height);
-  _logger__WEBPACK_IMPORTED_MODULE_4__.log.debug('Graph.label', graph._label, 'swidth', sWidth, 'sheight', sHeight, 'width', width, 'height', height, 'tx', tx, 'ty', ty, 'vBox', vBox);
-  svgElem.attr('viewBox', vBox);
-  svgElem.select('g').attr('transform', "translate(".concat(tx, ", ").concat(ty, ")"));
+  var vBox = "".concat(svgBounds.x - padding, " ").concat(svgBounds.y - padding, " ").concat(svgBounds.width + 2 * padding, " ").concat(svgBounds.height + 2 * padding);
+  _logger__WEBPACK_IMPORTED_MODULE_4__.log.info('Graph.label', graph._label, 'swidth', sWidth, 'sheight', sHeight, 'width', width, 'height', height, 'vBox', vBox);
+  svgElem.attr('viewBox', vBox); // svgElem.select('g').attr('transform', `translate(${tx}, ${ty})`);
 };
 var initIdGenerator = /*#__PURE__*/function () {
   function iterator(deterministic, seed) {
@@ -40387,7 +40564,7 @@ module.exports = "0.8.5";
   \***********************************************/
 /***/ (function(module) {
 
-/*! @license DOMPurify 2.3.10 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.3.10/LICENSE */
+/*! @license DOMPurify 2.4.0 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.4.0/LICENSE */
 
 (function (global, factory) {
    true ? module.exports = factory() :
@@ -40714,7 +40891,7 @@ module.exports = "0.8.5";
      */
 
 
-    DOMPurify.version = '2.3.10';
+    DOMPurify.version = '2.4.0';
     /**
      * Array of elements that DOMPurify removed during sanitation.
      * Empty if nothing was removed.
@@ -40872,9 +41049,27 @@ module.exports = "0.8.5";
      * case Trusted Types are not supported  */
 
     var RETURN_TRUSTED_TYPE = false;
-    /* Output should be free from DOM clobbering attacks? */
+    /* Output should be free from DOM clobbering attacks?
+     * This sanitizes markups named with colliding, clobberable built-in DOM APIs.
+     */
 
     var SANITIZE_DOM = true;
+    /* Achieve full DOM Clobbering protection by isolating the namespace of named
+     * properties and JS variables, mitigating attacks that abuse the HTML/DOM spec rules.
+     *
+     * HTML/DOM spec rules that enable DOM Clobbering:
+     *   - Named Access on Window (§7.3.3)
+     *   - DOM Tree Accessors (§3.1.5)
+     *   - Form Element Parent-Child Relations (§4.10.3)
+     *   - Iframe srcdoc / Nested WindowProxies (§4.8.5)
+     *   - HTMLCollection (§4.2.10.2)
+     *
+     * Namespace isolation is implemented by prefixing `id` and `name` attributes
+     * with a constant string, i.e., `user-content-`
+     */
+
+    var SANITIZE_NAMED_PROPS = false;
+    var SANITIZE_NAMED_PROPS_PREFIX = 'user-content-';
     /* Keep element content when removing element? */
 
     var KEEP_CONTENT = true;
@@ -40987,6 +41182,8 @@ module.exports = "0.8.5";
       FORCE_BODY = cfg.FORCE_BODY || false; // Default false
 
       SANITIZE_DOM = cfg.SANITIZE_DOM !== false; // Default true
+
+      SANITIZE_NAMED_PROPS = cfg.SANITIZE_NAMED_PROPS || false; // Default false
 
       KEEP_CONTENT = cfg.KEEP_CONTENT !== false; // Default true
 
@@ -41644,6 +41841,18 @@ module.exports = "0.8.5";
         if (!_isValidAttribute(lcTag, lcName, value)) {
           continue;
         }
+        /* Full DOM Clobbering protection via namespace isolation,
+         * Prefix id and name attributes with `user-content-`
+         */
+
+
+        if (SANITIZE_NAMED_PROPS && (lcName === 'id' || lcName === 'name')) {
+          // Remove the attribute with this value
+          _removeAttribute(name, currentNode); // Prefix the value and later re-create the attribute with the sanitized value
+
+
+          value = SANITIZE_NAMED_PROPS_PREFIX + value;
+        }
         /* Handle attributes that require Trusted Types */
 
 
@@ -41730,7 +41939,8 @@ module.exports = "0.8.5";
     // eslint-disable-next-line complexity
 
 
-    DOMPurify.sanitize = function (dirty, cfg) {
+    DOMPurify.sanitize = function (dirty) {
+      var cfg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var body;
       var importedNode;
       var currentNode;
@@ -89088,7 +89298,7 @@ function combine (array, callback) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"mermaid","version":"9.1.5","description":"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.","main":"dist/mermaid.core.js","module":"dist/mermaid.esm.min.mjs","exports":{".":{"require":"./dist/mermaid.core.js","import":"./dist/mermaid.esm.min.mjs"},"./*":"./*"},"keywords":["diagram","markdown","flowchart","sequence diagram","gantt","class diagram","git graph"],"scripts":{"build:development":"webpack --mode development --progress --color","build:production":"webpack --mode production --progress --color","build":"concurrently \\"yarn build:development\\" \\"yarn build:production\\"","postbuild":"documentation build src/mermaidAPI.js src/config.js src/defaultConfig.js --shallow -f md --markdown-toc false > docs/Setup.md","build:watch":"yarn build:development --watch","release":"yarn build","lint":"eslint ./ --ext .js,.json,.html","lint:fix":"yarn lint --fix","e2e:depr":"yarn lint && jest e2e --config e2e/jest.config.js","cypress":"cypress run","e2e":"start-server-and-test dev http://localhost:9000/ cypress","e2e-upd":"yarn lint && jest e2e -u --config e2e/jest.config.js","dev":"webpack serve --config ./.webpack/webpack.config.e2e.babel.js","ci":"jest src/.*","test":"yarn lint && jest src/.*","test:watch":"jest --watch src","prepublishOnly":"yarn build && yarn test","prepare":"husky install && yarn build","pre-commit":"lint-staged"},"repository":{"type":"git","url":"https://github.com/knsv/mermaid"},"author":"Knut Sveidqvist","license":"MIT","standard":{"ignore":["**/parser/*.js","dist/**/*.js","cypress/**/*.js"],"globals":["page"]},"dependencies":{"@braintree/sanitize-url":"^6.0.0","d3":"^7.0.0","dagre":"^0.8.5","dagre-d3":"^0.6.4","dompurify":"2.3.10","graphlib":"^2.1.8","khroma":"^2.0.0","moment-mini":"2.24.0","stylis":"^4.0.10"},"devDependencies":{"@applitools/eyes-cypress":"^3.25.7","@babel/core":"^7.14.6","@babel/eslint-parser":"^7.14.7","@babel/preset-env":"^7.14.7","@babel/register":"^7.14.5","@commitlint/cli":"^17.0.0","@commitlint/config-conventional":"^17.0.0","babel-jest":"^28.0.3","babel-loader":"^8.2.2","concurrently":"^7.0.0","coveralls":"^3.0.2","css-to-string-loader":"^0.1.3","cypress":"9.7.0","cypress-image-snapshot":"^4.0.1","documentation":"13.2.0","eslint":"^8.4.1","eslint-config-prettier":"^8.3.0","eslint-plugin-cypress":"^2.12.1","eslint-plugin-html":"^7.1.0","eslint-plugin-jest":"^26.0.0","eslint-plugin-jsdoc":"^39.1.0","eslint-plugin-json":"^3.1.0","eslint-plugin-markdown":"^3.0.0","eslint-plugin-prettier":"^4.0.0","husky":"^8.0.0","identity-obj-proxy":"^3.0.0","jest":"^28.0.3","jest-environment-jsdom":"^28.0.2","jison":"^0.4.18","js-base64":"3.7.2","lint-staged":"^13.0.0","moment":"^2.23.0","path-browserify":"^1.0.1","prettier":"^2.3.2","prettier-plugin-jsdoc":"^0.3.30","start-server-and-test":"^1.12.6","terser-webpack-plugin":"^5.2.4","webpack":"^5.53.0","webpack-cli":"^4.7.2","webpack-dev-server":"^4.3.0","webpack-merge":"^5.8.0","webpack-node-externals":"^3.0.0"},"resolutions":{"d3":"^7.0.0"},"files":["dist"],"sideEffects":["**/*.css","**/*.scss"]}');
+module.exports = JSON.parse('{"name":"mermaid","version":"9.1.7","description":"Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.","main":"dist/mermaid.min.js","module":"dist/mermaid.esm.min.mjs","exports":{".":{"require":"./dist/mermaid.min.js","import":"./dist/mermaid.esm.min.mjs"},"./*":"./*"},"keywords":["diagram","markdown","flowchart","sequence diagram","gantt","class diagram","git graph"],"scripts":{"build:development":"webpack --mode development --progress --color","build:production":"webpack --mode production --progress --color","build":"concurrently \\"yarn build:development\\" \\"yarn build:production\\"","postbuild":"documentation build src/mermaidAPI.js src/config.js src/defaultConfig.js --shallow -f md --markdown-toc false > docs/Setup.md","build:watch":"yarn build:development --watch","release":"yarn build","lint":"eslint --cache ./ --ext .js,.json,.html,.md","lint:fix":"yarn lint --fix","e2e:depr":"yarn lint && jest e2e --config e2e/jest.config.js","cypress":"cypress run","e2e":"start-server-and-test dev http://localhost:9000/ cypress","e2e-upd":"yarn lint && jest e2e -u --config e2e/jest.config.js","dev":"webpack serve --config ./.webpack/webpack.config.e2e.babel.js","ci":"jest src/.*","test":"yarn lint && jest src/.*","test:watch":"jest --watch src","prepublishOnly":"yarn build && yarn test","prepare":"husky install && yarn build","pre-commit":"lint-staged"},"repository":{"type":"git","url":"https://github.com/knsv/mermaid"},"author":"Knut Sveidqvist","license":"MIT","standard":{"ignore":["**/parser/*.js","dist/**/*.js","cypress/**/*.js"],"globals":["page"]},"dependencies":{"@braintree/sanitize-url":"^6.0.0","d3":"^7.0.0","dagre":"^0.8.5","dagre-d3":"^0.6.4","dompurify":"2.4.0","graphlib":"^2.1.8","khroma":"^2.0.0","moment-mini":"2.24.0","stylis":"^4.0.10"},"devDependencies":{"@applitools/eyes-cypress":"^3.25.7","@babel/core":"^7.14.6","@babel/eslint-parser":"^7.14.7","@babel/preset-env":"^7.14.7","@babel/register":"^7.14.5","@commitlint/cli":"^17.1.2","@commitlint/config-conventional":"^17.0.0","babel-jest":"^29.0.1","babel-loader":"^8.2.2","concurrently":"^7.0.0","coveralls":"^3.0.2","css-to-string-loader":"^0.1.3","cypress":"9.7.0","cypress-image-snapshot":"^4.0.1","documentation":"13.2.0","eslint":"^8.4.1","eslint-config-prettier":"^8.3.0","eslint-plugin-cypress":"^2.12.1","eslint-plugin-html":"^7.1.0","eslint-plugin-jest":"^27.0.1","eslint-plugin-jsdoc":"^39.1.0","eslint-plugin-json":"^3.1.0","eslint-plugin-markdown":"^3.0.0","eslint-plugin-prettier":"^4.0.0","husky":"^8.0.0","identity-obj-proxy":"^3.0.0","jest":"^28.0.3","jest-environment-jsdom":"^29.0.1","jison":"^0.4.18","js-base64":"3.7.2","lint-staged":"^13.0.0","moment":"^2.23.0","path-browserify":"^1.0.1","prettier":"^2.3.2","prettier-plugin-jsdoc":"^0.3.30","start-server-and-test":"^1.12.6","terser-webpack-plugin":"^5.3.6","webpack":"^5.53.0","webpack-cli":"^4.7.2","webpack-dev-server":"^4.10.1","webpack-merge":"^5.8.0","webpack-node-externals":"^3.0.0"},"resolutions":{"d3":"^7.0.0"},"files":["dist"],"sideEffects":["**/*.css","**/*.scss"]}');
 
 /***/ })
 
