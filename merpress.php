@@ -21,10 +21,7 @@ add_action(
 		wp_register_script(
 			'mermaid-init',
 			plugin_dir_url( __FILE__ ) . 'assets/mermaid-init.js',
-			[
-				'jquery',
-				'mermaid',
-			],
+			[ 'mermaid' ],
 			MERMAID_PLUGIN_VERSION,
 			true
 		);
