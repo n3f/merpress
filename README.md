@@ -12,7 +12,8 @@ pnpm build
 ```
 
 If you want to work with development, use the `watch` script (e.g. `pnpm
-watch`).
+watch`). And it's suggested that you run `pnpm husky install` in order to add a
+linting check before committing.
 
 ## Setting a new version
 

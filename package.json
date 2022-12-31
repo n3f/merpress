@@ -1,6 +1,6 @@
 {
 	"name": "merpress",
-	"version": "1.0.0",
+	"version": "1.0.10-pre",
 	"description": "Merpress: add MermaidJS to WordPress",
 	"scripts": {
 		"build": "wp-scripts build",
@@ -23,7 +23,8 @@
 	},
 	"homepage": "https://github.com/n3f/merpress#readme",
 	"devDependencies": {
-		"@wordpress/env": "^4.5.0",
-		"@wordpress/scripts": "^25.0.0"
+		"@wordpress/env": "^4.9.0",
+		"@wordpress/scripts": "^25.0.0",
+		"husky": "^8.0.2"
 	}
 }
