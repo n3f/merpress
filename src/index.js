@@ -1,4 +1,5 @@
 import { useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
 
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
@@ -31,6 +32,11 @@ import metadata from './block.json';
  */
 // debugger;
 registerBlockType( metadata, {
+	description:  <>
+		<p>{ __('Create diagrams and flow charts using text via Mermaid', 'merpress') }.</p>
+		<a href=''>{ __( 'Documentation', 'merpress' ) }</a>
+	</>,
+
 	/**
 	 * @see ./edit.js
 	 */
