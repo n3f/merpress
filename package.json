@@ -4,6 +4,7 @@
   "description": "Merpress: add MermaidJS to WordPress",
   "scripts": {
 	"build": "wp-scripts build",
+	"watch": "wp-scripts start --webpack-devtool=source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
