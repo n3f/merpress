@@ -32,24 +32,33 @@ import metadata from './block.json';
  */
 // debugger;
 registerBlockType( metadata, {
-	description:  <>
-		<p>{ __('Create diagrams and flow charts using text via Mermaid', 'merpress') }.</p>
-		<a href=''>{ __( 'Documentation', 'merpress' ) }</a>
-	</>,
+	description: (
+		<>
+			<p>
+				{ __(
+					'Create diagrams and flow charts using text via Mermaid',
+					'merpress'
+				) }
+				.
+			</p>
+			<a href="https://mermaid.js.org/community/n00b-overview.html">
+				{ __( 'Documentation', 'merpress' ) }
+			</a>
+		</>
+	),
 
 	/**
 	 * @see ./edit.js
 	 */
 	edit: Edit,
+
 	/**
-	 * @see ./save.js
+	 * @param {Object} props Properties passed from the editor.
 	 */
-	save: function (props) {
-		const blockProps = useBlockProps.save({
+	save: ( props ) => {
+		const blockProps = useBlockProps.save( {
 			className: 'mermaid',
-		});
-		return <pre { ...blockProps }>
-			{ props.attributes.content }
-		</pre>
-	}
+		} );
+		return <pre { ...blockProps }>{ props.attributes.content }</pre>;
+	},
 } );

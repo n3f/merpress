@@ -7,7 +7,7 @@ Merpress is a WordPress plugin for creating diagrams and visualizations using [M
 Development now uses wordpress blocks best practices (i.e. '@wordpress/scripts'
 to generate the javascript).  Create the production javascript with:
 
-```
+```sh
 pnpm build
 ```
 
@@ -15,7 +15,9 @@ If you want to work with development, use the `watch` script (e.g. `pnpm
 watch`).
 
 ## Setting a new version
+
 TBD
 
 ## Creating a release
+
 TBD

@@ -8,18 +8,27 @@ export function MermaidBlock( props ) {
 
 	useEffect( () => {
 		try {
-			mermaid.parse( content );
+			window.mermaid.parse( content );
 			setError( false );
-			container.current.removeAttribute( 'data-processed' );
-			container.current.innerHTML = content;
-			mermaid.init( undefined, container.current );
 		} catch ( e ) {
 			setError( true );
 		}
+		container.current.removeAttribute( 'data-processed' );
+		container.current.innerHTML = content;
+		window.mermaid.init( undefined, container.current );
 	}, [ content ] );
- 
-	return <>
-		{ isError && <div className='error'>{__( 'Syntax Error', 'merpress' ) }</div> }
-		<div ref={ container } className={ 'mermaid ${error ? "mermaid-error" : "" }' }/>
-	</>;
+
+	return (
+		<>
+			{ isError && (
+				<div className="error">
+					{ __( 'Syntax Error', 'merpress' ) }
+				</div>
+			) }
+			<div
+				ref={ container }
+				className={ 'mermaid ${error ? "mermaid-error" : "" }' }
+			/>
+		</>
+	);
 }
