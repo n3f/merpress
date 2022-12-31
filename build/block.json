@@ -7,8 +7,11 @@
   "icon": "chart-pie",
   "description": "Create diagrams and flow charts using text via Mermaid",
   "keywords": [
-    "alert",
-    "message"
+    "mermaid",
+    "chart",
+    "diagram",
+    "flow",
+    "graph"
   ],
   "version": "1.0.10-pre",
   "textdomain": "my-plugin",
@@ -20,6 +23,7 @@
     }
   },
   "supports": {
+    "className": false,
     "html": false
   },
   "example": {
@@ -31,13 +35,14 @@
     "file:./index.js"
   ],
   "editorStyle": [
-    "mermaid-gutenberg-block",
     "wp-edit-blocks"
   ],
   "script": [
     "mermaid"
   ],
-  "style": [],
+  "style": [
+    "mermaid-gutenberg-block"
+  ],
   "viewScript": [
     "mermaid-init"
   ]

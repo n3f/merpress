@@ -10,12 +10,12 @@ export default function Edit( props ) {
     }
 
     return <div { ...blockProps } >
-        { props.isSelected &&
-        <pre className='mermaid-editor wp-block-code'>
-            <PlainText onChange={ updateContent } value={ content } />
-        </pre>
-        }
-        { props.isSelected && <hr/> }
+        { props.isSelected && <>
+            <pre className='mermaid-editor wp-block-code'>
+                <PlainText onChange={ updateContent } value={ content } />
+            </pre>
+            <hr/>
+        </> }
         <MermaidBlock content={ content } />
     </div>
 }

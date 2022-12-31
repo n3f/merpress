@@ -29,18 +29,10 @@ add_action(
 			true
 		);
 
-		// wp_register_script(
-		// 	'mermaid-gutenberg-block',
-		// 	plugin_dir_url( __FILE__ ) . 'assets/mermaid-block.js',
-		// 	[ 'mermaid' ],
-		// 	MERMAID_PLUGIN_VERSION,
-		// 	true
-		// );
-
 		wp_register_style(
 			'mermaid-gutenberg-block',
 			plugin_dir_url( __FILE__ ) . 'assets/mermaid-block.css',
-			[ 'wp-edit-blocks' ],
+			[],
 			MERMAID_PLUGIN_VERSION
 		);
 
@@ -48,12 +40,5 @@ add_action(
 		if ( $result === false ) {
 			error_log( 'Failed to register block type' );
 		}
-
-		// $enqueue_mermaid = function () {
-		// 	wp_enqueue_script( 'mermaid-init' );
-		// };
-
-		// add_action( 'loop_end', $enqueue_mermaid );
-		// add_action( 'loop_no_results', $enqueue_mermaid );
 	}
 );
