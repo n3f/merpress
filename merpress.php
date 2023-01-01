@@ -16,11 +16,11 @@ define( 'MERMAID_PLUGIN_VERSION', '1.0.10-alpha' );
 add_action(
 	'init',
 	function () {
-		wp_register_script( 'mermaid', plugin_dir_url( __FILE__ ) . 'assets/mermaid.min.js', [], MERMAID_JS_VERSION, true );
+		wp_register_script( 'mermaid', plugin_dir_url( __FILE__ ) . 'public/mermaid.min.js', [], MERMAID_JS_VERSION, true );
 
 		wp_register_script(
 			'mermaid-init',
-			plugin_dir_url( __FILE__ ) . 'assets/mermaid-init.js',
+			plugin_dir_url( __FILE__ ) . 'public/mermaid-init.js',
 			[ 'mermaid' ],
 			MERMAID_PLUGIN_VERSION,
 			true
@@ -28,7 +28,7 @@ add_action(
 
 		wp_register_style(
 			'mermaid-gutenberg-block',
-			plugin_dir_url( __FILE__ ) . 'assets/mermaid-block.css',
+			plugin_dir_url( __FILE__ ) . 'public/mermaid-block.css',
 			[],
 			MERMAID_PLUGIN_VERSION
 		);

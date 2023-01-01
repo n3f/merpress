@@ -1,5 +1,5 @@
 node_modules
-assets/mermaid.min.js
-assets/mermaid.js
-assets/mermaid.js.map
+public/mermaid.min.js
+public/mermaid.js
+public/mermaid.js.map
 build
