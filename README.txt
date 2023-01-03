@@ -3,22 +3,22 @@ Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
 Requires at least: 5.0
 Tested up to: 6.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10-alpha
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Merpress lets you create diagrams and visualizations using <a href="https://mermaid-js.github.io/mermaid/">MermaidJS</a>.
+Merpress lets you create diagrams and visualizations using <a href="https://mermaid.js.org/intro/">MermaidJS</a>.
 
 == Description ==
 
-Merpress lets you create diagrams and visualizations using [MermaidJS](https://mermaid-js.github.io/mermaid/).
+Merpress lets you create diagrams and visualizations using [MermaidJS](https://mermaid.js.org/intro/).
 
 == Frequently Asked Questions ==
 
 = Can you make diagrams with this? =
 
-Yes.  Checkout [MermaidJS](https://mermaid-js.github.io/mermaid/#/n00b-syntaxReference) for syntax reference and example diagrams.
+Yes.  Checkout [MermaidJS](https://mermaid.js.org/community/n00b-overview.html) for syntax reference and example diagrams.
 
 == Screenshots ==
 
@@ -30,10 +30,10 @@ Yes.  Checkout [MermaidJS](https://mermaid-js.github.io/mermaid/#/n00b-syntaxRef
 
 == Changelog ==
 
-= 1.0.9 =
+= 1.0.10-alpha =
 * Update mermaid to 9.3.0.
 
 == Upgrade Notice ==
 
-= 1.0.9 =
+= 1.0.10-alpha =
 Mermaid update (9.3.0)

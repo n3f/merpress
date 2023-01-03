@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "merpress/mermaidjs",
+    "title": "MermaidJS",
+    "category": "formatting",
+    "icon": "chart-pie",
+    "description": "Create diagrams and flow charts using text via Mermaid",
+    "keywords": [ "mermaid", "chart", "diagram", "flow", "graph" ],
+    "version": "1.0.10-alpha",
+    "textdomain": "my-plugin",
+    "attributes": {
+        "content": {
+            "type": "string",
+            "source": "text",
+            "selector": "pre.mermaid"
+        }
+    },
+    "supports": {
+        "className": false,
+        "html": false
+    },
+    "example": {
+        "attributes": {
+            "content": "graph TD\nA-->B\n"
+        }
+    },
+    "editorScript": [ "file:./index.js" ],
+    "editorStyle": [ "wp-edit-blocks" ],
+    "script": [ "mermaid" ],
+    "style": [ "mermaid-gutenberg-block" ],
+    "viewScript": [ "mermaid-init" ]
+}

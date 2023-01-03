@@ -1,0 +1,5 @@
+node_modules
+public/mermaid.min.js
+public/mermaid.js
+public/mermaid.js.map
+build
