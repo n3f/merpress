@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2" viewBox="0 0 600 600">
+  <path d="M0 0h600v600H0z" style="fill:#fff"/>
+  <path d="M282 480 142 177v241c0 22 3 36 8 41 6 8 17 12 31 12h13v9H68v-9h13c15 0 26-5 32-14 4-6 6-19 6-39V182c0-16-2-27-5-35-3-5-7-9-14-12-7-4-17-6-32-6v-9h102l131 282 129-282h102v9h-12c-16 0-27 5-33 14-4 6-6 19-6 39v236c0 22 2 36 7 41 7 8 17 12 32 12h12v9H379v-9h13c15 0 26-5 32-14 4-6 6-19 6-39V177L291 480h-9Z" style="fill-rule:nonzero"/>
+</svg>
