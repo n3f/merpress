@@ -2,7 +2,7 @@
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 2,
     "name": "merpress/mermaidjs",
-    "title": "MermaidJS",
+    "title": "MerPress",
     "category": "formatting",
     "icon": "chart-pie",
     "description": "Create diagrams and flow charts using text via Mermaid",

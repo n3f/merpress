@@ -33,6 +33,7 @@ add_action(
 			MERMAID_PLUGIN_VERSION
 		);
 
+		// Register the mermaidjs block.
 		$result = register_block_type( __DIR__ . '/build' );
 		if ( $result === false ) {
 			error_log( 'Failed to register block type' );

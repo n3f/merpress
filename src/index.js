@@ -23,7 +23,8 @@ import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import metadata from './block.json';
 
-// import _, { ReactComponent as Logo } from '../assets/markdeep.svg';
+// eslint-disable-next-line no-unused-vars
+import _, { ReactComponent as Logo } from '../public/icon.svg';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -52,6 +53,8 @@ registerBlockType( metadata, {
 	 */
 	edit: Edit,
 
+	icon: Logo,
+
 	/**
 	 * @param {Object} props Properties passed from the editor.
 	 */
@@ -59,6 +62,11 @@ registerBlockType( metadata, {
 		const blockProps = useBlockProps.save( {
 			className: 'mermaid',
 		} );
-		return <pre { ...blockProps }>{ props.attributes.content }</pre>;
+		return (
+			<>
+				<pre { ...blockProps }>{ props.attributes.content }</pre>
+				<div className="svg"></div>
+			</>
+		);
 	},
 } );
