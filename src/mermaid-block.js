@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
+import { useMerpressContext } from './context';
 
-export function MermaidBlock( props ) {
-	const { content } = props;
+export function MermaidBlock() {
 	const [ isError, setError ] = useState( false );
 	const container = useRef( null );
+	const { content } = useMerpressContext();
 
 	useEffect( () => {
 		try {

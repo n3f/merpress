@@ -1,4 +1,3 @@
-import { useBlockProps } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -21,6 +20,7 @@ import { registerBlockType } from '@wordpress/blocks';
  * Internal dependencies
  */
 import Edit from './edit';
+import Save from './save';
 import metadata from './block.json';
 
 // eslint-disable-next-line no-unused-vars
@@ -58,15 +58,5 @@ registerBlockType( metadata, {
 	/**
 	 * @param {Object} props Properties passed from the editor.
 	 */
-	save: ( props ) => {
-		const blockProps = useBlockProps.save( {
-			className: 'mermaid',
-		} );
-		return (
-			<>
-				<pre { ...blockProps }>{ props.attributes.content }</pre>
-				<div className="svg"></div>
-			</>
-		);
-	},
+	save: Save,
 } );
