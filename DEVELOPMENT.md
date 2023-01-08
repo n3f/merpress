@@ -16,6 +16,18 @@ If you want to work with development, use the `watch` script (e.g. `pnpm
 watch`). And it's suggested that you run `pnpm husky install` in order to add a
 linting check before committing.
 
+### Linting
+
+```sh
+pnpm lint
+```
+
+### Formatting
+
+```sh
+pnpm wp-scripts format <filename>
+```
+
 ## Get a new mermaid drop
 
 Check out the latest tag/version (on the mermaid repo):
