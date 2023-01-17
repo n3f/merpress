@@ -29,5 +29,15 @@
 		"husky": "^8.0.3",
 		"react": "^18.2.0",
 		"url-loader": "^4.1.1"
-	}
+	},
+	"files": [
+		"src",
+		"build",
+		"public",
+		"merpress.php",
+		"package.json",
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"DEVELOPMENT.md"
+	]
 }
