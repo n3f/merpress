@@ -42,7 +42,7 @@ registerBlockType( metadata, {
 				) }
 				.
 			</p>
-			<a href="https://mermaid.js.org/community/n00b-overview.html">
+			<a href="https://mermaid.js.org/syntax/flowchart.html">
 				{ __( 'Documentation', 'merpress' ) }
 			</a>
 		</>
