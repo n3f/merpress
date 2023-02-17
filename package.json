@@ -25,6 +25,7 @@
 	"devDependencies": {
 		"@svgr/webpack": "^6.5.1",
 		"@wordpress/env": "^4.9.0",
+		"@wordpress/icons": "^9.18.0",
 		"@wordpress/scripts": "^25.2.0",
 		"husky": "^8.0.3",
 		"react": "^18.2.0",

@@ -1,12 +1,36 @@
-import { PlainText, useBlockProps } from '@wordpress/block-editor';
+import { PlainText, useBlockProps, BlockControls } from '@wordpress/block-editor';
+import { Toolbar, ToolbarButton } from '@wordpress/components';
 import { useCallback, useState } from '@wordpress/element';
+import { capturePhoto, update } from '@wordpress/icons';
+import { __ } from '@wordpress/i18n';
 import { MermaidBlock } from './mermaid-block';
 import { MerpressContext } from './context';
+
+const IMG_STATE = Object.freeze( {
+	NOT_SAVED: { value: 0, label: 'not saved' },
+	SAVING: { value: 1, label: 'saving' },
+	SAVED: { value: 2, label: 'saved' },
+} );
+
 
 export default function Edit( props ) {
 	const { content = '' } = props.attributes;
 	const [ svg, setSvg ] = useState( '' );
+	const [ img, setImg ] = useState( IMG_STATE.NOT_SAVED );
 	const blockProps = useBlockProps();
+
+	const saveImg = ( evt ) => {
+		console.log( 'saveImg' );
+		setImg( IMG_STATE.SAVING );
+		setTimeout( () => {
+			setImg( IMG_STATE.SAVED );
+		}, 1000 );
+	};
+
+	const resetImg = ( evt ) => {
+		console.log( 'resetImg' );
+		setImg( IMG_STATE.NOT_SAVED );
+	};
 
 	const updateContent = useCallback(
 		( _content ) => {
@@ -33,6 +57,23 @@ export default function Edit( props ) {
 
 	return (
 		<MerpressContext.Provider value={ merpressContext }>
+			{
+				<BlockControls>
+					<Toolbar label={ __( 'MerPress', 'merpress' ) }>
+						<ToolbarButton
+							label={ __( 'Store diagram as PNG', 'merpress' ) }
+							icon={ capturePhoto }
+							onClick={ saveImg }
+							isBusy={ img == IMG_STATE.SAVING }
+							/>
+						{ img == IMG_STATE.SAVED && <ToolbarButton
+							label={ __( 'Unset PNG', 'merpress' ) }
+							icon={ update }
+							onClick={ resetImg }
+							/> }
+					</Toolbar>
+				</BlockControls>
+			}
 			<div { ...blockProps }>
 				{ props.isSelected && (
 					<>
