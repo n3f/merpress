@@ -2,6 +2,8 @@ import { PlainText, useBlockProps, BlockControls } from '@wordpress/block-editor
 import { Toolbar, ToolbarButton } from '@wordpress/components';
 import { useCallback, useState } from '@wordpress/element';
 import { capturePhoto, update } from '@wordpress/icons';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
 import { __ } from '@wordpress/i18n';
 import { MermaidBlock } from './mermaid-block';
 import { MerpressContext } from './context';
@@ -17,14 +19,20 @@ export default function Edit( props ) {
 	const { content = '' } = props.attributes;
 	const [ svg, setSvg ] = useState( '' );
 	const [ img, setImg ] = useState( IMG_STATE.NOT_SAVED );
+	const { createNotice, removeNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
 	const saveImg = ( evt ) => {
 		console.log( 'saveImg' );
 		setImg( IMG_STATE.SAVING );
-		setTimeout( () => {
+		const notice = createNotice( 'info', 'Saving diagram as PNG', { type: 'snackbar'});
+		setTimeout( async () => {
+			let p = await notice;
+			console.log(notice, p);
+			removeNotice( p.notice.id );
+			let w = await createNotice( 'warning', 'Saved diagram as PNG' );
 			setImg( IMG_STATE.SAVED );
-		}, 1000 );
+		}, 5000 );
 	};
 
 	const resetImg = ( evt ) => {
