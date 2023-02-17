@@ -22,8 +22,10 @@ export function MermaidBlock() {
 		container.current.removeAttribute( 'data-processed' );
 		container.current.innerHTML = content;
 		window.mermaid.init( undefined, container.current );
-		const svg = container.current.querySelector( 'svg' ).innerHTML;
-		setContext( { svg } );
+		const svgEl = container.current.querySelector( 'svg' );
+		const { width, height } = svgEl.getBoundingClientRect();
+		const svgText = new XMLSerializer().serializeToString( svgEl );
+		setContext( { svg: { svgText, width, height } } );
 	}, [ content, isSelected ] );
 
 	return (

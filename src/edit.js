@@ -1,12 +1,13 @@
 import { PlainText, useBlockProps, BlockControls } from '@wordpress/block-editor';
 import { Toolbar, ToolbarButton } from '@wordpress/components';
-import { useCallback, useState } from '@wordpress/element';
+import { useCallback, useEffect, useState } from '@wordpress/element';
 import { capturePhoto, update } from '@wordpress/icons';
 import { useDispatch } from '@wordpress/data';
 import { store as noticesStore } from '@wordpress/notices';
 import { __ } from '@wordpress/i18n';
 import { MermaidBlock } from './mermaid-block';
 import { MerpressContext } from './context';
+import { convertSVGToPNG, storePNG } from './utils';
 
 const IMG_STATE = Object.freeze( {
 	NOT_SAVED: { value: 0, label: 'not saved' },
@@ -17,27 +18,50 @@ const IMG_STATE = Object.freeze( {
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const { content = '', img={} } = attributes;
-	const [ svg, setSvg ] = useState( '' );
+	const [ svg, setSvg ] = useState( {} );
 	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
-	const saveImg = ( evt ) => {
+	const saveImg = async ( evt ) => {
 		console.log( 'saveImg' );
 		setImgState( IMG_STATE.SAVING );
-		const notice = createNotice( 'info', 'Saving diagram as PNG', { type: 'snackbar'});
-		setTimeout( async () => {
-			let p = await notice;
-			console.log(notice, p);
-			removeNotice( p.notice.id );
-			let w = await createNotice( 'warning', 'Saved diagram as PNG' );
-			setImgState( IMG_STATE.SAVED );
-		}, 5000 );
+		const notice = await createNotice( 'info', __( 'Saving diagram as PNG', 'merpress' ), { type: 'snackbar'});
+		try {
+			const png = await convertSVGToPNG( svg );
+			const media = await storePNG( png );
+			console.log( 'media', media );
+			setAttributes( {
+				img: {
+					src: media.url,
+					width: svg.width,
+					height: svg.height,
+				}
+			} );
+
+			// Handle all the notices and state changes/cleanup.
+			removeNotice( notice.notice.id );
+			let w = await createNotice( 'info', __( 'Saved diagram as PNG', 'merpress' ), { type: 'snackbar'} );
+			setTimeout( () => removeNotice( w.notice.id ), 3500 );
+		} catch ( e ) {
+			console.log( 'error', e );
+			createNotice( 'error', __( 'Error saving diagram as PNG', 'merpress' ) );
+			setImgState( IMG_STATE.NOT_SAVED );
+		}
 	};
+
+	useEffect( () => {
+		if ( img.src ) {
+			setImgState( IMG_STATE.SAVED );
+		}
+		else {
+			setImgState( IMG_STATE.NOT_SAVED );
+		}
+	}, [ img ] );
 
 	const resetImg = ( evt ) => {
 		console.log( 'resetImg' );
-		setImgState( IMG_STATE.NOT_SAVED );
+		setAttributes( { img: {} } );
 	};
 
 	const updateContent = useCallback(
@@ -52,6 +76,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			updateContent( context.content );
 		}
 		if ( context && context.svg !== undefined ) {
+			console.log( 'svg', context.svg );
 			setSvg( context.svg );
 		}
 	};
