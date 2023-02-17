@@ -15,34 +15,34 @@ const IMG_STATE = Object.freeze( {
 } );
 
 
-export default function Edit( props ) {
-	const { content = '' } = props.attributes;
+export default function Edit( { attributes, setAttributes, isSelected } ) {
+	const { content = '', img={} } = attributes;
 	const [ svg, setSvg ] = useState( '' );
-	const [ img, setImg ] = useState( IMG_STATE.NOT_SAVED );
+	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
 	const saveImg = ( evt ) => {
 		console.log( 'saveImg' );
-		setImg( IMG_STATE.SAVING );
+		setImgState( IMG_STATE.SAVING );
 		const notice = createNotice( 'info', 'Saving diagram as PNG', { type: 'snackbar'});
 		setTimeout( async () => {
 			let p = await notice;
 			console.log(notice, p);
 			removeNotice( p.notice.id );
 			let w = await createNotice( 'warning', 'Saved diagram as PNG' );
-			setImg( IMG_STATE.SAVED );
+			setImgState( IMG_STATE.SAVED );
 		}, 5000 );
 	};
 
 	const resetImg = ( evt ) => {
 		console.log( 'resetImg' );
-		setImg( IMG_STATE.NOT_SAVED );
+		setImgState( IMG_STATE.NOT_SAVED );
 	};
 
 	const updateContent = useCallback(
 		( _content ) => {
-			props.setAttributes( { content: _content } );
+			setAttributes( { content: _content } );
 		},
 		[ content ]
 	);
@@ -57,7 +57,7 @@ export default function Edit( props ) {
 	};
 
 	const merpressContext = {
-		isSelected: props.isSelected,
+		isSelected,
 		content,
 		svg,
 		setContext: updateContext,
@@ -72,9 +72,9 @@ export default function Edit( props ) {
 							label={ __( 'Store diagram as PNG', 'merpress' ) }
 							icon={ capturePhoto }
 							onClick={ saveImg }
-							isBusy={ img == IMG_STATE.SAVING }
+							isBusy={ imgState == IMG_STATE.SAVING }
 							/>
-						{ img == IMG_STATE.SAVED && <ToolbarButton
+						{ imgState == IMG_STATE.SAVED && <ToolbarButton
 							label={ __( 'Unset PNG', 'merpress' ) }
 							icon={ update }
 							onClick={ resetImg }
@@ -83,7 +83,7 @@ export default function Edit( props ) {
 				</BlockControls>
 			}
 			<div { ...blockProps }>
-				{ props.isSelected && (
+				{ isSelected && (
 					<>
 						<pre className="mermaid-editor wp-block-code">
 							<PlainText

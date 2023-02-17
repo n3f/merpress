@@ -185,12 +185,18 @@ const IMG_STATE = Object.freeze({
     label: 'saved'
   }
 });
-function Edit(props) {
+function Edit(_ref) {
+  let {
+    attributes,
+    setAttributes,
+    isSelected
+  } = _ref;
   const {
-    content = ''
-  } = props.attributes;
+    content = '',
+    img = {}
+  } = attributes;
   const [svg, setSvg] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const [img, setImg] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(IMG_STATE.NOT_SAVED);
+  const [imgState, setImgState] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(IMG_STATE.NOT_SAVED);
   const {
     createNotice,
     removeNotice
@@ -198,7 +204,7 @@ function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
   const saveImg = evt => {
     console.log('saveImg');
-    setImg(IMG_STATE.SAVING);
+    setImgState(IMG_STATE.SAVING);
     const notice = createNotice('info', 'Saving diagram as PNG', {
       type: 'snackbar'
     });
@@ -207,15 +213,15 @@ function Edit(props) {
       console.log(notice, p);
       removeNotice(p.notice.id);
       let w = await createNotice('warning', 'Saved diagram as PNG');
-      setImg(IMG_STATE.SAVED);
+      setImgState(IMG_STATE.SAVED);
     }, 5000);
   };
   const resetImg = evt => {
     console.log('resetImg');
-    setImg(IMG_STATE.NOT_SAVED);
+    setImgState(IMG_STATE.NOT_SAVED);
   };
   const updateContent = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useCallback)(_content => {
-    props.setAttributes({
+    setAttributes({
       content: _content
     });
   }, [content]);
@@ -228,7 +234,7 @@ function Edit(props) {
     }
   };
   const merpressContext = {
-    isSelected: props.isSelected,
+    isSelected,
     content,
     svg,
     setContext: updateContext
@@ -241,12 +247,12 @@ function Edit(props) {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Store diagram as PNG', 'merpress'),
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_8__["default"],
     onClick: saveImg,
-    isBusy: img == IMG_STATE.SAVING
-  }), img == IMG_STATE.SAVED && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+    isBusy: imgState == IMG_STATE.SAVING
+  }), imgState == IMG_STATE.SAVED && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Unset PNG', 'merpress'),
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"],
     onClick: resetImg
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, props.isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", {
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", {
     className: "mermaid-editor wp-block-code"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PlainText, {
     onChange: updateContent,
