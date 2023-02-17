@@ -333,12 +333,18 @@ __webpack_require__.r(__webpack_exports__);
 
 function Save(props) {
   const {
-    content
+    content,
+    img
   } = props.attributes;
+  const classes = `mermaid ${img && img.src ? 'img-override' : ''}`.trim();
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-    className: 'mermaid'
+    className: classes
   });
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", blockProps, content);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", blockProps, content), img.src && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: img.src,
+    width: img.width,
+    height: img.height
+  }));
 }
 
 /***/ }),
@@ -439,7 +445,7 @@ module.exports = window["wp"]["primitives"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"}},"supports":{"className":false,"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n"}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"},"img":{"type":"object","source":"query","selector":"img","default":{},"query":{"src":{"type":"string","source":"attribute","attribute":"src"},"width":{"type":"number","source":"attribute","attribute":"width"},"height":{"type":"number","source":"attribute","attribute":"height"}}}},"supports":{"className":false,"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n"}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
 
 /***/ })
 
