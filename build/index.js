@@ -135,6 +135,78 @@ const useMerpressContext = () => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_
 
 /***/ }),
 
+/***/ "./src/deprecated/v1/index.js":
+/*!************************************!*\
+  !*** ./src/deprecated/v1/index.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/**
+ * When the deprecation is evaluated, the save function is called with the
+ * attributes below 👇️.  If the output matches the current block data, then the
+ * parsed attributes are passed to the migrate function.  The migrate function
+ * receives an object of attributes (simple key/value pairs and not the full
+ * attribute definition). It can then remove deprecated attributes and add new
+ * ones. **Subsequent deprecations might need to update the migration function**.
+ * 
+ * Creating a deprecation should be as simple as:
+ * 1. Copy the current block's save function.
+ * 2. Copy the current block's attributes.
+ * 3. Add a migrate function.
+ * 
+ * Example data to migrate:
+ * ```
+ * <!-- wp:merpress/mermaidjs -->
+ * <pre class="mermaid">graph TD
+ * A --> B[ok looks good!]
+ * %% saving seems to work</pre>
+ * <!-- /wp:merpress/mermaidjs -->
+ * ```
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  attributes: {
+    "content": {
+      "type": "string",
+      "source": "text",
+      "selector": "pre.mermaid"
+    }
+  },
+  save: _ref => {
+    let {
+      attributes: {
+        content
+      }
+    } = _ref;
+    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+      className: 'mermaid'
+    });
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", blockProps, content);
+  },
+  migrate: attributes => {
+    return {
+      ...attributes,
+      imgs: []
+    };
+  },
+  supports: {
+    "html": false,
+    "className": false
+  }
+});
+
+/***/ }),
+
 /***/ "./src/edit.js":
 /*!*********************!*\
   !*** ./src/edit.js ***!
@@ -669,7 +741,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/save.js");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/block.json");
-/* harmony import */ var _public_icon_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/icon.svg */ "./public/icon.svg");
+/* harmony import */ var _deprecated_v1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./deprecated/v1 */ "./src/deprecated/v1/index.js");
+/* harmony import */ var _public_icon_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/icon.svg */ "./public/icon.svg");
 
 
 
@@ -696,6 +769,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 // eslint-disable-next-line no-unused-vars
 
 
@@ -713,11 +787,12 @@ __webpack_require__.r(__webpack_exports__);
    * @see ./edit.js
    */
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  icon: _public_icon_svg__WEBPACK_IMPORTED_MODULE_6__.ReactComponent,
+  icon: _public_icon_svg__WEBPACK_IMPORTED_MODULE_7__.ReactComponent,
   /**
    * @param {Object} props Properties passed from the editor.
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
+  deprecated: [_deprecated_v1__WEBPACK_IMPORTED_MODULE_6__["default"]]
 });
 })();
 
