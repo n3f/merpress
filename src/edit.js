@@ -17,7 +17,7 @@ const IMG_STATE = Object.freeze( {
 
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
-	const { content = '', img={} } = attributes;
+	const { content = '', imgs=[] } = attributes;
 	const [ svg, setSvg ] = useState( {} );
 	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
@@ -32,11 +32,11 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			const media = await storePNG( png );
 			console.log( 'media', media );
 			setAttributes( {
-				img: {
+				imgs: [ {
 					src: media.url,
 					width: svg.width,
 					height: svg.height,
-				}
+				} ]
 			} );
 
 			// Handle all the notices and state changes/cleanup.
@@ -51,17 +51,17 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	};
 
 	useEffect( () => {
-		if ( img.src ) {
+		if ( imgs.length > 0 ) {
 			setImgState( IMG_STATE.SAVED );
 		}
 		else {
 			setImgState( IMG_STATE.NOT_SAVED );
 		}
-	}, [ img ] );
+	}, [ imgs ] );
 
 	const resetImg = ( evt ) => {
 		console.log( 'resetImg' );
-		setAttributes( { img: {} } );
+		setAttributes( { imgs: [] } );
 	};
 
 	const updateContent = useCallback(
@@ -76,7 +76,6 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			updateContent( context.content );
 		}
 		if ( context && context.svg !== undefined ) {
-			console.log( 'svg', context.svg );
 			setSvg( context.svg );
 		}
 	};

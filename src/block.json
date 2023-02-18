@@ -15,11 +15,11 @@
             "source": "text",
             "selector": "pre.mermaid"
         },
-        "img": {
-            "type": "object",
+        "imgs": {
+            "type": "array",
             "source": "query",
             "selector": "img",
-            "default": {},
+            "default": [],
             "query": {
                 "src": {
                     "type": "string",
@@ -40,12 +40,12 @@
         }
     },
     "supports": {
-        "className": false,
         "html": false
     },
     "example": {
         "attributes": {
-            "content": "graph TD\nA-->B\n"
+            "content": "graph TD\nA-->B\n",
+            "img":{}
         }
     },
     "editorScript": [ "file:./index.js" ],

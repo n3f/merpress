@@ -195,7 +195,7 @@ function Edit(_ref) {
   } = _ref;
   const {
     content = '',
-    img = {}
+    imgs = []
   } = attributes;
   const [svg, setSvg] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({});
   const [imgState, setImgState] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(IMG_STATE.NOT_SAVED);
@@ -215,11 +215,11 @@ function Edit(_ref) {
       const media = await (0,_utils__WEBPACK_IMPORTED_MODULE_8__.storePNG)(png);
       console.log('media', media);
       setAttributes({
-        img: {
+        imgs: [{
           src: media.url,
           width: svg.width,
           height: svg.height
-        }
+        }]
       });
 
       // Handle all the notices and state changes/cleanup.
@@ -235,16 +235,16 @@ function Edit(_ref) {
     }
   };
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (img.src) {
+    if (imgs.length > 0) {
       setImgState(IMG_STATE.SAVED);
     } else {
       setImgState(IMG_STATE.NOT_SAVED);
     }
-  }, [img]);
+  }, [imgs]);
   const resetImg = evt => {
     console.log('resetImg');
     setAttributes({
-      img: {}
+      imgs: []
     });
   };
   const updateContent = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useCallback)(_content => {
@@ -257,7 +257,6 @@ function Edit(_ref) {
       updateContent(context.content);
     }
     if (context && context.svg !== undefined) {
-      console.log('svg', context.svg);
       setSvg(context.svg);
     }
   };
@@ -377,17 +376,17 @@ __webpack_require__.r(__webpack_exports__);
 function Save(props) {
   const {
     content,
-    img
+    imgs
   } = props.attributes;
-  const classes = `mermaid ${img && img.src ? 'img-override' : ''}`.trim();
-  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-    className: classes
-  });
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", blockProps, content), img.src && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", {
+    class: "mermaid"
+  }, content), imgs.map((img, i) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    key: i,
     src: img.src,
     width: img.width,
     height: img.height
-  }));
+  })));
 }
 
 /***/ }),
@@ -582,7 +581,7 @@ module.exports = window["wp"]["primitives"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"},"img":{"type":"object","source":"query","selector":"img","default":{},"query":{"src":{"type":"string","source":"attribute","attribute":"src"},"width":{"type":"number","source":"attribute","attribute":"width"},"height":{"type":"number","source":"attribute","attribute":"height"}}}},"supports":{"className":false,"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n"}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"},"imgs":{"type":"array","source":"query","selector":"img","default":[],"query":{"src":{"type":"string","source":"attribute","attribute":"src"},"width":{"type":"number","source":"attribute","attribute":"width"},"height":{"type":"number","source":"attribute","attribute":"height"}}}},"supports":{"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n","img":{}}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
 
 /***/ })
 
