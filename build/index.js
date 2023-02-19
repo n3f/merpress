@@ -76,10 +76,10 @@ const capturePhoto = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createEl
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/update.js":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/update.js ***!
-  \*****************************************************************************************************************/
+/***/ "./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/cog.js":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/cog.js ***!
+  \**************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -96,14 +96,16 @@ __webpack_require__.r(__webpack_exports__);
  * WordPress dependencies
  */
 
-const update = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.SVG, {
+const cog = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.SVG, {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.Path, {
-  d: "m11.3 17.2-5-5c-.1-.1-.1-.3 0-.4l2.3-2.3-1.1-1-2.3 2.3c-.7.7-.7 1.8 0 2.5l5 5H7.5v1.5h5.3v-5.2h-1.5v2.6zm7.5-6.4-5-5h2.7V4.2h-5.2v5.2h1.5V6.8l5 5c.1.1.1.3 0 .4l-2.3 2.3 1.1 1.1 2.3-2.3c.6-.7.6-1.9-.1-2.5z"
+  fillRule: "evenodd",
+  d: "M10.289 4.836A1 1 0 0111.275 4h1.306a1 1 0 01.987.836l.244 1.466c.787.26 1.503.679 2.108 1.218l1.393-.522a1 1 0 011.216.437l.653 1.13a1 1 0 01-.23 1.273l-1.148.944a6.025 6.025 0 010 2.435l1.149.946a1 1 0 01.23 1.272l-.653 1.13a1 1 0 01-1.216.437l-1.394-.522c-.605.54-1.32.958-2.108 1.218l-.244 1.466a1 1 0 01-.987.836h-1.306a1 1 0 01-.986-.836l-.244-1.466a5.995 5.995 0 01-2.108-1.218l-1.394.522a1 1 0 01-1.217-.436l-.653-1.131a1 1 0 01.23-1.272l1.149-.946a6.026 6.026 0 010-2.435l-1.148-.944a1 1 0 01-.23-1.272l.653-1.131a1 1 0 011.217-.437l1.393.522a5.994 5.994 0 012.108-1.218l.244-1.466zM14.929 12a3 3 0 11-6 0 3 3 0 016 0z",
+  clipRule: "evenodd"
 }));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (update);
-//# sourceMappingURL=update.js.map
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cog);
+//# sourceMappingURL=cog.js.map
 
 /***/ }),
 
@@ -129,7 +131,7 @@ const MerpressContext = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.creat
   isSelected: undefined,
   content: undefined,
   svg: undefined,
-  setContext: () => {}
+  updateContext: () => {}
 });
 const useMerpressContext = () => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useContext)(MerpressContext);
 
@@ -224,7 +226,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/capture-photo.js");
-/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/update.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/.pnpm/@wordpress+icons@9.18.0/node_modules/@wordpress/icons/build-module/library/cog.js");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
@@ -259,6 +261,16 @@ const IMG_STATE = Object.freeze({
     label: 'saved'
   }
 });
+const DIAGRAM = Object.freeze({
+  MERMAID: {
+    value: 'mermaid',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Mermaid', 'merpress')
+  },
+  IMAGE: {
+    value: 'image',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Image', 'merpress')
+  }
+});
 function Edit(_ref) {
   let {
     attributes,
@@ -271,13 +283,21 @@ function Edit(_ref) {
   } = attributes;
   const [svg, setSvg] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({});
   const [imgState, setImgState] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(IMG_STATE.NOT_SAVED);
+  const [diagramSource, setDiagramSource] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(DIAGRAM.MERMAID);
+  const [blockNotices, setBlockNotices] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const {
     createNotice,
     removeNotice
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_wordpress_notices__WEBPACK_IMPORTED_MODULE_4__.store);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
+
+  /**
+   * Called from the camera button.  Saves the current diagram as a PNG,
+   * updates the block attributes and controls messaging via notices.
+   *
+   * @param {*} evt
+   */
   const saveImg = async evt => {
-    console.log('saveImg');
     setImgState(IMG_STATE.SAVING);
     const notice = await createNotice('info', (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Saving diagram as PNG', 'merpress'), {
       type: 'snackbar'
@@ -285,7 +305,6 @@ function Edit(_ref) {
     try {
       const png = await (0,_utils__WEBPACK_IMPORTED_MODULE_8__.convertSVGToPNG)(svg);
       const media = await (0,_utils__WEBPACK_IMPORTED_MODULE_8__.storePNG)(png);
-      console.log('media', media);
       setAttributes({
         imgs: [{
           src: media.url,
@@ -301,11 +320,28 @@ function Edit(_ref) {
       });
       setTimeout(() => removeNotice(w.notice.id), 3500);
     } catch (e) {
-      console.log('error', e);
+      console.log('saveImg error', e);
       createNotice('error', (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Error saving diagram as PNG', 'merpress'));
       setImgState(IMG_STATE.NOT_SAVED);
     }
   };
+
+  /**
+   * Called from the dropdown menu.  Changes the diagram source between
+   * mermaid and image.
+   *
+   * @param {*} value if not provided, toggles the diagram source
+   */
+  const changeDiagramSource = value => {
+    if (value === undefined) {
+      value = diagramSource == DIAGRAM.MERMAID ? DIAGRAM.IMAGE : DIAGRAM.MERMAID;
+    }
+    setDiagramSource(value);
+  };
+
+  /**
+   * Update the IMG_STATE when the imgs attribute changes. (SAVING, SAVED, NOT_SAVED)
+   */
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (imgs.length > 0) {
       setImgState(IMG_STATE.SAVED);
@@ -313,50 +349,65 @@ function Edit(_ref) {
       setImgState(IMG_STATE.NOT_SAVED);
     }
   }, [imgs]);
-  const resetImg = evt => {
-    console.log('resetImg');
-    setAttributes({
-      imgs: []
-    });
-  };
-  const updateContent = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useCallback)(_content => {
-    setAttributes({
-      content: _content
-    });
-  }, [content]);
+
+  /**
+   * This is an exported function for updating MerpressContext.
+   *
+   * Update this when additional attributes are needed to be distributed.
+   *
+   * @param {*} context
+   */
   const updateContext = context => {
-    if (context && context.content) {
-      updateContent(context.content);
-    }
     if (context && context.svg !== undefined) {
       setSvg(context.svg);
+    }
+    if (context && context.content) {
+      setAttributes({
+        content: context.content
+      });
     }
   };
   const merpressContext = {
     isSelected,
     content,
     svg,
-    setContext: updateContext
+    updateContext
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_context__WEBPACK_IMPORTED_MODULE_7__.MerpressContext.Provider, {
     value: merpressContext
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Toolbar, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('MerPress', 'merpress')
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Toolbar, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Store diagram as PNG', 'merpress'),
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"],
     onClick: saveImg,
     isBusy: imgState == IMG_STATE.SAVING
-  }), imgState == IMG_STATE.SAVED && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Unset PNG', 'merpress'),
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.DropdownMenu, {
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_10__["default"],
-    onClick: resetImg
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('MerPress settings', 'merpress'),
+    controls: [{
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Use mermaid as diagram', 'merpress'),
+      isDisabled: diagramSource == DIAGRAM.MERMAID,
+      onClick: () => changeDiagramSource(DIAGRAM.MERMAID)
+    }, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Use image as diagram', 'merpress'),
+      isDisabled: diagramSource == DIAGRAM.IMAGE,
+      onClick: () => changeDiagramSource(DIAGRAM.IMAGE)
+    }, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Unset saved image', 'merpress'),
+      isDisabled: imgState == IMG_STATE.NOT_SAVED,
+      onClick: () => setAttributes({
+        imgs: []
+      })
+    }]
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", {
     className: "mermaid-editor wp-block-code"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PlainText, {
-    onChange: updateContent,
+    onChange: newContent => updateContext({
+      content: newContent
+    }),
     value: content
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("hr", null)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mermaid_block__WEBPACK_IMPORTED_MODULE_6__.MermaidBlock, null)));
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("hr", null)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.NoticeList, {
+    notices: blockNotices
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mermaid_block__WEBPACK_IMPORTED_MODULE_6__.MermaidBlock, null)));
 }
 
 /***/ }),
@@ -386,21 +437,18 @@ function MermaidBlock() {
   const {
     isSelected,
     content,
-    setContext
+    updateContext
   } = (0,_context__WEBPACK_IMPORTED_MODULE_2__.useMerpressContext)();
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     try {
       window.mermaid.parse(content);
       setError(false);
     } catch (e) {
-      setContext({
-        svg: ''
+      updateContext({
+        svg: {}
       });
       setError(true);
-      // When we are editing the block, we don't need to update the diagram.
-      if (isSelected) {
-        return;
-      }
+      return;
     }
     container.current.removeAttribute('data-processed');
     container.current.innerHTML = content;
@@ -411,7 +459,7 @@ function MermaidBlock() {
       height
     } = svgEl.getBoundingClientRect();
     const svgText = new XMLSerializer().serializeToString(svgEl);
-    setContext({
+    updateContext({
       svg: {
         svgText,
         width,
@@ -506,7 +554,7 @@ function convertSVGToPNG(_ref) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
       const png = canvas.toDataURL('image/png');
-      console.log('img', png);
+      // console.log( 'img', png );
       resolve(png);
     };
     img.onerror = e => {
@@ -519,7 +567,7 @@ function convertSVGToPNG(_ref) {
  * Store the png string in the media library.
  */
 async function storePNG(pngDataURL) {
-  console.log('storePNG', pngDataURL);
+  // console.log( 'storePNG', pngDataURL );
   // First convert image to a proper blob file
   const resp = await fetch(pngDataURL);
   const blob = await resp.blob();

@@ -5,19 +5,16 @@ import { useMerpressContext } from './context';
 export function MermaidBlock() {
 	const [ isError, setError ] = useState( false );
 	const container = useRef( null );
-	const { isSelected, content, setContext } = useMerpressContext();
+	const { isSelected, content, updateContext } = useMerpressContext();
 
 	useEffect( () => {
 		try {
 			window.mermaid.parse( content );
 			setError( false );
 		} catch ( e ) {
-			setContext( { svg: '' } );
+			updateContext( { svg: {} } );
 			setError( true );
-			// When we are editing the block, we don't need to update the diagram.
-			if ( isSelected ) {
-				return;
-			}
+			return;
 		}
 		container.current.removeAttribute( 'data-processed' );
 		container.current.innerHTML = content;
@@ -25,7 +22,7 @@ export function MermaidBlock() {
 		const svgEl = container.current.querySelector( 'svg' );
 		const { width, height } = svgEl.getBoundingClientRect();
 		const svgText = new XMLSerializer().serializeToString( svgEl );
-		setContext( { svg: { svgText, width, height } } );
+		updateContext( { svg: { svgText, width, height } } );
 	}, [ content, isSelected ] );
 
 	return (

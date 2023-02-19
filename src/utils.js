@@ -25,7 +25,7 @@ export function convertSVGToPNG( { svgText, width, height } ) {
 			ctx.clearRect( 0, 0, canvas.width, canvas.height );
 			ctx.drawImage( img, 0, 0 );
 			const png = canvas.toDataURL( 'image/png' );
-			console.log( 'img', png );
+			// console.log( 'img', png );
 			resolve( png );
 		}
 		img.onerror = ( e ) => {
@@ -38,7 +38,7 @@ export function convertSVGToPNG( { svgText, width, height } ) {
  * Store the png string in the media library.
  */
 export async function storePNG( pngDataURL ){
-	console.log( 'storePNG', pngDataURL );
+	// console.log( 'storePNG', pngDataURL );
 	// First convert image to a proper blob file
 	const resp = await fetch( pngDataURL );
 	const blob = await resp.blob();

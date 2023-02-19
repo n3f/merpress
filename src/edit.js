@@ -1,7 +1,12 @@
 import { PlainText, useBlockProps, BlockControls } from '@wordpress/block-editor';
-import { Toolbar, ToolbarButton } from '@wordpress/components';
-import { useCallback, useEffect, useState } from '@wordpress/element';
-import { capturePhoto, update } from '@wordpress/icons';
+import {
+	DropdownMenu,
+	Toolbar,
+	ToolbarButton,
+	NoticeList,
+} from '@wordpress/components';
+import { useEffect, useState } from '@wordpress/element';
+import { capturePhoto, cog } from '@wordpress/icons';
 import { useDispatch } from '@wordpress/data';
 import { store as noticesStore } from '@wordpress/notices';
 import { __ } from '@wordpress/i18n';
@@ -15,22 +20,35 @@ const IMG_STATE = Object.freeze( {
 	SAVED: { value: 2, label: 'saved' },
 } );
 
+const DIAGRAM = Object.freeze( {
+	MERMAID: { value: 'mermaid', label: __( 'Mermaid', 'merpress' ) },
+	IMAGE: { value: 'image', label: __( 'Image', 'merpress' ) },
+} );
+
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const { content = '', imgs=[] } = attributes;
+
 	const [ svg, setSvg ] = useState( {} );
 	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
+	const [ diagramSource, setDiagramSource ] = useState( DIAGRAM.MERMAID );
+	const [ blockNotices, setBlockNotices ] = useState( [] );
+
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
+	/**
+	 * Called from the camera button.  Saves the current diagram as a PNG,
+	 * updates the block attributes and controls messaging via notices.
+	 *
+	 * @param {*} evt
+	 */
 	const saveImg = async ( evt ) => {
-		console.log( 'saveImg' );
 		setImgState( IMG_STATE.SAVING );
 		const notice = await createNotice( 'info', __( 'Saving diagram as PNG', 'merpress' ), { type: 'snackbar'});
 		try {
 			const png = await convertSVGToPNG( svg );
 			const media = await storePNG( png );
-			console.log( 'media', media );
 			setAttributes( {
 				imgs: [ {
 					src: media.url,
@@ -44,12 +62,28 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			let w = await createNotice( 'info', __( 'Saved diagram as PNG', 'merpress' ), { type: 'snackbar'} );
 			setTimeout( () => removeNotice( w.notice.id ), 3500 );
 		} catch ( e ) {
-			console.log( 'error', e );
+			console.log( 'saveImg error', e );
 			createNotice( 'error', __( 'Error saving diagram as PNG', 'merpress' ) );
 			setImgState( IMG_STATE.NOT_SAVED );
 		}
 	};
 
+	/**
+	 * Called from the dropdown menu.  Changes the diagram source between
+	 * mermaid and image.
+	 *
+	 * @param {*} value if not provided, toggles the diagram source
+	 */
+	const changeDiagramSource = ( value ) => {
+		if ( value === undefined ) {
+			value = diagramSource == DIAGRAM.MERMAID ? DIAGRAM.IMAGE : DIAGRAM.MERMAID;
+		}
+		setDiagramSource( value );
+	};
+
+	/**
+	 * Update the IMG_STATE when the imgs attribute changes. (SAVING, SAVED, NOT_SAVED)
+	 */
 	useEffect( () => {
 		if ( imgs.length > 0 ) {
 			setImgState( IMG_STATE.SAVED );
@@ -59,24 +93,19 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		}
 	}, [ imgs ] );
 
-	const resetImg = ( evt ) => {
-		console.log( 'resetImg' );
-		setAttributes( { imgs: [] } );
-	};
-
-	const updateContent = useCallback(
-		( _content ) => {
-			setAttributes( { content: _content } );
-		},
-		[ content ]
-	);
-
+	/**
+	 * This is an exported function for updating MerpressContext.
+	 *
+	 * Update this when additional attributes are needed to be distributed.
+	 *
+	 * @param {*} context
+	 */
 	const updateContext = ( context ) => {
-		if ( context && context.content ) {
-			updateContent( context.content );
-		}
 		if ( context && context.svg !== undefined ) {
 			setSvg( context.svg );
+		}
+		if ( context && context.content ) {
+			setAttributes( { content: context.content } );
 		}
 	};
 
@@ -84,25 +113,41 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		isSelected,
 		content,
 		svg,
-		setContext: updateContext,
+		updateContext,
 	};
 
 	return (
 		<MerpressContext.Provider value={ merpressContext }>
 			{
 				<BlockControls>
-					<Toolbar label={ __( 'MerPress', 'merpress' ) }>
+					<Toolbar>
 						<ToolbarButton
 							label={ __( 'Store diagram as PNG', 'merpress' ) }
 							icon={ capturePhoto }
 							onClick={ saveImg }
 							isBusy={ imgState == IMG_STATE.SAVING }
 							/>
-						{ imgState == IMG_STATE.SAVED && <ToolbarButton
-							label={ __( 'Unset PNG', 'merpress' ) }
-							icon={ update }
-							onClick={ resetImg }
-							/> }
+						<DropdownMenu
+							icon={ cog }
+							label={ __( 'MerPress settings', 'merpress' ) }
+							controls={ [
+								{
+									title: __( 'Use mermaid as diagram', 'merpress' ),
+									isDisabled: diagramSource == DIAGRAM.MERMAID,
+									onClick: () => changeDiagramSource( DIAGRAM.MERMAID ),
+								},
+								{
+									title: __( 'Use image as diagram', 'merpress' ),
+									isDisabled: diagramSource == DIAGRAM.IMAGE,
+									onClick: () => changeDiagramSource( DIAGRAM.IMAGE ),
+								},
+								{
+									title: __( 'Unset saved image', 'merpress' ),
+									isDisabled: imgState == IMG_STATE.NOT_SAVED,
+									onClick: () => setAttributes( { imgs: [] } ),
+								},
+							] }
+						/>
 					</Toolbar>
 				</BlockControls>
 			}
@@ -111,13 +156,14 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					<>
 						<pre className="mermaid-editor wp-block-code">
 							<PlainText
-								onChange={ updateContent }
+								onChange={ ( newContent ) => updateContext( { content: newContent } ) }
 								value={ content }
 							/>
 						</pre>
 						<hr />
 					</>
 				) }
+				<NoticeList notices={ blockNotices }/>
 				<MermaidBlock />
 			</div>
 		</MerpressContext.Provider>

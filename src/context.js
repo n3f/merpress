@@ -8,7 +8,7 @@ export const MerpressContext = createContext( {
 	isSelected: undefined,
 	content: undefined,
 	svg: undefined,
-	setContext: () => {},
+	updateContext: () => {},
 } );
 
 export const useMerpressContext = () => useContext( MerpressContext );
