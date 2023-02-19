@@ -41,6 +41,7 @@ export default {
 		return {
 			...attributes,
 			imgs: [],
+			diagramSource: 'mermaid',
 		};
 	},
 	supports: {

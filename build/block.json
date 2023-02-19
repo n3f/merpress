@@ -21,6 +21,13 @@
       "source": "text",
       "selector": "pre.mermaid"
     },
+    "diagramSource": {
+      "enum": [
+        "mermaid",
+        "image"
+      ],
+      "default": "mermaid"
+    },
     "imgs": {
       "type": "array",
       "source": "query",

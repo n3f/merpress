@@ -1,7 +1,7 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save( props ) {
-	const { content, imgs } = props.attributes;
+	const { content, imgs, diagramSource } = props.attributes;
 	const blockProps = useBlockProps.save();
 
 	return <div {...blockProps}>

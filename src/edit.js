@@ -21,17 +21,16 @@ const IMG_STATE = Object.freeze( {
 } );
 
 const DIAGRAM = Object.freeze( {
-	MERMAID: { value: 'mermaid', label: __( 'Mermaid', 'merpress' ) },
-	IMAGE: { value: 'image', label: __( 'Image', 'merpress' ) },
+	MERMAID: 'mermaid',
+	IMAGE: 'image',
 } );
 
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
-	const { content = '', imgs=[] } = attributes;
+	const { content = '', imgs = [], diagramSource = DIAGRAM.MERMAID } = attributes;
 
 	const [ svg, setSvg ] = useState( {} );
 	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
-	const [ diagramSource, setDiagramSource ] = useState( DIAGRAM.MERMAID );
 	const [ blockNotices, setBlockNotices ] = useState( [] );
 
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
@@ -66,19 +65,6 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			createNotice( 'error', __( 'Error saving diagram as PNG', 'merpress' ) );
 			setImgState( IMG_STATE.NOT_SAVED );
 		}
-	};
-
-	/**
-	 * Called from the dropdown menu.  Changes the diagram source between
-	 * mermaid and image.
-	 *
-	 * @param {*} value if not provided, toggles the diagram source
-	 */
-	const changeDiagramSource = ( value ) => {
-		if ( value === undefined ) {
-			value = diagramSource == DIAGRAM.MERMAID ? DIAGRAM.IMAGE : DIAGRAM.MERMAID;
-		}
-		setDiagramSource( value );
 	};
 
 	/**
@@ -134,12 +120,12 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 								{
 									title: __( 'Use mermaid as diagram', 'merpress' ),
 									isDisabled: diagramSource == DIAGRAM.MERMAID,
-									onClick: () => changeDiagramSource( DIAGRAM.MERMAID ),
+									onClick: () => setAttributes( { diagramSource: DIAGRAM.MERMAID } ),
 								},
 								{
 									title: __( 'Use image as diagram', 'merpress' ),
 									isDisabled: diagramSource == DIAGRAM.IMAGE,
-									onClick: () => changeDiagramSource( DIAGRAM.IMAGE ),
+									onClick: () => setAttributes( { diagramSource: DIAGRAM.IMAGE } ),
 								},
 								{
 									title: __( 'Unset saved image', 'merpress' ),

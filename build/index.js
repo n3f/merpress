@@ -198,7 +198,8 @@ __webpack_require__.r(__webpack_exports__);
   migrate: attributes => {
     return {
       ...attributes,
-      imgs: []
+      imgs: [],
+      diagramSource: 'mermaid'
     };
   },
   supports: {
@@ -262,14 +263,8 @@ const IMG_STATE = Object.freeze({
   }
 });
 const DIAGRAM = Object.freeze({
-  MERMAID: {
-    value: 'mermaid',
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Mermaid', 'merpress')
-  },
-  IMAGE: {
-    value: 'image',
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Image', 'merpress')
-  }
+  MERMAID: 'mermaid',
+  IMAGE: 'image'
 });
 function Edit(_ref) {
   let {
@@ -279,11 +274,11 @@ function Edit(_ref) {
   } = _ref;
   const {
     content = '',
-    imgs = []
+    imgs = [],
+    diagramSource = DIAGRAM.MERMAID
   } = attributes;
   const [svg, setSvg] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({});
   const [imgState, setImgState] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(IMG_STATE.NOT_SAVED);
-  const [diagramSource, setDiagramSource] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(DIAGRAM.MERMAID);
   const [blockNotices, setBlockNotices] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const {
     createNotice,
@@ -324,19 +319,6 @@ function Edit(_ref) {
       createNotice('error', (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Error saving diagram as PNG', 'merpress'));
       setImgState(IMG_STATE.NOT_SAVED);
     }
-  };
-
-  /**
-   * Called from the dropdown menu.  Changes the diagram source between
-   * mermaid and image.
-   *
-   * @param {*} value if not provided, toggles the diagram source
-   */
-  const changeDiagramSource = value => {
-    if (value === undefined) {
-      value = diagramSource == DIAGRAM.MERMAID ? DIAGRAM.IMAGE : DIAGRAM.MERMAID;
-    }
-    setDiagramSource(value);
   };
 
   /**
@@ -386,11 +368,15 @@ function Edit(_ref) {
     controls: [{
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Use mermaid as diagram', 'merpress'),
       isDisabled: diagramSource == DIAGRAM.MERMAID,
-      onClick: () => changeDiagramSource(DIAGRAM.MERMAID)
+      onClick: () => setAttributes({
+        diagramSource: DIAGRAM.MERMAID
+      })
     }, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Use image as diagram', 'merpress'),
       isDisabled: diagramSource == DIAGRAM.IMAGE,
-      onClick: () => changeDiagramSource(DIAGRAM.IMAGE)
+      onClick: () => setAttributes({
+        diagramSource: DIAGRAM.IMAGE
+      })
     }, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Unset saved image', 'merpress'),
       isDisabled: imgState == IMG_STATE.NOT_SAVED,
@@ -496,7 +482,8 @@ __webpack_require__.r(__webpack_exports__);
 function Save(props) {
   const {
     content,
-    imgs
+    imgs,
+    diagramSource
   } = props.attributes;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", {
@@ -701,7 +688,7 @@ module.exports = window["wp"]["primitives"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"},"imgs":{"type":"array","source":"query","selector":"img","default":[],"query":{"src":{"type":"string","source":"attribute","attribute":"src"},"width":{"type":"number","source":"attribute","attribute":"width"},"height":{"type":"number","source":"attribute","attribute":"height"}}}},"supports":{"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n","img":{}}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"merpress/mermaidjs","title":"MerPress","category":"formatting","icon":"chart-pie","description":"Create diagrams and flow charts using text via Mermaid","keywords":["mermaid","chart","diagram","flow","graph"],"version":"1.0.10-alpha","textdomain":"my-plugin","attributes":{"content":{"type":"string","source":"text","selector":"pre.mermaid"},"diagramSource":{"enum":["mermaid","image"],"default":"mermaid"},"imgs":{"type":"array","source":"query","selector":"img","default":[],"query":{"src":{"type":"string","source":"attribute","attribute":"src"},"width":{"type":"number","source":"attribute","attribute":"width"},"height":{"type":"number","source":"attribute","attribute":"height"}}}},"supports":{"html":false},"example":{"attributes":{"content":"graph TD\\nA-->B\\n","img":{}}},"editorScript":["file:./index.js"],"editorStyle":["wp-edit-blocks"],"script":["mermaid"],"style":["mermaid-gutenberg-block"],"viewScript":["mermaid-init"]}');
 
 /***/ })
 
