@@ -80,6 +80,28 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	}, [ imgs ] );
 
 	/**
+	 * When the diagramSource is DIAGRAM.IMAGE, it's possible the diagram will be
+	 * out of date. Add a notice letting the user know.
+	 */
+	useEffect( () => {
+		if ( diagramSource == DIAGRAM.IMAGE && imgs.length == 0 ) {
+			setAttributes( { diagramSource: DIAGRAM.MERMAID } );
+		}
+
+		if ( diagramSource == DIAGRAM.IMAGE ) {
+			setBlockNotices( [ {
+				id: 'merpress-image-diagram',
+				content: __( 'Using linked image.  Might be out of date from graph.', 'merpress' ),
+				status: 'info',
+				isDismissible: false,
+			} ] );
+		}
+		else {
+			setBlockNotices( [] );
+		}
+	}, [ diagramSource ] );
+
+	/**
 	 * This is an exported function for updating MerpressContext.
 	 *
 	 * Update this when additional attributes are needed to be distributed.
@@ -124,7 +146,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 								},
 								{
 									title: __( 'Use image as diagram', 'merpress' ),
-									isDisabled: diagramSource == DIAGRAM.IMAGE,
+									isDisabled: diagramSource == DIAGRAM.IMAGE || imgs.length == 0,
 									onClick: () => setAttributes( { diagramSource: DIAGRAM.IMAGE } ),
 								},
 								{

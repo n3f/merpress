@@ -333,6 +333,28 @@ function Edit(_ref) {
   }, [imgs]);
 
   /**
+   * When the diagramSource is DIAGRAM.IMAGE, it's possible the diagram will be
+   * out of date. Add a notice letting the user know.
+   */
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (diagramSource == DIAGRAM.IMAGE && imgs.length == 0) {
+      setAttributes({
+        diagramSource: DIAGRAM.MERMAID
+      });
+    }
+    if (diagramSource == DIAGRAM.IMAGE) {
+      setBlockNotices([{
+        id: 'merpress-image-diagram',
+        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Using linked image.  Might be out of date from graph.', 'merpress'),
+        status: 'info',
+        isDismissible: false
+      }]);
+    } else {
+      setBlockNotices([]);
+    }
+  }, [diagramSource]);
+
+  /**
    * This is an exported function for updating MerpressContext.
    *
    * Update this when additional attributes are needed to be distributed.
@@ -373,7 +395,7 @@ function Edit(_ref) {
       })
     }, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Use image as diagram', 'merpress'),
-      isDisabled: diagramSource == DIAGRAM.IMAGE,
+      isDisabled: diagramSource == DIAGRAM.IMAGE || imgs.length == 0,
       onClick: () => setAttributes({
         diagramSource: DIAGRAM.IMAGE
       })
