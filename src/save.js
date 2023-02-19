@@ -2,7 +2,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save( props ) {
 	const { content, imgs, diagramSource } = props.attributes;
-	const blockProps = useBlockProps.save();
+	const blockProps = useBlockProps.save( {
+		className: `diagram-source-${diagramSource}`,
+	} );
 
 	return <div {...blockProps}>
 		<pre class="mermaid">{ content }</pre>
