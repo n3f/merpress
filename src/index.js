@@ -22,6 +22,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import Save from './save';
 import metadata from './block.json';
+import deprecatedV1 from './deprecated/v1';
 
 // eslint-disable-next-line no-unused-vars
 import _, { ReactComponent as Logo } from '../public/icon.svg';
@@ -59,4 +60,6 @@ registerBlockType( metadata, {
 	 * @param {Object} props Properties passed from the editor.
 	 */
 	save: Save,
+
+	deprecated: [ deprecatedV1 ],
 } );

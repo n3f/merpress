@@ -5,8 +5,10 @@
 import { createContext, useContext } from '@wordpress/element';
 
 export const MerpressContext = createContext( {
+	isSelected: undefined,
 	content: undefined,
-	setContent: () => {},
+	svg: undefined,
+	updateContext: () => {},
 } );
 
 export const useMerpressContext = () => useContext( MerpressContext );

@@ -5,19 +5,26 @@ import { useMerpressContext } from './context';
 export function MermaidBlock() {
 	const [ isError, setError ] = useState( false );
 	const container = useRef( null );
-	const { content } = useMerpressContext();
+	const { isSelected, content, updateContext } = useMerpressContext();
 
 	useEffect( () => {
 		try {
 			window.mermaid.parse( content );
 			setError( false );
 		} catch ( e ) {
+			updateContext( { svg: {} } );
 			setError( true );
+			return;
 		}
 		container.current.removeAttribute( 'data-processed' );
 		container.current.innerHTML = content;
 		window.mermaid.init( undefined, container.current );
-	}, [ content ] );
+		const svgEl = container.current.querySelector( 'svg' );
+		const { width, height } = svgEl.getBoundingClientRect();
+		// eslint-disable-next-line no-undef
+		const svgText = new XMLSerializer().serializeToString( svgEl );
+		updateContext( { svg: { svgText, width, height } } );
+	}, [ content, isSelected ] );
 
 	return (
 		<>

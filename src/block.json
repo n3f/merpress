@@ -14,15 +14,42 @@
             "type": "string",
             "source": "text",
             "selector": "pre.mermaid"
+        },
+        "diagramSource": {
+            "enum": [ "mermaid", "image" ],
+            "default": "mermaid"
+        },
+        "imgs": {
+            "type": "array",
+            "source": "query",
+            "selector": "img",
+            "default": [],
+            "query": {
+                "src": {
+                    "type": "string",
+                    "source": "attribute",
+                    "attribute": "src"
+                },
+                "width": {
+                    "type": "number",
+                    "source": "attribute",
+                    "attribute": "width"
+                },
+                "height": {
+                    "type": "number",
+                    "source": "attribute",
+                    "attribute": "height"
+                }
+            }
         }
     },
     "supports": {
-        "className": false,
         "html": false
     },
     "example": {
         "attributes": {
-            "content": "graph TD\nA-->B\n"
+            "content": "graph TD\nA-->B\n",
+            "img":{}
         }
     },
     "editorScript": [ "file:./index.js" ],
