@@ -3,12 +3,24 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function Save( props ) {
 	const { content, imgs, diagramSource } = props.attributes;
 	const blockProps = useBlockProps.save( {
-		className: `diagram-source-${diagramSource}`,
+		className: `diagram-source-${ diagramSource }`,
 	} );
 
-	return <div {...blockProps}>
-		<pre class="mermaid">{ content }</pre>
-		{/* Putting a key to make react happy...*/}
-		{ imgs.map( (img, i) => <img key={i} src={ img.src } width={ img.width } height={ img.height } /> ) }
-	</div>
+	return (
+		<div { ...blockProps }>
+			<pre className="mermaid">{ content }</pre>
+			{ /* Putting a key to make react happy...*/ }
+			{ imgs.map( ( img, i ) => {
+				return (
+					<img
+						key={ i }
+						src={ img.src }
+						width={ img.width }
+						height={ img.height }
+						alt=""
+					/>
+				);
+			} ) }
+		</div>
+	);
 }

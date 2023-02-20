@@ -21,6 +21,7 @@ export function MermaidBlock() {
 		window.mermaid.init( undefined, container.current );
 		const svgEl = container.current.querySelector( 'svg' );
 		const { width, height } = svgEl.getBoundingClientRect();
+		// eslint-disable-next-line no-undef
 		const svgText = new XMLSerializer().serializeToString( svgEl );
 		updateContext( { svg: { svgText, width, height } } );
 	}, [ content, isSelected ] );

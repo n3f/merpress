@@ -7,12 +7,12 @@ import { useBlockProps } from '@wordpress/block-editor';
  * receives an object of attributes (simple key/value pairs and not the full
  * attribute definition). It can then remove deprecated attributes and add new
  * ones. **Subsequent deprecations might need to update the migration function**.
- * 
+ *
  * Creating a deprecation should be as simple as:
  * 1. Copy the current block's save function.
  * 2. Copy the current block's attributes.
  * 3. Add a migrate function.
- * 
+ *
  * Example data to migrate:
  * ```
  * <!-- wp:merpress/mermaidjs -->
@@ -24,17 +24,16 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default {
 	attributes: {
-		"content": {
-			"type": "string",
-			"source": "text",
-			"selector": "pre.mermaid"
+		content: {
+			type: 'string',
+			source: 'text',
+			selector: 'pre.mermaid',
 		},
 	},
 	save: ( { attributes: { content } } ) => {
-		const blockProps = useBlockProps.save({
+		const blockProps = useBlockProps.save( {
 			className: 'mermaid',
-		});
-	
+		} );
 		return <pre { ...blockProps }>{ content }</pre>;
 	},
 	migrate: ( attributes ) => {
@@ -45,7 +44,7 @@ export default {
 		};
 	},
 	supports: {
-        "html": false,
-		"className": false,
-    },
+		html: false,
+		className: false,
+	},
 };
