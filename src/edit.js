@@ -111,7 +111,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				{
 					id: 'merpress-image-diagram',
 					content: __(
-						'Using linked image. Might be out of date from graph.',
+						'Using linked image. Might be out of date from diagram. (The diagram is shown here).',
 						'merpress'
 					),
 					status: 'info',
@@ -134,7 +134,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		if ( context && context.svg !== undefined ) {
 			setSvg( context.svg );
 		}
-		if ( context && context.content ) {
+		if ( context && context.content !== undefined ) {
 			setAttributes( { content: context.content } );
 		}
 	};

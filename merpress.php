@@ -15,22 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @package MerPress
  */
 
-define( 'MERMAID_JS_VERSION', '9.4.0' );
 define( 'MERMAID_PLUGIN_VERSION', '1.1.0-alpha' );
 
 add_action(
 	'init',
 	function () {
-		wp_register_script( 'mermaid', plugin_dir_url( __FILE__ ) . 'public/mermaid.min.js', [], MERMAID_JS_VERSION, true );
-
-		wp_register_script(
-			'mermaid-init',
-			plugin_dir_url( __FILE__ ) . 'public/mermaid-init.js',
-			[ 'mermaid' ],
-			MERMAID_PLUGIN_VERSION,
-			true
-		);
-
 		wp_register_style(
 			'mermaid-gutenberg-block',
 			plugin_dir_url( __FILE__ ) . 'public/mermaid-block.css',
