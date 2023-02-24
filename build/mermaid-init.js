@@ -1,0 +1,1 @@
+!function(n){if(void 0!==n){n.run();const i=function(){setTimeout((function(){n.run()}),1e3)};window.addEventListener("load",i)}}(window.mermaid);

@@ -68,12 +68,12 @@
     "wp-edit-blocks"
   ],
   "script": [
-    "mermaid"
+    "file:./mermaid.js"
   ],
   "style": [
     "mermaid-gutenberg-block"
   ],
   "viewScript": [
-    "mermaid-init"
+    "file:./mermaid-init.js"
   ]
 }
