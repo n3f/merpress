@@ -16,7 +16,7 @@ export function MermaidBlock() {
 				container.current.innerHTML = content;
 
 				const getSVG = () => {
-					return new Promise( ( resolve ) => {
+					return new Promise( ( resolve, reject ) => {
 						const cb = () => {
 							const svgEl =
 								container.current.querySelector( 'svg' );
@@ -42,7 +42,7 @@ export function MermaidBlock() {
 			}
 		}
 		processContent();
-	}, [ content, updateContext ] );
+	}, [ content ] );
 
 	return (
 		<>
