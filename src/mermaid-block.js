@@ -14,30 +14,35 @@ export function MermaidBlock() {
 				setError( false );
 				container.current?.removeAttribute( 'data-processed' );
 				container.current.innerHTML = content;
-	
+
 				const getSVG = () => {
 					return new Promise( ( resolve ) => {
 						const cb = () => {
-							const svgEl = container.current.querySelector( 'svg' );
-							const { width, height } = svgEl.getBoundingClientRect();
-							// eslint-disable-next-line no-undef
-							const svgText = new XMLSerializer().serializeToString( svgEl );
+							const svgEl =
+								container.current.querySelector( 'svg' );
+							const { width, height } =
+								svgEl.getBoundingClientRect();
+							const svgText = new XMLSerializer() // eslint-disable-line no-undef
+								.serializeToString( svgEl );
 							resolve( { svgText, width, height } );
-						}
-						window.mermaid.run( { nodes: [ container.current ], postRenderCallback: cb } );
+						};
+						window.mermaid.run( {
+							nodes: [ container.current ],
+							postRenderCallback: cb,
+						} );
 					} );
 				};
 				const svg = await getSVG();
 				updateContext( { svg } );
 			} catch ( e ) {
+				// eslint-disable-next-line no-console
 				console.error( e );
 				updateContext( { svg: {} } );
 				setError( true );
-				return;
 			}
 		}
 		processContent();
-	}, [ content ] );
+	}, [ content, updateContext ] );
 
 	return (
 		<>

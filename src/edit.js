@@ -121,7 +121,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		} else {
 			setBlockNotices( [] );
 		}
-	}, [ diagramSource ] );
+	}, [ diagramSource, imgs, setAttributes ] );
 
 	/**
 	 * This is an exported function for updating MerpressContext.

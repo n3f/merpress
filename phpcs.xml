@@ -12,4 +12,7 @@
     <rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
         <type>warning</type>
     </rule>
+    <rule ref="Squiz.Commenting.FileComment.Missing">
+        <exclude-pattern>build</exclude-pattern>
+    </rule>
 </ruleset>

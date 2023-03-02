@@ -6,7 +6,7 @@
 		"build": "wp-scripts build",
 		"watch": "wp-scripts start --webpack-devtool=source-map",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "wp-scripts lint-md-docs && wp-scripts lint-js && wp-scripts lint-style"
+		"lint": "wp-scripts lint-md-docs && wp-scripts lint-js src && wp-scripts lint-style && ./vendor/bin/phpcs"
 	},
 	"repository": {
 		"type": "git",

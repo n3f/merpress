@@ -1,11 +1,11 @@
 {
-    "name": "n3f/merpress",
-    "description": "Merpress: add MermaidJS to WordPress",
-    "type": "wordpress-plugin",
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.7",
-        "wp-coding-standards/wpcs": "^2.3"
-    },
-    "license": "GPLv3",
-    "require": {}
+	"name": "n3f/merpress",
+	"description": "Merpress: add MermaidJS to WordPress",
+	"type": "wordpress-plugin",
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.7",
+		"wp-coding-standards/wpcs": "^2.3"
+	},
+	"license": "GPLv3",
+	"require": {}
 }

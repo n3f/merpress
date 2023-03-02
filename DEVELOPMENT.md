@@ -3,6 +3,14 @@
 Merpress is a WordPress plugin for creating diagrams and visualizations using
 [MermaidJS](https://mermaid.js.org).
 
+## Setup
+
+Composer is only used to run `phpcs` for linting and formatting.
+
+```sh
+pnpm install && composer install
+```
+
 ## Development
 
 Development now uses wordpress blocks best practices (i.e. '@wordpress/scripts'
@@ -33,7 +41,7 @@ pnpm wp-scripts format <filename>
 Check out the latest tag/version (on the mermaid repo):
 
    1. `pnpm update -L`
-   2. Rebuild & checkin
+   2. Rebuild, commit, create PR.
 
 ## Setting a new version
 

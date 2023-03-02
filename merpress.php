@@ -1,10 +1,4 @@
 <?php
-
-// If this file is called directly, abort.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 /**
  * Plugin Name: MerPress
  * Plugin URI: https://github.com/n3f/merpress
@@ -14,6 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @package MerPress
  */
+
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 define( 'MERMAID_PLUGIN_VERSION', '1.1.0-alpha' );
 
@@ -29,7 +28,7 @@ add_action(
 
 		// Register the mermaidjs block.
 		$result = register_block_type( __DIR__ . '/build' );
-		if ( $result === false ) {
+		if ( false === $result ) {
 			error_log( 'Failed to register block type' );
 		}
 	}
