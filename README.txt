@@ -3,7 +3,7 @@ Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
 Requires at least: 5.0
 Tested up to: 6.1
-Stable tag: 1.1.0-alpha
+Stable tag: 1.1.0-beta
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -30,10 +30,11 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/community/n00b-overview.html) 
 
 == Changelog ==
 
-= 1.1.0-alpha =
-* Update mermaid to 9.4.0.
+= 1.1.0-beta =
+* Update mermaid to 10.0.2.
+* Adds feature to store PNG of diagram.
 
 == Upgrade Notice ==
 
-= 1.1.0-alpha =
-Mermaid update (9.4.0)
+= 1.1.0-beta =
+Mermaid update (10.0.2) & saves diagram as PNG on demand.
