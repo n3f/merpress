@@ -23,9 +23,7 @@ fi
 sed_option=""
 if [ "$(uname)" == "Darwin" ]; then
     # Do something under Mac OS X platform        
-    echo "Macos"
     sed_option="'' -e"
-    echo $sed_option
 fi
 sed -i "${sed_macOS}" "s/Version: .*/Version: $plugin/" merpress.php
 sed -Ei "${sed_macOS}" "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
