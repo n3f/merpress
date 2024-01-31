@@ -32,7 +32,8 @@ import _, { ReactComponent as Logo } from '../public/icon.svg';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-// debugger;
+// TODO: revisit description because the non-string block description is deprecated. In order to provide a link refer
+// to the following issue: https://github.com/WordPress/gutenberg/issues/49887
 registerBlockType( metadata, {
 	description: (
 		<>

@@ -3,7 +3,7 @@
 	"version": "1.1.0-beta",
 	"description": "Merpress: add MermaidJS to WordPress",
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "rm build/* && wp-scripts build",
 		"watch": "wp-scripts start --webpack-devtool=source-map",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "wp-scripts lint-md-docs && wp-scripts lint-js src && wp-scripts lint-style && ./vendor/bin/phpcs"
@@ -24,11 +24,11 @@
 	"homepage": "https://github.com/n3f/merpress#readme",
 	"devDependencies": {
 		"@svgr/webpack": "^6.5.1",
-		"@wordpress/env": "^5.13.0",
-		"@wordpress/icons": "^9.19.0",
-		"@wordpress/scripts": "^25.5.0",
+		"@wordpress/env": "^9.2.0",
+		"@wordpress/icons": "^9.41.0",
+		"@wordpress/scripts": "^27.1.0",
 		"husky": "^8.0.3",
-		"mermaid": "^10.0.2",
+		"mermaid": "^10.7.0",
 		"react": "^18.2.0",
 		"url-loader": "^4.1.1"
 	},

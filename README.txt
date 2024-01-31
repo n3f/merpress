@@ -31,10 +31,10 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/community/n00b-overview.html) 
 == Changelog ==
 
 = 1.1.0-beta =
-* Update mermaid to 10.0.2.
+* Update mermaid to 10.7.0.
 * Adds feature to store PNG of diagram.
 
 == Upgrade Notice ==
 
 = 1.1.0-beta =
-Mermaid update (10.0.2) & saves diagram as PNG on demand.
+Mermaid update (10.7.0) & saves diagram as PNG on demand.

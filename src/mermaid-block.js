@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from '@wordpress/element';
+import { useState, useCallback, useEffect, useRef } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { useMerpressContext } from './context';
 
@@ -7,16 +7,16 @@ export function MermaidBlock() {
 	const container = useRef( null );
 	const { content, updateContext } = useMerpressContext();
 
-	useEffect( () => {
-		async function processContent() {
+	const processContent = useCallback(
+		async function processContent( _content ) {
 			try {
-				await window.mermaid.parse( content );
+				await window.mermaid.parse( _content );
 				setError( false );
 				container.current?.removeAttribute( 'data-processed' );
-				container.current.innerHTML = content;
+				container.current.innerHTML = _content;
 
 				const getSVG = () => {
-					return new Promise( ( resolve, reject ) => {
+					return new Promise( ( resolve ) => {
 						const cb = () => {
 							const svgEl =
 								container.current.querySelector( 'svg' );
@@ -40,9 +40,13 @@ export function MermaidBlock() {
 				updateContext( { svg: {} } );
 				setError( true );
 			}
-		}
-		processContent();
-	}, [ content ] );
+		},
+		[ updateContext ]
+	);
+
+	useEffect( () => {
+		processContent( content );
+	}, [ content, processContent ] );
 
 	return (
 		<>
