@@ -4,8 +4,12 @@
 	"type": "wordpress-plugin",
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.7",
-		"wp-coding-standards/wpcs": "^2.3"
+		"wp-coding-standards/wpcs": "^3.0"
 	},
 	"license": "GPLv3",
-	"require": {}
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

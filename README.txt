@@ -2,8 +2,8 @@
 Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
 Requires at least: 5.0
-Tested up to: 6.1
-Stable tag: 1.1.0-beta
+Tested up to: 6.4.3
+Stable tag: 1.0.9
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -18,7 +18,7 @@ Merpress lets you create diagrams and visualizations using [MermaidJS](https://m
 
 = Can you make diagrams with this? =
 
-Yes.  Checkout [MermaidJS](https://mermaid.js.org/community/n00b-overview.html) for syntax reference and example diagrams.
+Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference and example diagrams.
 
 == Screenshots ==
 
@@ -31,10 +31,10 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/community/n00b-overview.html) 
 == Changelog ==
 
 = 1.1.0-beta =
-* Update mermaid to 10.7.0.
-* Adds feature to store PNG of diagram.
+* Update mermaid to 10.8.0.
+* Adds *_beta_* feature to store PNG of diagram. Currently broken in Firefox.
 
 == Upgrade Notice ==
 
 = 1.1.0-beta =
-Mermaid update (10.7.0) & saves diagram as PNG on demand.
+Mermaid update (10.8.0) & saves diagram as PNG on demand (beta).
