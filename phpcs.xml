@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ruleset name="MerPress">
+    <file>build</file>
+    <file>merpress.php</file>
+    
+    <arg name="parallel" value="80"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg value="nps"/>
+
+    <rule ref="WordPress"/>
+    <!-- <rule ref="PHPCompatibility"/>
+    <rule ref="PHPCompatibilityWP"/> -->
+    <rule ref="Universal.Arrays.DisallowShortArraySyntax">
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+    </rule>
+    <rule ref="Squiz.Commenting.FileComment.Missing">
+        <exclude-pattern>build</exclude-pattern>
+    </rule>
+    <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+        <exclude-pattern>build</exclude-pattern>
+    </rule>
+    <!-- enable the RequireStrictTypesSniff -->
+    <rule ref="Generic.PHP.RequireStrictTypes">
+        <type>error</type>
+    </rule>
+    <!-- temp PHP8 bugs: TODO: try removing and seeing if `./vendor/bin/phpcs build/*` works -->
+    <rule ref="WordPress.WP.I18n">
+        <exclude-pattern>build</exclude-pattern>
+    </rule>
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <exclude-pattern>build</exclude-pattern>
+    </rule>
+</ruleset>

@@ -1,21 +1,22 @@
 <?php
+/**
+ * Plugin Name: MerPress
+ * Plugin URI: https://github.com/n3f/merpress
+ * Description: Merpress lets you create diagrams and visualizations using <a href="https://mermaid-js.github.io/mermaid/">MermaidJS</a>.
+ * Version: 1.1.0-beta
+ * Requires at least: 4.6
+ *
+ * @package MerPress
+ */
+
+declare( strict_types=1 );
 
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Plugin Name: MerPress
- * Plugin URI: https://github.com/n3f/merpress
- * Description: Merpress lets you create diagrams and visualizations using <a href="https://mermaid-js.github.io/mermaid/">MermaidJS</a>.
- * Version: 1.1.0-alpha
- * Requires at least: 4.6
- *
- * @package MerPress
- */
-
-define( 'MERMAID_PLUGIN_VERSION', '1.1.0-alpha' );
+define( 'MERMAID_PLUGIN_VERSION', '1.1.0-beta' );
 
 add_action(
 	'init',
@@ -29,7 +30,7 @@ add_action(
 
 		// Register the mermaidjs block.
 		$result = register_block_type( __DIR__ . '/build' );
-		if ( $result === false ) {
+		if ( false === $result ) {
 			error_log( 'Failed to register block type' );
 		}
 	}

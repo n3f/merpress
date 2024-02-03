@@ -4,12 +4,12 @@ import {
 	BlockControls,
 } from '@wordpress/block-editor';
 import {
-	DropdownMenu,
+	ToolbarDropdownMenu,
 	Toolbar,
 	ToolbarButton,
 	NoticeList,
 } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState, useCallback } from '@wordpress/element';
 import { capturePhoto, cog } from '@wordpress/icons';
 import { useDispatch } from '@wordpress/data';
 import { store as noticesStore } from '@wordpress/notices';
@@ -90,7 +90,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	 * Update the IMG_STATE when the imgs attribute changes. (SAVING, SAVED, NOT_SAVED)
 	 */
 	useEffect( () => {
-		if ( imgs.length > 0 ) {
+		if ( imgs && imgs.length > 0 ) {
 			setImgState( IMG_STATE.SAVED );
 		} else {
 			setImgState( IMG_STATE.NOT_SAVED );
@@ -102,7 +102,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	 * out of date. Add a notice letting the user know.
 	 */
 	useEffect( () => {
-		if ( diagramSource === DIAGRAM.IMAGE && imgs.length === 0 ) {
+		if ( diagramSource === DIAGRAM.IMAGE && imgs && imgs.length === 0 ) {
 			setAttributes( { diagramSource: DIAGRAM.MERMAID } );
 		}
 
@@ -121,7 +121,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		} else {
 			setBlockNotices( [] );
 		}
-	}, [ diagramSource ] );
+	}, [ diagramSource, imgs, setAttributes ] );
 
 	/**
 	 * This is an exported function for updating MerpressContext.
@@ -130,14 +130,17 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	 *
 	 * @param {*} context
 	 */
-	const updateContext = ( context ) => {
-		if ( context && context.svg !== undefined ) {
-			setSvg( context.svg );
-		}
-		if ( context && context.content !== undefined ) {
-			setAttributes( { content: context.content } );
-		}
-	};
+	const updateContext = useCallback(
+		( context ) => {
+			if ( context && context.svg !== undefined ) {
+				setSvg( context.svg );
+			}
+			if ( context && context.content !== undefined ) {
+				setAttributes( { content: context.content } );
+			}
+		},
+		[ setAttributes ]
+	);
 
 	const merpressContext = {
 		isSelected,
@@ -150,14 +153,14 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		<MerpressContext.Provider value={ merpressContext }>
 			{
 				<BlockControls>
-					<Toolbar>
+					<Toolbar label={ __( 'Merpress', 'merpress' ) }>
 						<ToolbarButton
 							label={ __( 'Store diagram as PNG', 'merpress' ) }
 							icon={ capturePhoto }
 							onClick={ saveImg }
 							isBusy={ imgState === IMG_STATE.SAVING }
 						/>
-						<DropdownMenu
+						<ToolbarDropdownMenu
 							icon={ cog }
 							label={ __( 'MerPress settings', 'merpress' ) }
 							controls={ [
