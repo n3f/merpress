@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import mermaid from 'mermaid';
 
 window.mermaid = mermaid;

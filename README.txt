@@ -30,11 +30,11 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 == Changelog ==
 
-= 1.1.0-beta =
+= 1.1.0-c =
 * Update mermaid to 10.8.0.
 * Adds *_beta_* feature to store PNG of diagram. Currently broken in Firefox.
 
 == Upgrade Notice ==
 
-= 1.1.0-beta =
-Mermaid update (10.8.0) & saves diagram as PNG on demand (beta).
+= 1.1.0-c =
+Move mermaid back to external.
