@@ -1,1 +1,1 @@
-(()=>{"use strict";var e={n:r=>{var t=r&&r.__esModule?()=>r.default:()=>r;return e.d(t,{a:t}),t},d:(r,t)=>{for(var a in t)e.o(t,a)&&!e.o(r,a)&&Object.defineProperty(r,a,{enumerable:!0,get:t[a]})},o:(e,r)=>Object.prototype.hasOwnProperty.call(e,r)};const r=mermaid;var t=e.n(r);window.mermaid=t(),t().initialize({startOnLoad:!0,flowchart:{useMaxWidth:!0}})})();
+(()=>{const i={startOnLoad:!0,flowchart:{useMaxWidth:!0}};!function t(a){a?a.initialize(i):setTimeout((()=>{t(window?.mermaid||"")}),100)}(window?.mermaid||"")})();

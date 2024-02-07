@@ -1,8 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
-import mermaid from 'mermaid';
-
-window.mermaid = mermaid;
-
 const MERMAID_CONFIG = {
 	startOnLoad: true,
 	flowchart: {
@@ -10,4 +5,15 @@ const MERMAID_CONFIG = {
 	},
 };
 
-mermaid.initialize( MERMAID_CONFIG );
+function loadMermaid( mermaid ) {
+	// Loop until mermaid is defined
+	if ( ! mermaid ) {
+		setTimeout( () => {
+			loadMermaid( window?.mermaid || '' );
+		}, 100 );
+		return;
+	}
+	mermaid.initialize( MERMAID_CONFIG );
+}
+
+loadMermaid( window?.mermaid || '' );

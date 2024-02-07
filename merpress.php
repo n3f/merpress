@@ -22,7 +22,18 @@ define( 'MERMAID_JS_VERSION', '10.8.0' );
 add_action(
 	'init',
 	function () {
-		wp_register_script( 'mermaid', plugin_dir_url( __FILE__ ) . 'public/mermaid.min.js', [], MERMAID_JS_VERSION, true );
+		$mermaid_config = [
+			'mermaid_version' => MERMAID_JS_VERSION,
+			'mermaid_url'     => plugin_dir_url( __FILE__ ) . 'public/mermaid.min.js',
+		];
+
+		wp_register_script(
+			'mermaid',
+			$mermaid_config['mermaid_url'],
+			[],
+			$mermaid_config['mermaid_version'],
+			false
+		);
 
 		wp_register_style(
 			'mermaid-gutenberg-block',
