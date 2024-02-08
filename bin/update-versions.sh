@@ -20,11 +20,21 @@ fi
 # Update the plugin versions
 # merpress.php
 
-sed_option=""
-if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-    sed_option="'' -e"
-fi
+function is_gnu_sed(){
+  sed --version >/dev/null 2>&1
+}
+
+function sed_i_wrapper(){
+  if is_gnu_sed; then
+    $(which sed) "$@"
+  else
+    a=()
+    for b in "$@"; do
+      [[ $b == '-i' ]] && a=("${a[@]}" "$b" "") || a=("${a[@]}" "$b")
+    done
+    $(which sed) "${a[@]}"
+  fi
+}
 sed -i "${sed_macOS}" "s/Version: .*/Version: $plugin/" merpress.php
 sed -Ei "${sed_macOS}" "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
 # readme.txt
