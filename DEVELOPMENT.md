@@ -41,7 +41,14 @@ pnpm wp-scripts format <filename>
 Check out the latest tag/version (on the mermaid repo):
 
    1. `pnpm update -L`
-   2. Rebuild, commit, create PR.
+   2. Build a new version of mermaid:
+      1. Change the tag to the version you want: e.g. `git fetch origin v10.8.0 --depth 1`
+      2. `gcb v10.8.0 FETCH_HEAD`
+      3. `pnpm i`
+      4. `pnpm run -r clean`
+      5. `pnpm run build:mermaid`
+      6. `cp packages/mermaid/dist/mermaid.{,min.}js* $MERPRESS_DIR/public/`
+   3. Rebuild (`pnpm build`), commit, create PR.
 
 ## Setting a new version
 
