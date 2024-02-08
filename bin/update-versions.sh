@@ -35,8 +35,8 @@ function sed_i_wrapper(){
     $(which sed) "${a[@]}"
   fi
 }
-sed -i "${sed_macOS}" "s/Version: .*/Version: $plugin/" merpress.php
-sed -Ei "${sed_macOS}" "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
+sed_i_wrapper -i "s/Version: .*/Version: $plugin/" merpress.php
+sed_i_wrapper -i -E "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
 # readme.txt
 sed -i "${sed_macOS}" "s/Stable tag: .*/Stable tag: $plugin/" README.txt
 sed -Ei "${sed_macOS}"  "s/= $version_pattern =/= $plugin =/" README.txt
