@@ -18,7 +18,6 @@ if [ -z "$plugin" ]; then
 fi
 
 # Update the plugin versions
-# merpress.php
 
 function is_gnu_sed(){
   sed --version >/dev/null 2>&1
