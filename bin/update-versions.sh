@@ -18,24 +18,41 @@ if [ -z "$plugin" ]; then
 fi
 
 # Update the plugin versions
+
+function is_gnu_sed(){
+  sed --version >/dev/null 2>&1
+}
+
+function sed_i_wrapper(){
+  if is_gnu_sed; then
+    $(which sed) "$@"
+  else
+    a=()
+    for b in "$@"; do
+      [[ $b == '-i' ]] && a=("${a[@]}" "$b" "") || a=("${a[@]}" "$b")
+    done
+    $(which sed) "${a[@]}"
+  fi
+}
+
 # merpress.php
-sed -i "s/Version: .*/Version: $plugin/" merpress.php
-sed -Ei "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
+sed_i_wrapper -i "s/Version: .*/Version: $plugin/" merpress.php
+sed_i_wrapper -i -E "s/(define\( 'MERMAID_PLUGIN_VERSION', ')$version_pattern(.*)/\1$plugin\3/" merpress.php
 # readme.txt
-sed -i "s/Stable tag: .*/Stable tag: $plugin/" README.txt
-sed -Ei "s/= $version_pattern =/= $plugin =/" README.txt
+sed -i "${sed_macOS}" "s/Stable tag: .*/Stable tag: $plugin/" README.txt
+sed -Ei "${sed_macOS}"  "s/= $version_pattern =/= $plugin =/" README.txt
 # package.json
-sed -Ei "s/\"version\": \"($version_pattern)\",/\"version\": \"$plugin\",/" package.json
+sed -Ei "${sed_macOS}" "s/\"version\": \"($version_pattern)\",/\"version\": \"$plugin\",/" package.json
 # src/block.json
-sed -Ei "s/\"version\": \"($version_pattern)\",/\"version\": \"$plugin\",/" src/block.json
+sed -Ei "${sed_macOS}" "s/\"version\": \"($version_pattern)\",/\"version\": \"$plugin\",/" src/block.json
 
 if [ -n "$mermaid" ]; then
     # Update the mermaid version
     # merpress.php
-    sed -Ei "s/(define\( 'MERMAID_JS_VERSION', ')$version_pattern(.*)/\1$mermaid\3/" merpress.php
+    sed -Ei "${sed_macOS}" "s/(define\( 'MERMAID_JS_VERSION', ')$version_pattern(.*)/\1$mermaid\3/" merpress.php
     # readme.txt
-    sed -Ei "s/(Update mermaid to )$version_pattern/\1$mermaid/" README.txt
-    sed -Ei "s/(Mermaid update \()$version_pattern\)/\1$mermaid)/" README.txt
+    sed -Ei "${sed_macOS}" "s/(Update mermaid to )$version_pattern/\1$mermaid/" README.txt
+    sed -Ei "${sed_macOS}" "s/(Mermaid update \()$version_pattern\)/\1$mermaid)/" README.txt
 fi
 
 
