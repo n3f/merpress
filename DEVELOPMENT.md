@@ -38,12 +38,10 @@ pnpm wp-scripts format <filename>
 
 ## Get a new mermaid drop
 
-Check out the latest tag/version (on the mermaid repo):
-
    1. `pnpm update -L`
-   2. Build a new version of mermaid:
-      1. Change the tag to the version you want: e.g. `git fetch origin v10.8.0 --depth 1`
-      2. `gcb v10.8.0 FETCH_HEAD`
+   2. Build a new version of mermaid (change to the mermaid git repo directory)
+      1. Change the tag to the version you want: e.g. `git fetch origin v10.9.0 --depth 1`
+      2. `git checkout -b v10.9.0 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`
