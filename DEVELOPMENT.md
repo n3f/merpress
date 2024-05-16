@@ -40,8 +40,8 @@ pnpm wp-scripts format <filename>
 
    1. `pnpm update -L`
    2. Build a new version of mermaid (change to the mermaid git repo directory)
-      1. Change the tag to the version you want: e.g. `git fetch origin v10.9.0 --depth 1`
-      2. `git checkout -b v10.9.0 FETCH_HEAD`
+      1. Change the tag to the version you want: e.g. `git fetch origin v10.9.1 --depth 1`
+      2. `git checkout -b v10.9.1 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`
@@ -58,11 +58,21 @@ takes 1 positional parameter (the new plugin version) and an optional one
 
 ```sh
 # Update this plugin to 1.0.99-beta and use mermaid 9.3.0
-./bin/update-versions.sh 1.0.99-beta 9.3.0
+./bin/update-versions.sh 1.1.0-e 10.9.1
+# need to build again
+pnpm build
 ```
 
 ## Creating a release
 
 ```sh
 pnpm wp-scripts plugin-zip
+```
+
+## Using playground
+
+Quickly launch a development environment after you have built the plugin using:
+
+```sh
+npx @wp-now/wp-now start
 ```

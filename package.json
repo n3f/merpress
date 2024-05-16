@@ -1,6 +1,6 @@
 {
 	"name": "merpress",
-	"version": "1.1.0-d",
+	"version": "1.1.0-e",
 	"description": "Merpress: add MermaidJS to WordPress",
 	"scripts": {
 		"build": "rm build/* && wp-scripts build && ./bin/tweak-built-php.sh",
@@ -24,11 +24,11 @@
 	"homepage": "https://github.com/n3f/merpress#readme",
 	"devDependencies": {
 		"@svgr/webpack": "^8.1.0",
-		"@wordpress/env": "^9.5.0",
-		"@wordpress/icons": "^9.44.0",
-		"@wordpress/scripts": "^27.4.0",
+		"@wordpress/env": "^9.10.0",
+		"@wordpress/icons": "^9.49.0",
+		"@wordpress/scripts": "^27.9.0",
 		"husky": "^9.0.11",
-		"react": "^18.2.0",
+		"react": "^18.3.1",
 		"url-loader": "^4.1.1"
 	},
 	"files": [
@@ -39,5 +39,6 @@
 		"package.json",
 		"pnpm-lock.yaml",
 		"DEVELOPMENT.md"
-	]
+	],
+	"packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589"
 }
