@@ -1,8 +1,8 @@
 === merpress ===
 Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
-Requires at least: 5.0
-Tested up to: 6.4.3
+Requires at least: 7.0
+Tested up to: 6.5.3
 Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv3
@@ -37,4 +37,4 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 == Upgrade Notice ==
 
 = 1.1.0 =
-Move mermaid back to external.
+Latest mermaid & a new beta feature.
