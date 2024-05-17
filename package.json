@@ -1,6 +1,6 @@
 {
 	"name": "merpress",
-	"version": "1.1.0-e",
+	"version": "1.1.0",
 	"description": "Merpress: add MermaidJS to WordPress",
 	"scripts": {
 		"build": "rm build/* && wp-scripts build && ./bin/tweak-built-php.sh",

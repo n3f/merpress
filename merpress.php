@@ -3,7 +3,7 @@
  * Plugin Name: MerPress
  * Plugin URI: https://github.com/n3f/merpress
  * Description: Merpress lets you create diagrams and visualizations using <a href="https://mermaid-js.github.io/mermaid/">MermaidJS</a>.
- * Version: 1.1.0-e
+ * Version: 1.1.0
  * Requires at least: 4.6
  *
  * @package MerPress
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MERMAID_PLUGIN_VERSION', '1.1.0-e' );
+define( 'MERMAID_PLUGIN_VERSION', '1.1.0' );
 define( 'MERMAID_JS_VERSION', '10.9.1' );
 
 add_action(

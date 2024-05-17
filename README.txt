@@ -3,7 +3,7 @@ Contributors: neffff
 Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
 Requires at least: 5.0
 Tested up to: 6.4.3
-Stable tag: 1.1.0-e
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -30,11 +30,11 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 == Changelog ==
 
-= 1.1.0-e =
+= 1.1.0 =
 * Update mermaid to 10.9.1.
 * Adds *_beta_* feature to store PNG of diagram. Currently broken in Firefox.
 
 == Upgrade Notice ==
 
-= 1.1.0-e =
+= 1.1.0 =
 Move mermaid back to external.
