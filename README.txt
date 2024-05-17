@@ -1,7 +1,7 @@
 === merpress ===
 Contributors: neffff
-Tags: posts, mermaid, diagrams, gantt, sequence, class, erd, entity-relationship, actor, flowchart, block
-Requires at least: 7.0
+Tags: posts, mermaid, diagrams, flowchart, block
+Requires at least: 6.4
 Tested up to: 6.5.3
 Stable tag: 1.1.0
 Requires PHP: 7.0
