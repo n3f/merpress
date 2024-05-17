@@ -1,0 +1,32 @@
+{
+  "landingPage": "/",
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "preferredVersions": {
+    "php": "7.4",
+    "wp": "5.9"
+  },
+  "login": true,
+  "plugins": [
+    "merpress"
+  ],
+  "steps": [
+    {
+      "step": "writeFile",
+      "path": "/tmp/mermaid-post.txt",
+      "data": "<!-- wp:merpress/mermaidjs -->\n<div class=\"wp-block-merpress-mermaidjs diagram-source-mermaid\"><pre class=\"mermaid\">\ngantt\ndateFormat  YYYY-MM-DD\naxisFormat  %d/%m\ntitle Adding GANTT diagram to mermaid\nexcludes weekdays 2014-01-10\ntodayMarker off\n\nsection team's critical event\ndeadline A           :milestone, crit, deadlineA, 2024-02-01, 0\ndeadline B           :milestone, crit, deadlineB, 2024-02-15, 0\nboss on leave        :bossaway, 2024-01-28, 2024-02-11\n\nsection new intern\nonboarding           :onboarding, 2024-01-02, 1w\nliterature review    :litreview, 2024-01-02, 10d\nproject A            :projectA, after onboarding litreview, until deadlineA bossaway\nchilling             :chilling, after projectA, until deadlineA\nproject B            :projectB, after deadlineA, until deadlineB</pre></div>\n<!-- /wp:merpress/mermaidjs -->\n"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post create --post_type=\"page\" --post_title=\"MerPress\" --post_status=\"publish\" /tmp/mermaid-post.txt"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "page_on_front": 4,
+        "show_on_front": "page"
+      }
+    }
+  ]
+}

@@ -1,1 +1,4 @@
 .idea
+.code
+node_modules
+vendor
