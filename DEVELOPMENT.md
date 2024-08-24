@@ -40,8 +40,8 @@ pnpm wp-scripts format <filename>
 
    1. `pnpm update -L`
    2. Build a new version of mermaid (change to the mermaid git repo directory)
-      1. Change the tag to the version you want: e.g. `git fetch origin v10.9.1 --depth 1`
-      2. `git checkout -b v10.9.1 FETCH_HEAD`
+      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.0.2 --depth 1`
+      2. `git checkout -b mermaid@11.0.2 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`

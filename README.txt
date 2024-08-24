@@ -2,9 +2,9 @@
 Contributors: neffff
 Tags: posts, mermaid, diagrams, flowchart, block
 Requires at least: 6.4
-Tested up to: 6.5.3
-Stable tag: 1.1.0
-Requires PHP: 7.0
+Tested up to: 6.6.1
+Stable tag: 1.1.1
+Requires PHP: 7.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,11 +30,10 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 == Changelog ==
 
-= 1.1.0 =
-* Update mermaid to 10.9.1.
-* Adds *_beta_* feature to store PNG of diagram. Currently broken in Firefox.
+= 1.1.1 =
+* Update mermaid to 11.0.2.
 
 == Upgrade Notice ==
 
-= 1.1.0 =
-Latest mermaid & a new beta feature.
+= 1.1.1 =
+Latest mermaid (11.0.2)
