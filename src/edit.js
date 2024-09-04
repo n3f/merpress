@@ -216,6 +216,11 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 									updateContext( { content: newContent } );
 								} }
 								value={ content }
+								// Fixes problem with blocks default styling.
+								// Test by setting a theme with a different background color and white text.
+								style={ {
+									backgroundColor: 'inherit',
+								} }
 							/>
 						</pre>
 						<hr />

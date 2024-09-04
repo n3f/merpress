@@ -32,6 +32,7 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 = 1.1.2 =
 * Update mermaid to 11.1.0.
+* Fix problem with block default styling.
 
 == Upgrade Notice ==
 
