@@ -18,6 +18,8 @@ import { MermaidBlock } from './mermaid-block';
 import { MerpressContext } from './context';
 import { convertSVGToPNG, storePNG } from './utils';
 
+import './editor.scss';
+
 const IMG_STATE = Object.freeze( {
 	NOT_SAVED: { value: 0, label: 'not saved' },
 	SAVING: { value: 1, label: 'saving' },
@@ -226,7 +228,14 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 						<hr />
 					</>
 				) }
-				<NoticeList notices={ blockNotices } />
+
+				{ blockNotices.length > 0 && (
+					<NoticeList
+						notices={ blockNotices }
+						className="merpress-notice-list"
+					/>
+				) }
+
 				<MermaidBlock />
 			</div>
 		</MerpressContext.Provider>

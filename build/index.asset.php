@@ -1,5 +1,5 @@
 <?php declare( strict_types=1 );
 return array(
 	'dependencies' => array( 'react', 'react-jsx-runtime', 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n', 'wp-media-utils', 'wp-notices', 'wp-primitives' ),
-	'version' => 'bdcd6e28a3ab8521ba01',
+	'version' => '73ee9b72c11f8de38f1d',
 );

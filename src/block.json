@@ -53,7 +53,7 @@
 		}
 	},
 	"editorScript": [ "file:./index.js" ],
-	"editorStyle": [ "wp-edit-blocks" ],
+	"editorStyle": [ "wp-edit-blocks", "file:./index.css" ],
 	"script": [ "mermaid", "file:./mermaid.js" ],
 	"style": [ "mermaid-gutenberg-block" ],
 	"viewScript": [ "file:./mermaid-init.js" ]

@@ -20,11 +20,7 @@ export function MermaidBlock() {
 						const cb = () => {
 							const svgEl =
 								container.current.querySelector( 'svg' );
-							const { width, height } =
-								svgEl.getBoundingClientRect();
-							const svgText = new XMLSerializer() // eslint-disable-line no-undef
-								.serializeToString( svgEl );
-							resolve( { svgText, width, height } );
+							resolve( svgEl );
 						};
 						window.mermaid.run( {
 							nodes: [ container.current ],
@@ -57,7 +53,7 @@ export function MermaidBlock() {
 			) }
 			<div
 				ref={ container }
-				className={ 'mermaid ${error ? "mermaid-error" : "" }' }
+				className={ `mermaid ${ isError ? 'mermaid-error' : '' }` }
 			/>
 		</>
 	);
