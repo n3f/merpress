@@ -6,35 +6,38 @@ const RESIZE_FACTOR = 2;
 /**
  * Using an svg string convert to a base64 encoded img.
  *
- * @param {Object} svg         an svg element.
- * @param {string} svg.svgText the svg text.
- * @param {number} svg.width   the width of the svg.
- * @param {number} svg.height  the height of the svg.
+ * @param {Object} svgEl an svg element.
  * @return {Promise<string>} a png base64 encoded string.
  */
-export function convertSVGToPNG( { svgText, width, height } ) {
-	const svg64 =
-		'data:image/svg+xml;base64,' +
-		btoa( unescape( encodeURIComponent( svgText ) ) );
-	// eslint-disable-next-line no-undef
-	const img = new Image();
-	img.src = svg64;
+export function convertSVGToPNG( svgEl ) {
+	/* global XMLSerializer */
+	const serializer = new XMLSerializer();
+	const svgString = serializer.serializeToString( svgEl );
+	const svgBlob = new Blob( [ svgString ], {
+		type: 'image/svg+xml;charset=utf-8',
+	} );
+	const svgUrl = URL.createObjectURL( svgBlob );
 
 	return new Promise( ( resolve, reject ) => {
+		/* global Image */
+		const img = new Image();
 		img.onload = () => {
 			const canvas = document.createElement( 'canvas' );
 			const ctx = canvas.getContext( '2d' );
-			canvas.width = width * RESIZE_FACTOR;
-			canvas.height = height * RESIZE_FACTOR;
+			canvas.width = svgEl.width.baseVal.value * RESIZE_FACTOR;
+			canvas.height = svgEl.height.baseVal.value * RESIZE_FACTOR;
+
 			ctx.clearRect( 0, 0, canvas.width, canvas.height );
-			ctx.drawImage( img, 0, 0 );
-			const png = canvas.toDataURL( 'image/png' );
-			// console.log( 'img', png );
-			resolve( png );
+			ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
+
+			URL.revokeObjectURL( svgUrl );
+			resolve( canvas.toDataURL( 'image/png' ) );
 		};
-		img.onerror = ( e ) => {
-			reject( e );
+		img.onerror = ( error ) => {
+			URL.revokeObjectURL( svgUrl );
+			reject( error );
 		};
+		img.src = svgUrl;
 	} );
 }
 

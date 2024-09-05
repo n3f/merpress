@@ -65,7 +65,8 @@
     "file:./index.js"
   ],
   "editorStyle": [
-    "wp-edit-blocks"
+    "wp-edit-blocks",
+    "file:./index.css"
   ],
   "script": [
     "mermaid",
