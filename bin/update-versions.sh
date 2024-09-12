@@ -35,7 +35,7 @@ if [ -n "$mermaid" ]; then
     sed -Ei "s/(define\( 'MERMAID_JS_VERSION', ')$version_pattern(.*)/\1$mermaid\3/" merpress.php
     # readme.txt
     sed -Ei "s/(Update mermaid to )$version_pattern/\1$mermaid/" README.txt
-    sed -Ei "s/(Mermaid update \()$version_pattern\)/\1$mermaid)/" README.txt
+    sed -Ei "s/(Latest mermaid \()$version_pattern\)/\1$mermaid)/" README.txt
 fi
 
 
