@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect, useRef } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { useMerpressContext } from './context';
 
-export function MermaidBlock() {
+export function MermaidBlock( { refreshTrigger } ) {
 	const [ isError, setError ] = useState( false );
 	const container = useRef( null );
 	const { content, updateContext } = useMerpressContext();
@@ -42,7 +42,7 @@ export function MermaidBlock() {
 
 	useEffect( () => {
 		processContent( content );
-	}, [ content, processContent ] );
+	}, [ content, processContent, refreshTrigger ] );
 
 	return (
 		<>

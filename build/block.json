@@ -53,7 +53,14 @@
     }
   },
   "supports": {
-    "html": false
+    "html": false,
+    "align": [
+      "left",
+      "center",
+      "right",
+      "wide",
+      "full"
+    ]
   },
   "example": {
     "attributes": {
@@ -73,7 +80,7 @@
     "file:./mermaid.js"
   ],
   "style": [
-    "mermaid-gutenberg-block"
+    "file:./style-index.css"
   ],
   "viewScript": [
     "file:./mermaid-init.js"
