@@ -36,6 +36,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		content = '',
 		imgs = [],
 		diagramSource = DIAGRAM.MERMAID,
+		align,
 	} = attributes;
 
 	const [ svg, setSvg ] = useState( {} );
@@ -43,7 +44,9 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const [ blockNotices, setBlockNotices ] = useState( [] );
 
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps( {
+		className: align ? `align${ align }` : '',
+	} );
 
 	/**
 	 * Called from the camera button.  Saves the current diagram as a PNG,

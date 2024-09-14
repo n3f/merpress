@@ -1,9 +1,11 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save( props ) {
-	const { content, imgs, diagramSource } = props.attributes;
+	const { content, imgs, diagramSource, align } = props.attributes;
 	const blockProps = useBlockProps.save( {
-		className: `diagram-source-${ diagramSource }`,
+		className: `diagram-source-${ diagramSource }${
+			align ? ` align${ align }` : ''
+		}`,
 	} );
 
 	return (

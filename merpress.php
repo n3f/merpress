@@ -35,13 +35,6 @@ add_action(
 			false
 		);
 
-		wp_register_style(
-			'mermaid-gutenberg-block',
-			plugin_dir_url( __FILE__ ) . 'public/mermaid-block.css',
-			[],
-			MERMAID_PLUGIN_VERSION
-		);
-
 		// Register the mermaidjs block.
 		$result = register_block_type( __DIR__ . '/build' );
 		if ( false === $result ) {

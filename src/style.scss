@@ -1,0 +1,38 @@
+.mermaid svg,
+.wp-block-merpress-mermaidjs img {
+	display: block;
+	margin: auto;
+}
+
+.diagram-source-image > .mermaid,
+.diagram-source-mermaid > img {
+	display: none;
+}
+
+.mermaid-error {
+	opacity: 0.5;
+}
+
+.wp-block-merpress-mermaidjs {
+	&.alignwide img {
+		max-width: var(--wp--style--global--wide-size);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.alignfull img {
+		width: 100%;
+	}
+	&.alignleft img {
+		float: left;
+		margin-right: 1em;
+		max-width: 50%;
+	}
+	&.alignright img {
+		float: right;
+		margin-left: 1em;
+		max-width: 50%;
+	}
+	&:not(.alignleft, .alignright, .alignfull, .alignwide) img {
+		max-width: var(--wp--style--global--content-size);
+	}
+}
