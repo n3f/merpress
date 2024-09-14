@@ -42,6 +42,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const [ svg, setSvg ] = useState( {} );
 	const [ imgState, setImgState ] = useState( IMG_STATE.NOT_SAVED );
 	const [ blockNotices, setBlockNotices ] = useState( [] );
+	const [ refreshTrigger, setRefreshTrigger ] = useState( 0 );
 
 	const { createNotice, removeNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps( {
@@ -154,6 +155,10 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 		updateContext,
 	};
 
+	useEffect( () => {
+		setRefreshTrigger( ( prev ) => prev + 1 );
+	}, [ align ] );
+
 	return (
 		<MerpressContext.Provider value={ merpressContext }>
 			{
@@ -239,7 +244,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					/>
 				) }
 
-				<MermaidBlock />
+				<MermaidBlock refreshTrigger={ refreshTrigger } />
 			</div>
 		</MerpressContext.Provider>
 	);
