@@ -39,14 +39,15 @@ pnpm wp-scripts format <filename>
 ## Get a new mermaid drop
 
    1. `pnpm update -L`
-   2. Build a new version of mermaid (change to the mermaid git repo directory)
-      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.2.0 --depth 1`
-      2. `git checkout -b mermaid@11.2.0 FETCH_HEAD`
+   2. `composer update`
+   3. Build a new version of mermaid (change to the mermaid git repo directory)
+      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.2.1 --depth 1`
+      2. `git checkout -b mermaid@11.2.1 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`
       6. `cp packages/mermaid/dist/mermaid.{,min.}js* $MERPRESS_DIR/public/`
-   3. Update versions (`bin/update-versions.sh`), rebuild (`pnpm build`), test, commit, create PR.
+   4. Update versions (`bin/update-versions.sh`), rebuild (`pnpm build`), test, commit, create PR.
 
 ## Setting a new version
 
@@ -56,7 +57,7 @@ takes 1 positional parameter (the new plugin version) and an optional one
 
 ```sh
 # Update this plugin
-./bin/update-versions.sh 1.1.3 11.2.0
+./bin/update-versions.sh 1.1.4 11.2.1
 # need to build again
 pnpm build
 ```
