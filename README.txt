@@ -3,7 +3,7 @@ Contributors: neffff
 Tags: posts, mermaid, diagrams, flowchart, block
 Requires at least: 6.4
 Tested up to: 6.6.2
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires PHP: 7.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -30,11 +30,11 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 == Changelog ==
 
-= 1.1.4 =
-* Update mermaid to 11.2.1.
+= 1.1.5 =
+* Update mermaid to 11.3.0.
 * Add support for block alignment.
 
 == Upgrade Notice ==
 
-= 1.1.4 =
-Latest mermaid (11.2.1) & adds support for block alignment.
+= 1.1.5 =
+Latest mermaid (11.3.0) & adds support for block alignment.
