@@ -1,4 +1,4 @@
-#!env sh
+#!/bin/sh
 
 # This script updates the version numbers in the source code.
 # $1 is the plugin version
@@ -10,7 +10,7 @@ mermaid=$2
 version_pattern='[0-9]+\.[0-9]+\.[0-9]+(-?[a-zA-Z0-9]+)?'
 
 # set the base directory up a level
-pushd $(dirname $0)/.. > /dev/null
+pushd $(dirname "$0")/.. > /dev/null
 
 if [ -z "$plugin" ]; then
     echo "Usage: $0 <plugin version> [<mermaid version>]"
