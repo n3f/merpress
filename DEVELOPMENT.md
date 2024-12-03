@@ -1,6 +1,6 @@
-# merpress
+# MerPress
 
-Merpress is a WordPress plugin for creating diagrams and visualizations using
+MerPress is a WordPress plugin for creating diagrams and visualizations using
 [MermaidJS](https://mermaid.js.org).
 
 ## Setup
@@ -13,7 +13,7 @@ pnpm install && composer install
 
 ## Development
 
-Development now uses wordpress blocks best practices (i.e. '@wordpress/scripts'
+Development now uses WordPress blocks best practices (i.e. '@wordpress/scripts'
 to generate the javascript).  Create the production javascript with:
 
 ```sh
@@ -41,13 +41,13 @@ pnpm wp-scripts format <filename>
    1. `pnpm update -L`
    2. `composer update`
    3. Build a new version of mermaid (change to the mermaid git repo directory)
-      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.4.0 --depth 1`
-      2. `git checkout -b mermaid@11.4.0 FETCH_HEAD`
+      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.4.1 --depth 1`
+      2. `git checkout -b mermaid@11.4.1 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`
       6. `cp packages/mermaid/dist/mermaid.{,min.}js* $MERPRESS_DIR/public/`
-   4. Update versions (`bin/update-versions.sh`), rebuild (`pnpm build`), test, commit, create PR.
+   4. Update versions (`bin/update-versions.sh`), rebuild (`pnpm build`), test, commit, create PR. _(Check if the WordPress version or other README values should be updated.)_
 
 ## Setting a new version
 
@@ -57,7 +57,7 @@ takes 1 positional parameter (the new plugin version) and an optional one
 
 ```sh
 # Update this plugin
-./bin/update-versions.sh 1.1.6 11.4.0
+./bin/update-versions.sh 1.1.7 11.4.1
 # need to build again
 pnpm build
 ```
