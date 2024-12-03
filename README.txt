@@ -2,8 +2,8 @@
 Contributors: neffff
 Tags: posts, mermaid, diagrams, flowchart, block
 Requires at least: 6.4
-Tested up to: 6.6.2
-Stable tag: 1.1.6
+Tested up to: 6.7.1
+Stable tag: 1.1.7
 Requires PHP: 7.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -30,10 +30,10 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 == Changelog ==
 
-= 1.1.6 =
-* Update mermaid to 11.4.0.
+= 1.1.7 =
+* Update mermaid to 11.4.1.
 
 == Upgrade Notice ==
 
-= 1.1.6 =
-Latest mermaid (11.4.0).
+= 1.1.7 =
+Latest mermaid (11.4.1).
