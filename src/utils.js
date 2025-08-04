@@ -12,11 +12,16 @@ const RESIZE_FACTOR = 2;
 export function convertSVGToPNG( svgEl ) {
 	/* global XMLSerializer */
 	const serializer = new XMLSerializer();
+
 	const svgString = serializer.serializeToString( svgEl );
-	const svgBlob = new Blob( [ svgString ], {
-		type: 'image/svg+xml;charset=utf-8',
-	} );
-	const svgUrl = URL.createObjectURL( svgBlob );
+	const svgDataUrl =
+		'data:image/svg+xml;base64,' +
+		btoa(
+			encodeURIComponent( svgString ).replace(
+				/%([0-9A-F]{2})/g,
+				( match, p1 ) => String.fromCharCode( parseInt( p1, 16 ) )
+			)
+		);
 
 	return new Promise( ( resolve, reject ) => {
 		/* global Image */
@@ -30,14 +35,16 @@ export function convertSVGToPNG( svgEl ) {
 			ctx.clearRect( 0, 0, canvas.width, canvas.height );
 			ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
 
-			URL.revokeObjectURL( svgUrl );
-			resolve( canvas.toDataURL( 'image/png' ) );
+			try {
+				resolve( canvas.toDataURL( 'image/png' ) );
+			} catch ( error ) {
+				reject( error );
+			}
 		};
 		img.onerror = ( error ) => {
-			URL.revokeObjectURL( svgUrl );
 			reject( error );
 		};
-		img.src = svgUrl;
+		img.src = svgDataUrl;
 	} );
 }
 
