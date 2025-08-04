@@ -7,7 +7,7 @@
 	"icon": "chart-pie",
 	"description": "Create diagrams and flow charts using text via Mermaid",
 	"keywords": [ "mermaid", "chart", "diagram", "flow", "graph" ],
-	"version": "1.1.10",
+	"version": "1.1.11",
 	"textdomain": "my-plugin",
 	"attributes": {
 		"content": {

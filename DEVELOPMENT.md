@@ -39,10 +39,25 @@ pnpm wp-scripts format <filename>
 ## Get a new mermaid drop
 
    1. `pnpm update -L`
+
+      Currently React is at 18.3.1, but to check if 19.0.0 is supported:
+
+      Try updating React first:
+
+      `pnpm add react@^19.0.0 react-dom@^19.0.0`
+
+      Check for peer dependency warnings
+
+      `pnpm install`
+
+      If warnings appear, revert
+
+      `pnpm add react@^18.3.1 react-dom@^18.3.1`
+
    2. `composer update`
    3. Build a new version of mermaid (change to the mermaid git repo directory)
-      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.8.1 --depth 1`
-      2. `git checkout -b mermaid@11.8.1 FETCH_HEAD`
+      1. Change the tag to the version you want: e.g. `git fetch origin mermaid@11.9.0 --depth 1`
+      2. `git checkout -b mermaid@11.9.0 FETCH_HEAD`
       3. `pnpm i`
       4. `pnpm run -r clean`
       5. `pnpm run build:mermaid`
@@ -57,7 +72,7 @@ takes 1 positional parameter (the new plugin version) and an optional one
 
 ```sh
 # Update this plugin
-./bin/update-versions.sh 1.1.10 11.8.1
+./bin/update-versions.sh 1.1.11 11.9.0
 # need to build again
 pnpm build
 ```
