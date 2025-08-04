@@ -83,11 +83,14 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			setTimeout( () => removeNotice( w.notice.id ), 3500 );
 		} catch ( e ) {
 			// eslint-disable-next-line no-console
-			console.log( 'saveImg error', e );
-			createNotice(
-				'error',
-				__( 'Error saving diagram as PNG', 'merpress' )
+			console.error( 'saveImg error', e );
+
+			const errorMessage = __(
+				'Error saving diagram as PNG',
+				'merpress'
 			);
+
+			createNotice( 'error', errorMessage );
 			setImgState( IMG_STATE.NOT_SAVED );
 		}
 	};
