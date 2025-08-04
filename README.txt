@@ -32,8 +32,9 @@ Yes.  Checkout [MermaidJS](https://mermaid.js.org/intro/) for syntax reference a
 
 = 1.1.11 =
 * Update mermaid to 11.9.0.
+* Fix issue with mermaid to PNG (tainted canvas)
 
 == Upgrade Notice ==
 
 = 1.1.11 =
-Latest mermaid (11.9.0).
+Latest mermaid (11.9.0) and fixes issue with mermaid to PNG (tainted canvas).
